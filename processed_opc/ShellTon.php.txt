@@ -1,0 +1,271 @@
+FunctionStart 
+INIT_FCALL 'define'
+SEND_VAL 'ROOT_DIR'
+INIT_FCALL 'realpath'
+DO_ICALL 
+DO_ICALL 
+FETCH_CONSTANT 'ROOT_DIR'
+FETCH_IS '_GET'
+ISSET_ISEMPTY_DIM_OBJ 'dir'
+INIT_FCALL 'validatedirectory'
+FETCH_R '_GET'
+FETCH_DIM_R 'dir'
+DO_FCALL 
+INIT_FCALL 'is_dir'
+DO_ICALL 
+FETCH_CONSTANT 'ROOT_DIR'
+FETCH_IS '_GET'
+ISSET_ISEMPTY_DIM_OBJ 'delete'
+CONCAT '/'
+INIT_FCALL 'basename'
+FETCH_R '_GET'
+FETCH_DIM_R 'delete'
+DO_ICALL 
+INIT_FCALL 'is_file'
+DO_ICALL 
+INIT_FCALL 'unlink'
+DO_ICALL 
+INIT_FCALL 'header'
+INIT_FCALL 'urlencode'
+DO_ICALL 
+CONCAT 'Location: ?dir='
+DO_ICALL 
+FETCH_IS '_GET'
+ISSET_ISEMPTY_DIM_OBJ 'download'
+CONCAT '/'
+INIT_FCALL 'basename'
+FETCH_R '_GET'
+FETCH_DIM_R 'download'
+DO_ICALL 
+INIT_FCALL 'is_file'
+DO_ICALL 
+INIT_FCALL 'header'
+SEND_VAL 'Content-Description: File Transfer'
+DO_ICALL 
+INIT_FCALL 'header'
+SEND_VAL 'Content-Type: application/octet-stream'
+DO_ICALL 
+INIT_FCALL 'header'
+INIT_FCALL 'basename'
+DO_ICALL 
+CONCAT 'Content-Disposition: attachment; filename="'
+CONCAT '"'
+DO_ICALL 
+INIT_FCALL 'header'
+INIT_FCALL 'filesize'
+DO_ICALL 
+CONCAT 'Content-Length: '
+DO_ICALL 
+INIT_FCALL 'readfile'
+DO_ICALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'rename_file'
+CONCAT '/'
+INIT_FCALL 'basename'
+FETCH_R '_POST'
+FETCH_DIM_R 'old_name'
+DO_ICALL 
+CONCAT '/'
+INIT_FCALL 'basename'
+FETCH_R '_POST'
+FETCH_DIM_R 'new_name'
+DO_ICALL 
+INIT_FCALL 'is_file'
+DO_ICALL 
+INIT_FCALL 'rename'
+DO_ICALL 
+INIT_FCALL 'header'
+INIT_FCALL 'urlencode'
+DO_ICALL 
+CONCAT 'Location: ?dir='
+DO_ICALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'upload'
+FETCH_R '_FILES'
+FETCH_DIM_R 'file'
+FETCH_DIM_R 'error'
+CONCAT '/'
+INIT_FCALL 'basename'
+FETCH_R '_FILES'
+FETCH_DIM_R 'file'
+FETCH_DIM_R 'name'
+DO_ICALL 
+INIT_FCALL 'move_uploaded_file'
+FETCH_R '_FILES'
+FETCH_DIM_R 'file'
+FETCH_DIM_R 'tmp_name'
+DO_ICALL 
+INIT_FCALL 'header'
+INIT_FCALL 'urlencode'
+DO_ICALL 
+CONCAT 'Location: ?dir='
+DO_ICALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'save_file'
+CONCAT '/'
+INIT_FCALL 'basename'
+FETCH_R '_POST'
+FETCH_DIM_R 'file_name'
+DO_ICALL 
+INIT_FCALL 'is_file'
+DO_ICALL 
+INIT_FCALL 'file_put_contents'
+FETCH_R '_POST'
+FETCH_DIM_R 'file_content'
+DO_ICALL 
+INIT_FCALL 'header'
+INIT_FCALL 'urlencode'
+DO_ICALL 
+CONCAT 'Location: ?dir='
+DO_ICALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'create_file'
+INIT_FCALL 'basename'
+FETCH_R '_POST'
+FETCH_DIM_R 'new_file_name'
+DO_ICALL 
+CONCAT '/'
+INIT_FCALL 'file_put_contents'
+DO_ICALL 
+INIT_FCALL 'header'
+INIT_FCALL 'urlencode'
+DO_ICALL 
+CONCAT 'Location: ?dir='
+DO_ICALL 
+ECHO '  <!DOCTYPE html>  <html lang="fr">  <head>   <meta charset="UTF-8"> '
+INIT_FCALL 'urlencode'
+INIT_FCALL 'dirname'
+DO_ICALL 
+DO_ICALL 
+ECHO '" style="color: #03DAC6;">'
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+ECHO '</a></p>     <div class="form-container">   <!-- Formulaire pour téléch'
+INIT_FCALL 'listdirectory'
+DO_FCALL 
+ECHO ' </tbody>   </table>     <!-- Formulaire de renommage -->   '
+FETCH_IS '_GET'
+ISSET_ISEMPTY_DIM_OBJ 'rename'
+ECHO ' <form method="post">   <input type="hidden" name="old_name" value="'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_GET'
+FETCH_DIM_R 'rename'
+DO_ICALL 
+ECHO '">   <input type="text" name="new_name" placeholder="Nouveau nom" required>   <butt'
+ECHO '   <!-- Formulaire de modification -->   '
+FETCH_IS '_GET'
+ISSET_ISEMPTY_DIM_OBJ 'edit'
+ECHO ' <form method="post">   <input type="hidden" name="file_name" value="'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_GET'
+FETCH_DIM_R 'edit'
+DO_ICALL 
+ECHO '">   <textarea name="file_content" required>'
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'file_get_contents'
+CONCAT '/'
+FETCH_R '_GET'
+FETCH_DIM_R 'edit'
+DO_ICALL 
+DO_ICALL 
+ECHO '</textarea>   <br>   <button type="submit" name="save_file">Sauvegarder les modificat'
+ECHO '  </body>  </html>  '
+RETURN 1
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'realpath'
+DO_ICALL 
+INIT_FCALL 'strpos'
+FETCH_CONSTANT 'ROOT_DIR'
+DO_ICALL 
+RETURN 
+FETCH_CONSTANT 'ROOT_DIR'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'scandir'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+IS_NOT_EQUAL '.'
+IS_NOT_EQUAL '..'
+CONCAT '/'
+INIT_FCALL 'is_dir'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+ECHO '<tr>'
+INIT_FCALL 'urlencode'
+CONCAT '/'
+DO_ICALL 
+CONCAT '<td><a href="?dir='
+CONCAT '">📁 '
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '</a></td>'
+ECHO '<td>Folder</td>'
+INIT_FCALL_BY_NAME 'getFileActions'
+DO_FCALL 
+CONCAT '<td>'
+CONCAT '</td>'
+ECHO '</tr>'
+FE_RESET_R 
+FE_FETCH_R 
+ECHO '<tr>'
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '<td>'
+CONCAT '</td>'
+INIT_FCALL_BY_NAME 'formatFileSize'
+CONCAT '/'
+DO_FCALL 
+CONCAT '<td>'
+CONCAT '</td>'
+INIT_FCALL_BY_NAME 'getFileActions'
+DO_FCALL 
+CONCAT '<td>'
+CONCAT '</td>'
+ECHO '</tr>'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'is_file'
+DO_ICALL 
+INIT_FCALL 'filesize'
+DO_ICALL 
+INIT_FCALL 'round'
+DIV 1048576
+DO_ICALL 
+CONCAT '+MB'
+RETURN 
+INIT_FCALL 'round'
+DIV 1024
+DO_ICALL 
+CONCAT '+KB'
+RETURN 
+CONCAT '+bytes'
+RETURN 
+RETURN 'N/A'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'urlencode'
+DO_ICALL 
+INIT_FCALL 'urlencode'
+DO_ICALL 
+CONCAT '<a href="?dir='
+CONCAT '&edit='
+CONCAT '">Edit</a> | '
+CONCAT '<a href="?dir='
+CONCAT '&delete='
+CONCAT '">Delete</a> | '
+CONCAT '<a href="?dir='
+CONCAT '&rename='
+CONCAT '">Rename</a> | '
+CONCAT '<a href="?dir='
+CONCAT '&download='
+CONCAT '">Download</a>'
+RETURN 
+RETURN 'null'
+FunctionEnd 

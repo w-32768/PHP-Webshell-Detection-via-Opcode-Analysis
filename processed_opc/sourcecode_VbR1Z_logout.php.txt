@@ -1,0 +1,6 @@
+FunctionStart 
+INCLUDE_OR_EVAL '../init.php' 'REQUIRE_ONCE'
+INIT_METHOD_CALL 'logOut'
+DO_FCALL 
+RETURN 1
+FunctionEnd 

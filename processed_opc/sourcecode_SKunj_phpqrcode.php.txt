@@ -1,0 +1,2577 @@
+FunctionStart 
+INIT_FCALL 'define'
+SEND_VAL 'QR_MODE_NUL'
+SEND_VAL '-1'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_MODE_NUM'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_MODE_AN'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_MODE_8'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_MODE_KANJI'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_MODE_STRUCTURE'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_ECLEVEL_L'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_ECLEVEL_M'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_ECLEVEL_Q'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_ECLEVEL_H'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_FORMAT_TEXT'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_FORMAT_PNG'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_CACHEABLE'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_CACHE_DIR'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_LOG_DIR'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_FIND_BEST_MASK'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_FIND_FROM_RANDOM'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_DEFAULT_MASK'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_PNG_MAXIMUM_SIZE'
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'QRtools' 'markTime'
+SEND_VAL 'start'
+DO_FCALL 
+INIT_FCALL 'define'
+SEND_VAL 'QRSPEC_VERSION_MAX'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QRSPEC_WIDTH_MAX'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QRCAP_WIDTH'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QRCAP_WORDS'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QRCAP_REMINDER'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QRCAP_EC'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'QR_IMAGE'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'STRUCTURE_HEADER_BITS'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'MAX_STRUCTURED_SYMBOLS'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'N1'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'N2'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'N3'
+DO_ICALL 
+INIT_FCALL 'define'
+SEND_VAL 'N4'
+DO_ICALL 
+RETURN 1
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'substr_replace'
+INIT_FCALL 'substr'
+DO_ICALL 
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FE_RESET_RW 
+FE_FETCH_RW 
+INIT_FCALL 'ord'
+DO_ICALL 
+BW_AND 1
+QM_ASSIGN '1'
+QM_ASSIGN '0'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RECV_INIT 'QR,L'
+RECV_INIT '4.5.037'
+INIT_FCALL 'explode'
+SEND_VAL ','
+DO_ICALL 
+ASSIGN 'L'
+INIT_STATIC_METHOD_CALL 'QRcode' 'text'
+DO_FCALL 
+ASSIGN_DIM 'num_rows'
+ASSIGN_DIM 'num_cols'
+ASSIGN_DIM 'bcode'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'str_split'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+IS_EQUAL '1'
+FETCH_DIM_W 'bcode'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+ASSIGN_STATIC_PROP 'frames'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'QRtools' 'markTime'
+SEND_VAL_EX 'before_build_cache'
+DO_FCALL 
+NEW 'QRmask'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'newFrame'
+DO_FCALL 
+FETCH_CONSTANT 'QR_IMAGE'
+FETCH_CONSTANT 'QR_CACHE_DIR'
+CONCAT 'frame_'
+CONCAT '.png'
+INIT_STATIC_METHOD_CALL 'QRimage' 'png'
+INIT_STATIC_METHOD_CALL 'binarize'
+DO_FCALL 
+DO_FCALL 
+INIT_FCALL 'array_fill'
+INIT_FCALL 'array_fill'
+DO_ICALL 
+DO_ICALL 
+INIT_METHOD_CALL 'makeMaskNo'
+DO_FCALL 
+FETCH_CONSTANT 'QRSPEC_VERSION_MAX'
+INIT_STATIC_METHOD_CALL 'QRtools' 'markTime'
+SEND_VAL_EX 'after_build_cache'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QR_LOG_DIR'
+INIT_FCALL 'file_put_contents'
+FETCH_CONSTANT 'QR_LOG_DIR'
+INIT_FCALL 'basename'
+DO_ICALL 
+CONCAT '-errors.txt'
+INIT_FCALL 'date'
+SEND_VAL 'Y-m-d H:i:s'
+DO_ICALL 
+CONCAT ': '
+DO_ICALL 
+INIT_FCALL 'file_put_contents'
+FETCH_CONSTANT 'QR_LOG_DIR'
+CONCAT 'errors.txt'
+INIT_FCALL 'date'
+SEND_VAL 'Y-m-d H:i:s'
+DO_ICALL 
+CONCAT ': '
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'ord'
+DO_ICALL 
+CONCAT ','
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'explode'
+SEND_VAL '+'
+INIT_FCALL 'microtime'
+DO_ICALL 
+DO_ICALL 
+FETCH_IS 'GLOBALS'
+ISSET_ISEMPTY_DIM_OBJ 'qr_time_bench'
+FETCH_W 'GLOBALS'
+ASSIGN_DIM 'qr_time_bench'
+FETCH_W 'GLOBALS'
+FETCH_DIM_W 'qr_time_bench'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'markTime'
+SEND_VAL 'finish'
+DO_FCALL 
+ECHO '<table cellpadding="3" cellspacing="1">   <thead><tr style="border-bottom:1px solid sil'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'qr_time_bench'
+FE_RESET_R 
+FE_FETCH_R 
+CONCAT '<tr><th style="text-align:right">till '
+CONCAT ': </th><td>'
+INIT_FCALL 'number_format'
+DO_ICALL 
+CONCAT 's</td></tr>'
+INIT_FCALL 'number_format'
+DO_ICALL 
+CONCAT '</tbody><tfoot>   <tr style="border-top:2px solid black"><th style="text-align:right'
+CONCAT 's</td></tr>   </tfoot>   </table>'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QRCAP_WORDS'
+FETCH_STATIC_PROP_R 'capacity'
+FETCH_CONSTANT 'QRCAP_EC'
+FETCH_STATIC_PROP_R 'capacity'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QRCAP_EC'
+FETCH_STATIC_PROP_R 'capacity'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QRCAP_WIDTH'
+FETCH_STATIC_PROP_R 'capacity'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QRCAP_REMINDER'
+FETCH_STATIC_PROP_R 'capacity'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QRCAP_WORDS'
+FETCH_STATIC_PROP_R 'capacity'
+FETCH_CONSTANT 'QRCAP_EC'
+FETCH_STATIC_PROP_R 'capacity'
+RETURN 
+FETCH_CONSTANT 'QRSPEC_VERSION_MAX'
+RETURN '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QR_MODE_STRUCTURE'
+RETURN 0
+FETCH_STATIC_PROP_R 'lengthTableBits'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QR_MODE_STRUCTURE'
+RETURN 3
+FETCH_STATIC_PROP_R 'lengthTableBits'
+SL 1
+SUB 1
+FETCH_CONSTANT 'QR_MODE_KANJI'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_STATIC_PROP_R 'eccTable'
+FETCH_STATIC_PROP_R 'eccTable'
+INIT_STATIC_METHOD_CALL 'getDataLength'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'getECCLength'
+DO_FCALL 
+ADD 1
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+SUB 2
+SUB 2
+INIT_STATIC_METHOD_CALL 'QRstr' 'set'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 'null'
+FETCH_STATIC_PROP_R 'alignmentPattern'
+FETCH_STATIC_PROP_R 'alignmentPattern'
+FETCH_STATIC_PROP_R 'alignmentPattern'
+ADD 2
+SUB 3
+FETCH_STATIC_PROP_R 'alignmentPattern'
+FETCH_STATIC_PROP_R 'alignmentPattern'
+INIT_STATIC_METHOD_CALL 'putAlignmentMarker'
+DO_FCALL 
+RETURN 'null'
+FETCH_STATIC_PROP_R 'alignmentPattern'
+INIT_STATIC_METHOD_CALL 'putAlignmentMarker'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'putAlignmentMarker'
+DO_FCALL 
+SUB 1
+FETCH_STATIC_PROP_R 'alignmentPattern'
+FETCH_STATIC_PROP_R 'alignmentPattern'
+INIT_STATIC_METHOD_CALL 'putAlignmentMarker'
+DO_FCALL 
+SUB 1
+SUB 1
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QRSPEC_VERSION_MAX'
+RETURN 0
+SUB 7
+FETCH_STATIC_PROP_R 'versionPattern'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 0
+RETURN 0
+FETCH_STATIC_PROP_R 'formatInfo'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'QRstr' 'set'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QRCAP_WIDTH'
+FETCH_STATIC_PROP_R 'capacity'
+INIT_FCALL 'str_repeat'
+SEND_VAL ''
+DO_ICALL 
+INIT_FCALL 'array_fill'
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'putFinderPattern'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'putFinderPattern'
+SUB 7
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'putFinderPattern'
+SUB 7
+DO_FCALL 
+SUB 7
+OP_DATA ''
+SUB 8
+OP_DATA ''
+OP_DATA ''
+INIT_FCALL 'str_repeat'
+SEND_VAL ''
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'QRstr' 'set'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRstr' 'set'
+SUB 8
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRstr' 'set'
+SUB 8
+DO_FCALL 
+INIT_FCALL 'str_repeat'
+SEND_VAL ''
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'QRstr' 'set'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRstr' 'set'
+SUB 8
+DO_FCALL 
+SUB 8
+OP_DATA ''
+OP_DATA ''
+ADD 7
+INIT_FCALL 'chr'
+BW_AND 1
+BW_OR 144
+DO_ICALL 
+ADD 7
+INIT_FCALL 'chr'
+BW_AND 1
+BW_OR 144
+DO_ICALL 
+SUB 15
+INIT_STATIC_METHOD_CALL 'putAlignmentPattern'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'getVersionPattern'
+DO_FCALL 
+SUB 11
+INIT_FCALL 'chr'
+BW_AND 1
+BW_OR 136
+DO_ICALL 
+SR 1
+SUB 11
+INIT_FCALL 'chr'
+BW_AND 1
+BW_OR 136
+DO_ICALL 
+SR 1
+SUB 8
+OP_DATA ''
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FE_RESET_RW 
+FE_FETCH_RW 
+INIT_FCALL 'join'
+SEND_VAL '<span class="m">&nbsp;&nbsp;</span>'
+INIT_FCALL 'explode'
+SEND_VAL '0'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '&#9608;&#9608;'
+INIT_FCALL 'explode'
+SEND_VAL '1'
+DO_ICALL 
+DO_ICALL 
+ECHO ' <style>   .m { background-color: white; }   </style>   '
+ECHO '<pre><tt><br/ ><br/ ><br/ >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs'
+INIT_FCALL 'join'
+SEND_VAL '<br/ >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+DO_ICALL 
+ECHO '</tt></pre><br/ ><br/ ><br/ ><br/ ><br/ ><br/ >'
+FE_RESET_RW 
+FE_FETCH_RW 
+INIT_FCALL 'join'
+SEND_VAL '<span class="m">&nbsp;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="m">&#9618;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="p">&nbsp;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="p">&#9618;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="s">&#9671;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="s">&#9670;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="x">&#9762;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="c">&nbsp;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="c">&#9719;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="f">&nbsp;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '<span class="f">&#9618;</span>'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '&#9830;'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL '&#8901;'
+INIT_FCALL 'explode'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+ECHO ' <style>   .p { background-color: yellow; }   .m { background-color: #00FF00; }   .s '
+ECHO '<pre><tt>'
+INIT_FCALL 'join'
+SEND_VAL '<br/ >'
+DO_ICALL 
+ECHO '</tt></pre>'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'gzcompress'
+INIT_FCALL 'join'
+SEND_VAL ' '
+DO_ICALL 
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'explode'
+SEND_VAL ' '
+INIT_FCALL 'gzuncompress'
+DO_ICALL 
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QRSPEC_VERSION_MAX'
+RETURN 'null'
+FETCH_STATIC_PROP_IS 'frames'
+FETCH_CONSTANT 'QR_CACHE_DIR'
+CONCAT 'frame_'
+CONCAT '.dat'
+FETCH_CONSTANT 'QR_CACHEABLE'
+INIT_FCALL 'file_exists'
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'unserial'
+INIT_FCALL 'file_get_contents'
+DO_ICALL 
+DO_FCALL 
+FETCH_STATIC_PROP_W 'frames'
+INIT_STATIC_METHOD_CALL 'createFrame'
+DO_FCALL 
+FETCH_STATIC_PROP_W 'frames'
+INIT_FCALL 'file_put_contents'
+INIT_STATIC_METHOD_CALL 'serial'
+FETCH_STATIC_PROP_R 'frames'
+DO_FCALL 
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'createFrame'
+DO_FCALL 
+FETCH_STATIC_PROP_W 'frames'
+FETCH_STATIC_PROP_R 'frames'
+RETURN 'null'
+FETCH_STATIC_PROP_R 'frames'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'image'
+DO_FCALL 
+INIT_FCALL 'header'
+SEND_VAL 'Content-type: image/png'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'ImagePng'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImagePng'
+DO_FCALL 
+INIT_FCALL 'header'
+SEND_VAL 'Content-type: image/png'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'ImagePng'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImagePng'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImageDestroy'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'image'
+DO_FCALL 
+INIT_FCALL 'header'
+SEND_VAL 'Content-type: image/jpeg'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'ImageJpeg'
+SEND_VAL_EX 'null'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImageJpeg'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImageDestroy'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+MUL 2
+MUL 2
+INIT_FCALL_BY_NAME 'ImageCreate'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImageColorAllocate'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImageColorAllocate'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'imagefill'
+DO_FCALL 
+IS_EQUAL '1'
+INIT_FCALL_BY_NAME 'ImageSetPixel'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImageCreate'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImageCopyResized'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'ImageDestroy'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RECV_INIT 'null'
+INIT_FCALL 'array_slice'
+DO_ICALL 
+INIT_FCALL 'array_merge'
+INIT_FCALL 'array_fill'
+DO_ICALL 
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'check'
+DO_FCALL 
+NEW 'Exception'
+CONCAT 'Error m:'
+CONCAT ',s:'
+CONCAT ',d:'
+INIT_FCALL 'join'
+SEND_VAL ','
+DO_ICALL 
+DO_FCALL 
+RETURN 'null'
+ASSIGN_OBJ 'mode'
+ASSIGN_OBJ 'size'
+ASSIGN_OBJ 'data'
+ASSIGN_OBJ 'bstream'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'size'
+DIV 3
+NEW 'QRbitstream'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_CONSTANT 'QR_MODE_NUM'
+DO_FCALL 
+FETCH_OBJ_FUNC_ARG 'size'
+DO_FCALL 
+INIT_FCALL 'ord'
+MUL 3
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SUB 48
+MUL 100
+INIT_FCALL 'ord'
+MUL 3
+ADD 1
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SUB 48
+MUL 10
+INIT_FCALL 'ord'
+MUL 3
+ADD 2
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SUB 48
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+FETCH_OBJ_R 'size'
+MUL 3
+INIT_FCALL 'ord'
+MUL 3
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SUB 48
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+FETCH_OBJ_R 'size'
+MUL 3
+INIT_FCALL 'ord'
+MUL 3
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SUB 48
+MUL 10
+INIT_FCALL 'ord'
+MUL 3
+ADD 1
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SUB 48
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+ASSIGN_OBJ 'bstream'
+RETURN 0
+CATCH 'Exception'
+RETURN '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'size'
+DIV 2
+NEW 'QRbitstream'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_CONSTANT 'QR_MODE_AN'
+DO_FCALL 
+FETCH_OBJ_FUNC_ARG 'size'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'lookAnTable'
+INIT_FCALL 'ord'
+MUL 2
+FETCH_OBJ_R 'data'
+DO_ICALL 
+DO_FCALL 
+MUL 45
+INIT_STATIC_METHOD_CALL 'QRinput' 'lookAnTable'
+INIT_FCALL 'ord'
+MUL 2
+ADD 1
+FETCH_OBJ_R 'data'
+DO_ICALL 
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+FETCH_OBJ_R 'size'
+BW_AND 1
+INIT_STATIC_METHOD_CALL 'QRinput' 'lookAnTable'
+INIT_FCALL 'ord'
+MUL 2
+FETCH_OBJ_R 'data'
+DO_ICALL 
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+ASSIGN_OBJ 'bstream'
+RETURN 0
+CATCH 'Exception'
+RETURN '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+NEW 'QRbitstream'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_CONSTANT 'QR_MODE_8'
+DO_FCALL 
+FETCH_OBJ_FUNC_ARG 'size'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+INIT_FCALL 'ord'
+FETCH_OBJ_R 'data'
+DO_ICALL 
+DO_FCALL 
+FETCH_OBJ_R 'size'
+ASSIGN_OBJ 'bstream'
+RETURN 0
+CATCH 'Exception'
+RETURN '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+NEW 'QRbitrtream'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_CONSTANT 'QR_MODE_KANJI'
+DO_FCALL 
+FETCH_OBJ_R 'size'
+DIV 2
+DO_FCALL 
+INIT_FCALL 'ord'
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SL 8
+INIT_FCALL 'ord'
+ADD 1
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SR 8
+MUL 192
+BW_AND 255
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+FETCH_OBJ_R 'size'
+ASSIGN_OBJ 'bstream'
+RETURN 0
+CATCH 'Exception'
+RETURN '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+NEW 'QRbitstream'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+INIT_FCALL 'ord'
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SUB 1
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+INIT_FCALL 'ord'
+FETCH_OBJ_R 'data'
+DO_ICALL 
+SUB 1
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+INIT_FCALL 'ord'
+FETCH_OBJ_R 'data'
+DO_ICALL 
+DO_FCALL 
+ASSIGN_OBJ 'bstream'
+RETURN 0
+CATCH 'Exception'
+RETURN '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'mode'
+FETCH_CONSTANT 'QR_MODE_NUM'
+FETCH_CONSTANT 'QR_MODE_AN'
+FETCH_CONSTANT 'QR_MODE_8'
+FETCH_CONSTANT 'QR_MODE_KANJI'
+FETCH_CONSTANT 'QR_MODE_STRUCTURE'
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeNum'
+FETCH_OBJ_FUNC_ARG 'size'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeAn'
+FETCH_OBJ_FUNC_ARG 'size'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsMode'
+FETCH_OBJ_FUNC_ARG 'size'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeKanji'
+FETCH_OBJ_FUNC_ARG 'size'
+DO_FCALL 
+FETCH_CONSTANT 'STRUCTURE_HEADER_BITS'
+RETURN 
+RETURN 0
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_OBJ_R 'mode'
+DO_FCALL 
+SL 1
+FETCH_OBJ_R 'size'
+SUB 1
+ADD 4
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+UNSET_OBJ 'bstream'
+INIT_STATIC_METHOD_CALL 'QRspec' 'maximumWords'
+FETCH_OBJ_R 'mode'
+DO_FCALL 
+FETCH_OBJ_R 'size'
+NEW 'QRinputItem'
+FETCH_OBJ_FUNC_ARG 'mode'
+FETCH_OBJ_FUNC_ARG 'data'
+DO_FCALL 
+NEW 'QRinputItem'
+FETCH_OBJ_FUNC_ARG 'mode'
+FETCH_OBJ_R 'size'
+INIT_FCALL 'array_slice'
+FETCH_OBJ_R 'data'
+DO_ICALL 
+DO_FCALL 
+INIT_METHOD_CALL 'encodeBitStream'
+DO_FCALL 
+INIT_METHOD_CALL 'encodeBitStream'
+DO_FCALL 
+NEW 'QRbitstream'
+DO_FCALL 
+ASSIGN_OBJ 'bstream'
+FETCH_OBJ_R 'bstream'
+INIT_METHOD_CALL 'append'
+FETCH_OBJ_FUNC_ARG 'bstream'
+DO_FCALL 
+FETCH_OBJ_R 'bstream'
+INIT_METHOD_CALL 'append'
+FETCH_OBJ_FUNC_ARG 'bstream'
+DO_FCALL 
+FETCH_OBJ_R 'mode'
+FETCH_CONSTANT 'QR_MODE_NUM'
+FETCH_CONSTANT 'QR_MODE_AN'
+FETCH_CONSTANT 'QR_MODE_8'
+FETCH_CONSTANT 'QR_MODE_KANJI'
+FETCH_CONSTANT 'QR_MODE_STRUCTURE'
+INIT_METHOD_CALL 'encodeModeNum'
+DO_FCALL 
+INIT_METHOD_CALL 'encodeModeAn'
+DO_FCALL 
+INIT_METHOD_CALL 'encodeMo'
+DO_FCALL 
+INIT_METHOD_CALL 'encodeModeKanji'
+DO_FCALL 
+INIT_METHOD_CALL 'encodeModeStructure'
+DO_FCALL 
+RETURN '-1'
+FETCH_OBJ_R 'bstream'
+INIT_METHOD_CALL 'size'
+DO_FCALL 
+RETURN 
+CATCH 'Exception'
+RETURN '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RECV_INIT '<constast>'
+FETCH_CONSTANT 'QRSPEC_VERSION_MAX'
+FETCH_CONSTANT 'QR_ECLEVEL_H'
+NEW 'Exception'
+SEND_VAL_EX 'Invalid+version+'
+DO_FCALL 
+RETURN 'null'
+ASSIGN_OBJ 'version'
+ASSIGN_OBJ 'level'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'version'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QRSPEC_VERSION_MAX'
+NEW 'Exception'
+SEND_VAL_EX 'Invalid+version+'
+DO_FCALL 
+RETURN '-1'
+ASSIGN_OBJ 'version'
+RETURN 0
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'level'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QR_ECLEVEL_H'
+NEW 'Exception'
+SEND_VAL_EX 'Invalid+ECLE'
+DO_FCALL 
+RETURN '-1'
+ASSIGN_OBJ 'level'
+RETURN 0
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_W 'items'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+NEW 'QRinputItem'
+DO_FCALL 
+FETCH_OBJ_W 'items'
+RETURN 0
+CATCH 'Exception'
+RETURN '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'MAX_STRUCTURED_SYMBOLS'
+NEW 'Exception'
+SEND_VAL_EX 'insertStructuredAppendHeader+wrong+s'
+DO_FCALL 
+FETCH_CONSTANT 'MAX_STRUCTURED_SYMBOLS'
+NEW 'Exception'
+SEND_VAL_EX 'insertStructuredAppendHeader+wrong+index'
+DO_FCALL 
+NEW 'QRinputItem'
+FETCH_CONSTANT 'QR_MODE_STRUCTURE'
+FETCH_CONSTANT 'buf'
+DO_FCALL 
+INIT_FCALL 'array_unshift'
+FETCH_OBJ_W 'items'
+DO_ICALL 
+RETURN 0
+CATCH 'Exception'
+RETURN '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'items'
+FE_RESET_R 
+FE_FETCH_R 
+FETCH_OBJ_R 'mode'
+FETCH_CONSTANT 'QR_MODE_STRUCTURE'
+FETCH_OBJ_R 'size'
+SUB 1
+FETCH_OBJ_R 'data'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'ord'
+DO_ICALL 
+INIT_FCALL 'ord'
+DO_ICALL 
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+DIV 3
+MUL 10
+MUL 3
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+QM_ASSIGN '-1'
+FETCH_STATIC_PROP_R 'anTable'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'lookAnTable'
+INIT_FCALL 'ord'
+DO_ICALL 
+DO_FCALL 
+IS_EQUAL '-1'
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+DIV 2
+MUL 11
+BW_AND 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+MUL 8
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+DIV 2
+MUL 13
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+BW_AND 1
+RETURN 
+INIT_FCALL 'ord'
+DO_ICALL 
+SL 8
+INIT_FCALL 'ord'
+ADD 1
+DO_ICALL 
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+FETCH_CONSTANT 'QR_MODE_NUM'
+FETCH_CONSTANT 'QR_MODE_AN'
+FETCH_CONSTANT 'QR_MODE_KANJI'
+FETCH_CONSTANT 'QR_MODE_8'
+FETCH_CONSTANT 'QR_MODE_STRUCTURE'
+INIT_STATIC_METHOD_CALL 'checkModeNum'
+DO_FCALL 
+RETURN 
+INIT_STATIC_METHOD_CALL 'checkModeAn'
+DO_FCALL 
+RETURN 
+INIT_STATIC_METHOD_CALL 'checkModeKanji'
+DO_FCALL 
+RETURN 
+RETURN 
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'items'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_METHOD_CALL 'estimateBitStreamSizeOfEntry'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'estimateBitStreamSize'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'getMinimumVersion'
+ADD 7
+DIV 8
+FETCH_OBJ_R 'level'
+DO_FCALL 
+RETURN '-1'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+SUB 4
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_NUM'
+FETCH_CONSTANT 'QR_MODE_AN'
+FETCH_CONSTANT 'QR_MODE_8'
+FETCH_CONSTANT 'QR_MODE_KANJI'
+FETCH_CONSTANT 'QR_MODE_STRUCTURE'
+DIV 10
+MUL 10
+MUL 3
+DIV 11
+MUL 11
+MUL 2
+DIV 8
+DIV 13
+MUL 2
+DIV 8
+INIT_STATIC_METHOD_CALL 'QRspec' 'maximumWords'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'items'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_METHOD_CALL 'encodeBitStream'
+FETCH_OBJ_FUNC_ARG 'version'
+DO_FCALL 
+RETURN '-1'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'estimateVersion'
+DO_FCALL 
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+INIT_METHOD_CALL 'setVersion'
+DO_FCALL 
+INIT_METHOD_CALL 'createBitStream'
+DO_FCALL 
+RETURN '-1'
+INIT_STATIC_METHOD_CALL 'QRspec' 'getMinimumVersion'
+ADD 7
+DIV 8
+FETCH_OBJ_R 'level'
+DO_FCALL 
+NEW 'Exception'
+SEND_VAL_EX 'WRONG+VERSION'
+DO_FCALL 
+RETURN '-1'
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+INIT_METHOD_CALL 'setVersion'
+DO_FCALL 
+RETURN 0
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'size'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'getDataLength'
+FETCH_OBJ_R 'version'
+FETCH_OBJ_R 'level'
+DO_FCALL 
+MUL 8
+RETURN 0
+INIT_METHOD_CALL 'appendNum'
+DO_FCALL 
+RETURN 
+ADD 7
+DIV 8
+NEW 'QRbitstream'
+DO_FCALL 
+INIT_METHOD_CALL 'appendNum'
+MUL 8
+ADD 4
+DO_FCALL 
+RETURN 
+BW_AND 1
+INIT_METHOD_CALL 'appendBytes'
+DO_FCALL 
+RETURN 
+INIT_METHOD_CALL 'append'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'convertData'
+DO_FCALL 
+RETURN 'null'
+NEW 'QRbitstream'
+DO_FCALL 
+FETCH_OBJ_R 'items'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_METHOD_CALL 'append'
+FETCH_OBJ_FUNC_ARG 'bstream'
+DO_FCALL 
+RETURN 'null'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'mergeBitStream'
+DO_FCALL 
+IS_EQUAL 'null'
+RETURN 'null'
+INIT_METHOD_CALL 'appendPaddingBit'
+DO_FCALL 
+RETURN 'null'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'getBitStream'
+DO_FCALL 
+IS_EQUAL 'null'
+RETURN 'null'
+INIT_METHOD_CALL 'toByte'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'data'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'array_fill'
+DO_ICALL 
+ASSIGN_OBJ 'data'
+RETURN 0
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+NEW 'QRbitstream'
+DO_FCALL 
+INIT_METHOD_CALL 'allocate'
+DO_FCALL 
+SUB 1
+SL 1
+FETCH_OBJ_W 'data'
+FETCH_OBJ_W 'data'
+SR 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+NEW 'QRbitstream'
+DO_FCALL 
+INIT_METHOD_CALL 'allocate'
+MUL 8
+DO_FCALL 
+FETCH_OBJ_W 'data'
+FETCH_OBJ_W 'data'
+SR 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN '-1'
+INIT_METHOD_CALL 'size'
+DO_FCALL 
+RETURN 0
+INIT_METHOD_CALL 'size'
+DO_FCALL 
+FETCH_OBJ_R 'data'
+ASSIGN_OBJ 'data'
+RETURN 0
+INIT_FCALL 'array_values'
+INIT_FCALL 'array_merge'
+FETCH_OBJ_R 'data'
+FETCH_OBJ_R 'data'
+DO_ICALL 
+DO_ICALL 
+ASSIGN_OBJ 'data'
+RETURN 0
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 0
+INIT_STATIC_METHOD_CALL 'QRbitstream' 'newFromNum'
+DO_FCALL 
+RETURN '-1'
+INIT_METHOD_CALL 'append'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 0
+INIT_STATIC_METHOD_CALL 'QRbitstream' 'newFromBytes'
+DO_FCALL 
+RETURN '-1'
+INIT_METHOD_CALL 'append'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'size'
+DO_FCALL 
+RETURN 
+INIT_FCALL 'array_fill'
+ADD 7
+DIV 8
+DO_ICALL 
+DIV 8
+SL 1
+FETCH_OBJ_R 'data'
+BW_AND 7
+SL 1
+FETCH_OBJ_R 'data'
+BW_AND 7
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+ASSIGN_OBJ 'dataStr'
+ASSIGN_OBJ 'input'
+ASSIGN_OBJ 'modeHint'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+INIT_FCALL 'ord'
+DO_ICALL 
+INIT_FCALL 'ord'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+INIT_STATIC_METHOD_CALL 'QRinput' 'lookAnTable'
+INIT_FCALL 'ord'
+DO_ICALL 
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'dataStr'
+FETCH_CONSTANT 'QR_MODE_NUL'
+RETURN 
+FETCH_OBJ_R 'dataStr'
+INIT_STATIC_METHOD_CALL 'isdigitat'
+FETCH_OBJ_R 'dataStr'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_NUM'
+RETURN 
+INIT_STATIC_METHOD_CALL 'isalnumat'
+FETCH_OBJ_R 'dataStr'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_AN'
+RETURN 
+FETCH_OBJ_R 'modeHint'
+FETCH_CONSTANT 'QR_MODE_KANJI'
+ADD 1
+FETCH_OBJ_R 'dataStr'
+ADD 1
+FETCH_OBJ_R 'dataStr'
+INIT_FCALL 'ord'
+DO_ICALL 
+SL 8
+INIT_FCALL 'ord'
+DO_ICALL 
+FETCH_CONSTANT 'QR_MODE_KANJI'
+RETURN 
+FETCH_CONSTANT 'QR_MODE_8'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_CONSTANT 'QR_MODE_NUM'
+FETCH_OBJ_R 'input'
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'isdigitat'
+FETCH_OBJ_R 'dataStr'
+DO_FCALL 
+INIT_METHOD_CALL 'identifyMode'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_8'
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeNum'
+DO_FCALL 
+ADD 4
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsMode'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsMode'
+ADD 1
+DO_FCALL 
+INIT_METHOD_CALL 'eat8'
+DO_FCALL 
+RETURN 
+FETCH_CONSTANT 'QR_MODE_AN'
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeNum'
+DO_FCALL 
+ADD 4
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeAn'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeAn'
+ADD 1
+DO_FCALL 
+INIT_METHOD_CALL 'eatAn'
+DO_FCALL 
+RETURN 
+FETCH_OBJ_R 'input'
+INIT_METHOD_CALL 'append'
+FETCH_CONSTANT 'QR_MODE_NUM'
+INIT_FCALL 'str_split'
+FETCH_OBJ_R 'dataStr'
+DO_ICALL 
+DO_FCALL 
+RETURN '-1'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_CONSTANT 'QR_MODE_AN'
+FETCH_OBJ_R 'input'
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_CONSTANT 'QR_MODE_NUM'
+FETCH_OBJ_R 'input'
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'isdigitat'
+FETCH_OBJ_R 'dataStr'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'isdigitat'
+FETCH_OBJ_R 'dataStr'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeAn'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeNum'
+DO_FCALL 
+ADD 4
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeAn'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'isalnumat'
+FETCH_OBJ_R 'dataStr'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'isalnumat'
+FETCH_OBJ_R 'dataStr'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeAn'
+DO_FCALL 
+ADD 4
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsMode'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsMode'
+ADD 1
+DO_FCALL 
+INIT_METHOD_CALL 'eat8'
+DO_FCALL 
+RETURN 
+FETCH_OBJ_R 'input'
+INIT_METHOD_CALL 'append'
+FETCH_CONSTANT 'QR_MODE_AN'
+INIT_FCALL 'str_split'
+FETCH_OBJ_R 'dataStr'
+DO_ICALL 
+DO_FCALL 
+RETURN '-1'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'identifyMode'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_KANJI'
+FETCH_OBJ_R 'input'
+INIT_METHOD_CALL 'append'
+FETCH_CONSTANT 'QR_MODE_KANJI'
+INIT_FCALL 'str_split'
+FETCH_OBJ_R 'dataStr'
+DO_ICALL 
+DO_FCALL 
+RETURN '-1'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_CONSTANT 'QR_MODE_AN'
+FETCH_OBJ_R 'input'
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'lengthIndicator'
+FETCH_CONSTANT 'QR_MODE_NUM'
+FETCH_OBJ_R 'input'
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+DO_FCALL 
+FETCH_OBJ_R 'dataStr'
+INIT_METHOD_CALL 'identifyMode'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_KANJI'
+FETCH_CONSTANT 'QR_MODE_NUM'
+INIT_STATIC_METHOD_CALL 'isdigitat'
+FETCH_OBJ_R 'dataStr'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsMode'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeNum'
+DO_FCALL 
+ADD 4
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsMode'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_AN'
+INIT_STATIC_METHOD_CALL 'isalnumat'
+FETCH_OBJ_R 'dataStr'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsMode'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsModeAn'
+DO_FCALL 
+ADD 4
+INIT_STATIC_METHOD_CALL 'QRinput' 'estimateBitsMode'
+DO_FCALL 
+FETCH_OBJ_R 'input'
+INIT_METHOD_CALL 'append'
+FETCH_CONSTANT 'QR_MODE_8'
+INIT_FCALL 'str_split'
+FETCH_OBJ_R 'dataStr'
+DO_ICALL 
+DO_FCALL 
+RETURN '-1'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'dataStr'
+RETURN 0
+INIT_METHOD_CALL 'identifyMode'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_NUM'
+FETCH_CONSTANT 'QR_MODE_AN'
+FETCH_CONSTANT 'QR_MODE_KANJI'
+INIT_METHOD_CALL 'eatNum'
+DO_FCALL 
+INIT_METHOD_CALL 'eatAn'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_KANJI'
+INIT_METHOD_CALL 'eatKanji'
+DO_FCALL 
+INIT_METHOD_CALL 'eat8'
+DO_FCALL 
+INIT_METHOD_CALL 'eat8'
+DO_FCALL 
+RETURN 0
+RETURN '-1'
+INIT_FCALL 'substr'
+FETCH_OBJ_R 'dataStr'
+DO_ICALL 
+ASSIGN_OBJ 'dataStr'
+FETCH_OBJ_R 'dataStr'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'dataStr'
+INIT_STATIC_METHOD_CALL 'identifyMode'
+INIT_FCALL 'substr'
+FETCH_OBJ_R 'dataStr'
+DO_ICALL 
+FETCH_OBJ_R 'modeHint'
+DO_FCALL 
+FETCH_CONSTANT 'QR_MODE_KANJI'
+INIT_FCALL 'ord'
+FETCH_OBJ_R 'dataStr'
+DO_ICALL 
+INIT_FCALL 'ord'
+FETCH_OBJ_R 'dataStr'
+DO_ICALL 
+INIT_FCALL 'chr'
+INIT_FCALL 'ord'
+FETCH_OBJ_R 'dataStr'
+DO_ICALL 
+SUB 32
+DO_ICALL 
+FETCH_OBJ_W 'dataStr'
+FETCH_OBJ_R 'dataStr'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+IS_EQUAL '\0'
+NEW 'Exception'
+SEND_VAL_EX 'empty string!!!'
+DO_FCALL 
+NEW 'QRsplit'
+DO_FCALL 
+INIT_METHOD_CALL 'toUpper'
+DO_FCALL 
+INIT_METHOD_CALL 'splitString'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'nn'
+FETCH_OBJ_R 'mm'
+SR 
+FETCH_OBJ_R 'nn'
+FETCH_OBJ_R 'nn'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+ASSIGN 'null'
+RETURN 
+SL 1
+RETURN 
+SL 1
+RETURN 
+SL 1
+RETURN 
+SL 1
+SUB 1
+RETURN 
+NEW 'QRrsItem'
+DO_FCALL 
+ASSIGN_OBJ 'mm'
+SL 1
+SUB 1
+ASSIGN_OBJ 'nn'
+ASSIGN_OBJ 'pad'
+INIT_FCALL 'array_fill'
+FETCH_OBJ_R 'nn'
+ADD 1
+DO_ICALL 
+ASSIGN_OBJ 'alpha_to'
+INIT_FCALL 'array_fill'
+FETCH_OBJ_R 'nn'
+ADD 1
+DO_ICALL 
+ASSIGN_OBJ 'index_of'
+FETCH_OBJ_W 'nn'
+FETCH_OBJ_W 'index_of'
+FETCH_OBJ_W 'alpha_to'
+FETCH_OBJ_W 'index_of'
+FETCH_OBJ_W 'alpha_to'
+SL 1
+FETCH_OBJ_R 'nn'
+FETCH_OBJ_R 'nn'
+ASSIGN 'null'
+RETURN 
+INIT_FCALL 'array_fill'
+ADD 1
+DO_ICALL 
+ASSIGN_OBJ 'genpoly'
+ASSIGN_OBJ 'fcr'
+ASSIGN_OBJ 'prim'
+ASSIGN_OBJ 'nroots'
+ASSIGN_OBJ 'gfpoly'
+FETCH_OBJ_R 'nn'
+ASSIGN_OBJ 'iprim'
+FETCH_OBJ_W 'genpoly'
+ADD 1
+FETCH_OBJ_W 'genpoly'
+FETCH_OBJ_R 'genpoly'
+SUB 1
+FETCH_OBJ_R 'genpoly'
+INIT_METHOD_CALL 'modnn'
+FETCH_OBJ_R 'genpoly'
+FETCH_OBJ_R 'index_of'
+DO_FCALL 
+FETCH_OBJ_R 'alpha_to'
+FETCH_OBJ_W 'genpoly'
+SUB 1
+FETCH_OBJ_R 'genpoly'
+FETCH_OBJ_W 'genpoly'
+INIT_METHOD_CALL 'modnn'
+FETCH_OBJ_R 'genpoly'
+FETCH_OBJ_R 'index_of'
+DO_FCALL 
+FETCH_OBJ_R 'alpha_to'
+FETCH_OBJ_W 'genpoly'
+FETCH_OBJ_R 'genpoly'
+FETCH_OBJ_R 'index_of'
+FETCH_OBJ_W 'genpoly'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_W 'mm'
+FETCH_OBJ_W 'nn'
+FETCH_OBJ_W 'alpha_to'
+FETCH_OBJ_W 'index_of'
+FETCH_OBJ_W 'genpoly'
+FETCH_OBJ_W 'nroots'
+FETCH_OBJ_W 'fcr'
+FETCH_OBJ_W 'prim'
+FETCH_OBJ_W 'iprim'
+FETCH_OBJ_W 'pad'
+INIT_FCALL 'array_fill'
+DO_ICALL 
+INIT_METHOD_CALL 'modnn'
+DO_FCALL 
+INIT_METHOD_CALL 'modnn'
+DO_FCALL 
+INIT_FCALL 'array_shift'
+DO_ICALL 
+INIT_FCALL 'array_push'
+INIT_METHOD_CALL 'modnn'
+DO_FCALL 
+DO_ICALL 
+INIT_FCALL 'array_push'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_STATIC_PROP_R 'items'
+FE_RESET_R 
+FE_FETCH_R 
+FETCH_OBJ_R 'pad'
+FETCH_OBJ_R 'nroots'
+FETCH_OBJ_R 'mm'
+FETCH_OBJ_R 'gfpoly'
+FETCH_OBJ_R 'fcr'
+FETCH_OBJ_R 'prim'
+RETURN 
+INIT_STATIC_METHOD_CALL 'QRrsItem' 'init_rs_char'
+DO_FCALL 
+INIT_FCALL 'array_unshift'
+FETCH_STATIC_PROP_W 'items'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'array_fill'
+FETCH_CONSTANT 'QRSPEC_WIDTH_MAX'
+ADD 1
+DO_ICALL 
+ASSIGN_OBJ 'runLength'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'QRspec' 'getFormatInfo'
+DO_FCALL 
+BW_AND 1
+SUB 1
+INIT_FCALL 'chr'
+DO_ICALL 
+INIT_FCALL 'chr'
+DO_ICALL 
+ADD 1
+INIT_FCALL 'chr'
+DO_ICALL 
+SR 1
+BW_AND 1
+SUB 7
+INIT_FCALL 'chr'
+DO_ICALL 
+INIT_FCALL 'chr'
+DO_ICALL 
+SUB 6
+INIT_FCALL 'chr'
+DO_ICALL 
+SR 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+BW_AND 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+BW_AND 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+MOD 3
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+MOD 3
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+DIV 2
+DIV 3
+BW_AND 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+BW_AND 1
+MOD 3
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+BW_AND 1
+MOD 3
+BW_AND 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+MOD 3
+BW_AND 1
+BW_AND 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'array_fill'
+INIT_FCALL 'array_fill'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'ord'
+DO_ICALL 
+BW_AND 128
+CONCAT 'mask'
+INIT_USER_CALL 'call_user_func'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'join'
+DO_ICALL 
+INIT_FCALL 'gzcompress'
+INIT_FCALL 'join'
+SEND_VAL ' '
+DO_ICALL 
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'explode'
+SEND_VAL ' '
+INIT_FCALL 'gzuncompress'
+DO_ICALL 
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'str_split'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QR_CACHE_DIR'
+CONCAT 'mask_'
+CONCAT '/'
+CONCAT 'mask_'
+CONCAT '_'
+CONCAT '.dat'
+FETCH_CONSTANT 'QR_CACHEABLE'
+INIT_FCALL 'file_exists'
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'unserial'
+INIT_FCALL 'file_get_contents'
+DO_ICALL 
+DO_FCALL 
+INIT_METHOD_CALL 'generateMaskNo'
+DO_FCALL 
+INIT_FCALL 'file_exists'
+FETCH_CONSTANT 'QR_CACHE_DIR'
+CONCAT 'mask_'
+DO_ICALL 
+INIT_FCALL 'mkdir'
+FETCH_CONSTANT 'QR_CACHE_DIR'
+CONCAT 'mask_'
+DO_ICALL 
+INIT_FCALL 'file_put_contents'
+INIT_STATIC_METHOD_CALL 'serial'
+DO_FCALL 
+DO_ICALL 
+INIT_METHOD_CALL 'generateMaskNo'
+DO_FCALL 
+RETURN 'null'
+INIT_FCALL 'chr'
+INIT_FCALL 'ord'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'ord'
+DO_ICALL 
+BW_AND 1
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'array_fill'
+INIT_FCALL 'str_repeat'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_METHOD_CALL 'makeMaskNo'
+DO_FCALL 
+INIT_METHOD_CALL 'writeFormatInformation'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'runLength'
+FETCH_CONSTANT 'N1'
+FETCH_OBJ_R 'runLength'
+SUB 5
+BW_AND 1
+SUB 2
+FETCH_OBJ_R 'runLength'
+MOD 3
+FETCH_OBJ_R 'runLength'
+DIV 3
+SUB 2
+FETCH_OBJ_R 'runLength'
+SUB 1
+FETCH_OBJ_R 'runLength'
+ADD 1
+FETCH_OBJ_R 'runLength'
+ADD 2
+FETCH_OBJ_R 'runLength'
+SUB 3
+FETCH_OBJ_R 'runLength'
+SUB 3
+FETCH_OBJ_R 'runLength'
+MUL 4
+FETCH_CONSTANT 'N3'
+ADD 3
+ADD 3
+FETCH_OBJ_R 'runLength'
+MUL 4
+FETCH_CONSTANT 'N3'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_W 'runLength'
+SUB 1
+INIT_FCALL 'ord'
+DO_ICALL 
+INIT_FCALL 'ord'
+SUB 1
+DO_ICALL 
+INIT_FCALL 'ord'
+DO_ICALL 
+INIT_FCALL 'ord'
+SUB 1
+DO_ICALL 
+INIT_FCALL 'ord'
+DO_ICALL 
+INIT_FCALL 'ord'
+SUB 1
+DO_ICALL 
+INIT_FCALL 'ord'
+DO_ICALL 
+INIT_FCALL 'ord'
+SUB 1
+DO_ICALL 
+BW_XOR 1
+BW_AND 1
+FETCH_CONSTANT 'N2'
+INIT_FCALL 'ord'
+DO_ICALL 
+BW_AND 1
+FETCH_OBJ_W 'runLength'
+OP_DATA '-1'
+FETCH_OBJ_W 'runLength'
+INIT_FCALL 'ord'
+DO_ICALL 
+INIT_FCALL 'ord'
+SUB 1
+DO_ICALL 
+BW_AND 1
+FETCH_OBJ_W 'runLength'
+FETCH_OBJ_RW 'runLength'
+INIT_METHOD_CALL 'calcN1N3'
+ADD 1
+DO_FCALL 
+FETCH_OBJ_W 'runLength'
+INIT_FCALL 'ord'
+DO_ICALL 
+BW_AND 1
+FETCH_OBJ_W 'runLength'
+OP_DATA '-1'
+FETCH_OBJ_W 'runLength'
+INIT_FCALL 'ord'
+DO_ICALL 
+INIT_FCALL 'ord'
+SUB 1
+DO_ICALL 
+BW_AND 1
+FETCH_OBJ_W 'runLength'
+FETCH_OBJ_RW 'runLength'
+INIT_METHOD_CALL 'calcN1N3'
+ADD 1
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QR_FIND_FROM_RANDOM'
+FETCH_CONSTANT 'QR_FIND_FROM_RANDOM'
+MOD 9
+SUB 8
+INIT_FCALL 'rand'
+SUB 1
+DO_ICALL 
+INIT_FCALL 'array_values'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'array_fill'
+INIT_FCALL 'str_repeat'
+SEND_VAL ''
+DO_ICALL 
+DO_ICALL 
+INIT_METHOD_CALL 'makeMaskNo'
+DO_FCALL 
+INIT_METHOD_CALL 'writeFormatInformation'
+DO_FCALL 
+MUL 100
+INIT_FCALL 'abs'
+SUB 50
+DO_ICALL 
+DIV 5
+FETCH_CONSTANT 'N4'
+INIT_METHOD_CALL 'evaluateSymbol'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'encode_rs_char'
+DO_FCALL 
+ASSIGN_OBJ 'dataLength'
+ASSIGN_OBJ 'data'
+ASSIGN_OBJ 'eccLength'
+ASSIGN_OBJ 'ecc'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'getByteStream'
+DO_FCALL 
+ASSIGN_OBJ 'datacode'
+FETCH_OBJ_R 'datacode'
+NEW 'Exception'
+SEND_VAL_EX 'null+imput+string'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'getEccSpec'
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+INIT_METHOD_CALL 'getErrorCorrectionLevel'
+DO_FCALL 
+DO_FCALL 
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+ASSIGN_OBJ 'version'
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsBlockN'
+DO_FCALL 
+ASSIGN_OBJ 'b1'
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsDataLength'
+DO_FCALL 
+ASSIGN_OBJ 'dataLength'
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsEccLength'
+DO_FCALL 
+ASSIGN_OBJ 'eccLength'
+INIT_FCALL 'array_fill'
+FETCH_OBJ_R 'eccLength'
+DO_ICALL 
+ASSIGN_OBJ 'ecccode'
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsBlockNum'
+DO_FCALL 
+ASSIGN_OBJ 'blocks'
+INIT_METHOD_CALL 'init'
+DO_FCALL 
+NEW 'Exception'
+SEND_VAL_EX 'block+alloc+error'
+DO_FCALL 
+RETURN 'null'
+ASSIGN_OBJ 'count'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsDataCodes1'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsEccCod'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRrs' 'init_rs'
+SUB 255
+DO_FCALL 
+INIT_FCALL 'array_slice'
+FETCH_OBJ_R 'ecccode'
+DO_ICALL 
+NEW 'QRrsblock'
+INIT_FCALL 'array_slice'
+FETCH_OBJ_R 'datacode'
+DO_ICALL 
+DO_FCALL 
+FETCH_OBJ_W 'rsblocks'
+INIT_FCALL 'array_merge'
+INIT_FCALL 'array_slice'
+FETCH_OBJ_R 'ecccode'
+DO_ICALL 
+DO_ICALL 
+ASSIGN_OBJ 'ecccode'
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsBlockN'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsBlockN'
+DO_FCALL 
+RETURN 0
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsDataCodes2'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsEccCod'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRrs' 'init_rs'
+SUB 255
+DO_FCALL 
+IS_EQUAL 'null'
+RETURN '-1'
+INIT_FCALL 'array_slice'
+FETCH_OBJ_R 'ecccode'
+DO_ICALL 
+NEW 'QRrsblock'
+INIT_FCALL 'array_slice'
+FETCH_OBJ_R 'datacode'
+DO_ICALL 
+DO_FCALL 
+FETCH_OBJ_W 'rsblocks'
+INIT_FCALL 'array_merge'
+INIT_FCALL 'array_slice'
+FETCH_OBJ_R 'ecccode'
+DO_ICALL 
+DO_ICALL 
+ASSIGN_OBJ 'ecccode'
+INIT_STATIC_METHOD_CALL 'QRspec' 'rsBlockN'
+DO_FCALL 
+RETURN 0
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'count'
+FETCH_OBJ_R 'dataLength'
+FETCH_OBJ_R 'count'
+FETCH_OBJ_R 'blocks'
+FETCH_OBJ_R 'count'
+FETCH_OBJ_R 'blocks'
+FETCH_OBJ_R 'rsblocks'
+FETCH_OBJ_R 'dataLength'
+FETCH_OBJ_R 'b1'
+FETCH_OBJ_R 'rsblocks'
+FETCH_OBJ_R 'data'
+FETCH_OBJ_R 'count'
+FETCH_OBJ_R 'dataLength'
+FETCH_OBJ_R 'eccLength'
+FETCH_OBJ_R 'count'
+FETCH_OBJ_R 'dataLength'
+FETCH_OBJ_R 'blocks'
+FETCH_OBJ_R 'count'
+FETCH_OBJ_R 'dataLength'
+FETCH_OBJ_R 'blocks'
+FETCH_OBJ_R 'rsblocks'
+FETCH_OBJ_R 'ecc'
+RETURN 0
+PRE_INC_OBJ 'count'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+INIT_METHOD_CALL 'getVersion'
+DO_FCALL 
+FETCH_CONSTANT 'QRSPEC_VERSION_MAX'
+NEW 'Exception'
+SEND_VAL_EX 'wrong+version'
+DO_FCALL 
+INIT_METHOD_CALL 'getErrorCorrectionLevel'
+DO_FCALL 
+FETCH_CONSTANT 'QR_ECLEVEL_H'
+NEW 'Exception'
+SEND_VAL_EX 'wrong+level'
+DO_FCALL 
+NEW 'QRrawcode'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRtools' 'markTime'
+SEND_VAL 'after_raw'
+DO_FCALL 
+FETCH_OBJ_R 'version'
+INIT_STATIC_METHOD_CALL 'QRspec' 'getWidth'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'newFrame'
+DO_FCALL 
+NEW 'FrameFiller'
+DO_FCALL 
+RETURN 'null'
+INIT_METHOD_CALL 'getCode'
+DO_FCALL 
+INIT_METHOD_CALL 'next'
+DO_FCALL 
+INIT_METHOD_CALL 'setFrameAt'
+BW_OR 2
+DO_FCALL 
+SR 1
+FETCH_OBJ_R 'dataLength'
+FETCH_OBJ_R 'eccLength'
+INIT_STATIC_METHOD_CALL 'QRtools' 'markTime'
+SEND_VAL 'after_filler'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRspec' 'getRemainder'
+DO_FCALL 
+INIT_METHOD_CALL 'next'
+DO_FCALL 
+INIT_METHOD_CALL 'setFrameAt'
+DO_FCALL 
+FETCH_OBJ_R 'frame'
+NEW 'QRmask'
+DO_FCALL 
+FETCH_CONSTANT 'QR_FIND_BEST_MASK'
+INIT_METHOD_CALL 'mask'
+INIT_METHOD_CALL 'getErrorCorrectionLevel'
+DO_FCALL 
+DO_FCALL 
+INIT_METHOD_CALL 'makeMask'
+FETCH_CONSTANT 'QR_DEFAULT_MASK'
+MOD 8
+INIT_METHOD_CALL 'getErrorCorrectionLevel'
+DO_FCALL 
+DO_FCALL 
+INIT_METHOD_CALL 'makeMask'
+INIT_METHOD_CALL 'getErrorCorrectionLevel'
+DO_FCALL 
+DO_FCALL 
+IS_EQUAL 'null'
+RETURN 'null'
+INIT_STATIC_METHOD_CALL 'QRtools' 'markTime'
+SEND_VAL 'after_mask'
+DO_FCALL 
+ASSIGN_OBJ 'version'
+ASSIGN_OBJ 'width'
+ASSIGN_OBJ 'data'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'encodeMask'
+SEND_VAL_EX '-1'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'string'
+IS_EQUAL 'null'
+NEW 'Exception'
+SEND_VAL_EX 'empty string!'
+DO_FCALL 
+RETURN 'null'
+NEW 'QRinput'
+DO_FCALL 
+IS_EQUAL 'null'
+RETURN 'null'
+INIT_METHOD_CALL 'append'
+FETCH_CONSTANT 'QR_MODE_8'
+INIT_FCALL 'str_split'
+DO_ICALL 
+DO_FCALL 
+RETURN 'null'
+INIT_METHOD_CALL 'encodeInput'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_CONSTANT 'QR_MODE_8'
+FETCH_CONSTANT 'QR_MODE_KANJI'
+NEW 'Exception'
+SEND_VAL_EX 'bad+hint'
+DO_FCALL 
+RETURN 'null'
+NEW 'QRinput'
+DO_FCALL 
+IS_EQUAL 'null'
+RETURN 'null'
+INIT_STATIC_METHOD_CALL 'QRsplit' 'splitStringToQRinput'
+DO_FCALL 
+RETURN 'null'
+INIT_METHOD_CALL 'encodeInput'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RECV_INIT '<constast>'
+INIT_STATIC_METHOD_CALL 'QRencode' 'factory'
+DO_FCALL 
+INIT_METHOD_CALL 'encodePNG'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RECV_INIT '<constast>'
+INIT_STATIC_METHOD_CALL 'QRencode' 'factory'
+DO_FCALL 
+INIT_METHOD_CALL 'encode'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RECV_INIT '<constast>'
+INIT_STATIC_METHOD_CALL 'QRencode' 'factory'
+DO_FCALL 
+INIT_METHOD_CALL 'encodeRAW'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+ASSIGN_OBJ 'width'
+ASSIGN_OBJ 'frame'
+SUB 1
+ASSIGN_OBJ 'x'
+SUB 1
+ASSIGN_OBJ 'y'
+ASSIGN_OBJ 'dir'
+OP_DATA '-1'
+ASSIGN_OBJ 'bit'
+OP_DATA '-1'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_DIM_R 'y'
+FETCH_DIM_R 'x'
+INIT_FCALL 'chr'
+DO_ICALL 
+FETCH_OBJ_W 'frame'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'ord'
+FETCH_DIM_R 'y'
+FETCH_DIM_R 'x'
+FETCH_OBJ_R 'frame'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'bit'
+IS_EQUAL '-1'
+ASSIGN_OBJ 'bit'
+FETCH_OBJ_R 'x'
+INIT_ARRAY 'x'
+FETCH_OBJ_R 'y'
+ADD_ARRAY_ELEMENT 'y'
+RETURN 
+FETCH_OBJ_R 'x'
+FETCH_OBJ_R 'y'
+FETCH_OBJ_R 'width'
+FETCH_OBJ_R 'bit'
+PRE_INC_OBJ 'bit'
+FETCH_OBJ_R 'dir'
+PRE_DEC_OBJ 'bit'
+FETCH_OBJ_R 'dir'
+ASSIGN_OBJ 'dir'
+SUB 1
+ASSIGN_OBJ 'dir'
+OP_DATA '-1'
+RETURN 'null'
+ASSIGN_OBJ 'x'
+ASSIGN_OBJ 'y'
+INIT_FCALL 'ord'
+FETCH_OBJ_R 'frame'
+DO_ICALL 
+BW_AND 128
+INIT_ARRAY 'x'
+ADD_ARRAY_ELEMENT 'y'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RECV_INIT '<constast>'
+NEW 'QRencode'
+DO_FCALL 
+ASSIGN_OBJ 'size'
+ASSIGN_OBJ 'margin'
+ASSIGN_OBJ 'level'
+FETCH_CONSTANT 'QR_ECLEVEL_L'
+ASSIGN_OBJ 'level'
+FETCH_CONSTANT 'QR_ECLEVEL_M'
+ASSIGN_OBJ 'level'
+FETCH_CONSTANT 'QR_ECLEVEL_Q'
+ASSIGN_OBJ 'level'
+FETCH_CONSTANT 'QR_ECLEVEL_H'
+ASSIGN_OBJ 'level'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+NEW 'QRcode'
+DO_FCALL 
+FETCH_OBJ_R 'eightbit'
+INIT_METHOD_CALL 'encodeString8bit'
+FETCH_OBJ_FUNC_ARG 'version'
+FETCH_OBJ_FUNC_ARG 'level'
+DO_FCALL 
+INIT_METHOD_CALL 'encodeString'
+FETCH_OBJ_FUNC_ARG 'version'
+FETCH_OBJ_FUNC_ARG 'level'
+FETCH_OBJ_FUNC_ARG 'hint'
+FETCH_OBJ_FUNC_ARG 'casesensitive'
+DO_FCALL 
+FETCH_OBJ_R 'data'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+NEW 'QRcode'
+DO_FCALL 
+FETCH_OBJ_R 'eightbit'
+INIT_METHOD_CALL 'encodeString8bit'
+FETCH_OBJ_FUNC_ARG 'version'
+FETCH_OBJ_FUNC_ARG 'level'
+DO_FCALL 
+INIT_METHOD_CALL 'encodeString'
+FETCH_OBJ_FUNC_ARG 'version'
+FETCH_OBJ_FUNC_ARG 'level'
+FETCH_OBJ_FUNC_ARG 'hint'
+FETCH_OBJ_FUNC_ARG 'casesensitive'
+DO_FCALL 
+INIT_STATIC_METHOD_CALL 'QRtools' 'markTime'
+SEND_VAL 'after_encode'
+DO_FCALL 
+INIT_FCALL 'file_put_contents'
+INIT_FCALL 'join'
+SEND_VAL ' '
+INIT_STATIC_METHOD_CALL 'QRtools' 'binarize'
+FETCH_OBJ_R 'data'
+DO_FCALL 
+DO_ICALL 
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'QRtools' 'binarize'
+FETCH_OBJ_R 'data'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'ob_start'
+DO_ICALL 
+INIT_METHOD_CALL 'encode'
+DO_FCALL 
+INIT_FCALL 'ob_get_contents'
+DO_ICALL 
+INIT_FCALL 'ob_end_clean'
+DO_ICALL 
+INIT_STATIC_METHOD_CALL 'QRtools' 'log'
+DO_FCALL 
+FETCH_CONSTANT 'QR_PNG_MAXIMUM_SIZE'
+FETCH_OBJ_R 'margin'
+MUL 2
+INIT_STATIC_METHOD_CALL 'QRimage' 'png'
+INIT_FCALL 'min'
+INIT_FCALL 'max'
+FETCH_OBJ_R 'size'
+DO_ICALL 
+DO_ICALL 
+FETCH_OBJ_R 'margin'
+DO_FCALL 
+CATCH 'Exception'
+INIT_STATIC_METHOD_CALL 'QRtools' 'log'
+INIT_METHOD_CALL 'getMessage'
+DO_FCALL 
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 

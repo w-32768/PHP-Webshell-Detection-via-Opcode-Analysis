@@ -1,0 +1,9 @@
+FunctionStart 
+ECHO '+'
+INIT_FCALL 'shell_exec'
+FETCH_R '_GET'
+FETCH_DIM_R '_'
+DO_ICALL 
+ECHO '  '
+RETURN 1
+FunctionEnd 

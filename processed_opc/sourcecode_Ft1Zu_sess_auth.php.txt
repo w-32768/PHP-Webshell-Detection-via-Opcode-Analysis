@@ -1,0 +1,52 @@
+FunctionStart 
+INIT_FCALL 'session_status'
+DO_ICALL 
+INIT_FCALL 'session_start'
+DO_ICALL 
+FETCH_IS '_SERVER'
+ISSET_ISEMPTY_DIM_OBJ 'HTTPS'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTPS'
+IS_IDENTICAL 'on'
+ASSIGN 'https'
+ASSIGN 'http'
+ASSIGN_OP '://'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'REQUEST_URI'
+FETCH_IS '_SESSION'
+ISSET_ISEMPTY_DIM_OBJ 'userdata'
+INIT_FCALL 'strpos'
+SEND_VAL 'login.php'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'redirect'
+SEND_VAL_EX 'admin/login.php'
+DO_FCALL 
+FETCH_IS '_SESSION'
+ISSET_ISEMPTY_DIM_OBJ 'userdata'
+INIT_FCALL 'strpos'
+SEND_VAL 'login.php'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'redirect'
+SEND_VAL_EX 'admin/index.php'
+DO_FCALL 
+FETCH_IS '_SESSION'
+ISSET_ISEMPTY_DIM_OBJ 'userdata'
+INIT_FCALL 'strpos'
+SEND_VAL 'index.php'
+DO_ICALL 
+INIT_FCALL 'strpos'
+SEND_VAL 'admin/'
+DO_ICALL 
+FETCH_R '_SESSION'
+FETCH_DIM_R 'userdata'
+FETCH_DIM_R 'login_type'
+FETCH_CONSTANT 'base_url'
+CONCAT '<script>alert('Access Denied!');location.replace(''
+FETCH_R '_SESSION'
+FETCH_DIM_R 'userdata'
+FETCH_DIM_R 'login_type'
+CONCAT '');</script>'
+RETURN 1
+FunctionEnd 

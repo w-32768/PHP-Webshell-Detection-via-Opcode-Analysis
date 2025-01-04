@@ -1,0 +1,10 @@
+|filename:|/root/samples/sourcecode_VbR1Z_logout.php
+|functionname:|(null)
+|numberofops:|4
+|compiledvars:|!0=$Ouser
+|line|#*|||op|fetch|ext|return|operands
+|2|0|E>|INCLUDE_OR_EVAL||||'..%2Finit.php'|,|REQUIRE_ONCE|
+|3|1||INIT_METHOD_CALL||||!0|,|'logOut'|
+||2||DO_FCALL||0||
+|4|3|>|RETURN||||1|
+|

