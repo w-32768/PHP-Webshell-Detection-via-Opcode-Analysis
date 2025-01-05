@@ -54,7 +54,7 @@ def filter_suffix_parts(suffix_parts):
         if re.match(r'.*,->\d+$', part):
             continue  # Skip strings like ,->27
         # Remove contents containing specific strings, such as Run directory info
-        if re.search(r'%2Fsamples%2F', part):
+        if re.search(r'%2Fsamples', part):
             continue  # Skip parts containing specific strings
         filtered_suffix.append(part)  # Keep other parts
     return filtered_suffix  # Return the filtered result
