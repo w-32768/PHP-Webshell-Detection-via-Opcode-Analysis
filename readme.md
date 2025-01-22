@@ -160,9 +160,30 @@ Users can adjust these parameters according to their specific needs for opcode g
 
 1) The `./datasets` directory contains zip archives organized by the author, which include both the opcode dataset and the processed results. These datasets are available for anyone to access and use.
 2) The dataset consists of the latest samples (from December 2021 to December 2024) as well as older samples (from November 2021 and earlier). The archives distinguish these two categories using the `new` and `old` folders. Both parts can be combined for model training.
-3) The dataset is of high quality, containing over 5,000 webshell files meticulously collected by the author. These files are sourced from multiple channels, including public websites, cybersecurity forums, major cybersecurity competitions, and malicious scripts captured from real-world servers used by hackers. The benign PHP code is collected from open-source PHP frameworks such as WordPress and PHPCMS. In total, the dataset comprises more than 10,000 samples. The positive-to-negative sample ratio is approximately 1:1.2.
+3) The dataset is of high quality, containing over 5,000 webshell files meticulously collected by the author. These files are sourced from multiple channels, including public websites, cybersecurity forums, major cybersecurity competitions, and malicious scripts captured from real-world servers used by hackers. Many webshells use anti-detection techniques. The benign PHP code is collected from open-source PHP frameworks such as WordPress and PHPCMS. In total, the dataset comprises more than 10,000 samples. The positive-to-negative sample ratio is approximately 1:1.2.
 4) A small number of webshell examples are already included in the `./samples` folder. If you require the complete webshell source code dataset, please contact the author via email to request access.
 5) Please send the email from an `.edu` email address. Only emails sent from `.edu` addresses will be responded to. The sender must clearly state their institution and identity. The webshell source code dataset is strictly for academic research purposes and must not be used for illegal activities. By sending the email, you agree to this usage agreement.
+
+### Reference
+
+Part of the webshell dataset comes from public websites. Some URLs are listed below:
+
+| No. | URL                                                                 |
+|-----|---------------------------------------------------------------------|
+| 1   | https://github.com/Cyc1e183/PHP-Webshell-Dataset                   |
+| 2   | https://github.com/bartblaze/php-backdoors                         |
+| 3   | https://github.com/tennc/Webshell                                  |
+| 4   | https://github.com/cpkarma/Reborn-PHP-Bypass-Webshell              |
+| 5   | https://github.com/Alexspedo168/Keqing-Bypass-Shell                |
+| 6   | https://github.com/mIcHyAmRaNe/wso-webshell                        |
+| 7   | https://github.com/22XploiterCrew-Team/Gel4y-Mini-Shell-Backdoor   |
+| 8   | https://github.com/awsox/403-bypass-webshells                      |
+| 9   | https://github.com/script044/webshells                             |
+| 10  | https://github.com/cli-ish/non-alphanumeric-webshell               |
+| 11  | https://github.com/Macr0phag3/webshell-bypassed-human              |
+| 12  | https://github.com/rebeyond/Behinder                               |
+| 13  | https://github.com/AntSwordProject/antSword                        |
+| 14  | https://github.com/BeichenDream/Godzilla                           |
 
 ### License
 
