@@ -180,6 +180,7 @@ This work has been accepted as a poster at the **[Network and Distributed System
     note = {Presented at NDSS 2025, poster available: \url{https://www.ndss-symposium.org/wp-content/uploads/2025-poster-46.pdf}},
     url = {https://doi.org/10.48550/arXiv.2502.19257}
 }
+```
 
 ### Reference
 
