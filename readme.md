@@ -1,5 +1,7 @@
 # **PHP Webshell Detection - Opcode Processing**
 
+Dataset & Code for NDSS 2025 poster 46 - Poster: Long PHP webshell files detection based on sliding window attention.
+
 This repository provides scripts designed to detect potential webshells in PHP source code by using opcode analysis. The detection process is divided into two primary steps:
 
 **1. Converting PHP Source Code to Opcode**  
@@ -163,6 +165,21 @@ Users can adjust these parameters according to their specific needs for opcode g
 3) The dataset is of high quality, containing over 5,000 webshell files meticulously collected by the author. These files are sourced from multiple channels, including public websites, cybersecurity forums, major cybersecurity competitions, and malicious scripts captured from real-world servers used by hackers. Many webshells use anti-detection techniques. The benign PHP code is collected from open-source PHP frameworks such as WordPress and PHPCMS. In total, the dataset comprises more than 10,000 samples. The positive-to-negative sample ratio is approximately 1:1.2.
 4) A small number of webshell examples are already included in the `./samples` folder. If you require the complete webshell source code dataset, please contact the author via email to request access.
 5) Please send the email from an `.edu` email address. Only emails sent from `.edu` addresses will be responded to. The sender must clearly state their institution and identity. The webshell source code dataset is strictly for academic research purposes and must not be used for illegal activities. By sending the email, you agree to this usage agreement.
+
+### Cite
+
+This work has been accepted as a poster at the **[Network and Distributed System Security (NDSS) Symposium 2025 Accepted Posters](https://www.ndss-symposium.org/ndss2025/accepted-posters/)**, with the full preprint available on arXiv. We welcome citations to our paper or dataset in your research:
+
+```bibtex
+@misc{ndss2025-poster-46,
+    author = {Zhiqiang Wang and Haoyu Wang and Lu Hao},
+    title = {Poster: Long PHP webshell files detection based on sliding window attention},
+    year = {2025},
+    archivePrefix = {arXiv},
+    eprint = {2502.19257},
+    note = {Presented at NDSS 2025, poster available: \url{https://www.ndss-symposium.org/wp-content/uploads/2025-poster-46.pdf}},
+    url = {https://doi.org/10.48550/arXiv.2502.19257}
+}
 
 ### Reference
 
