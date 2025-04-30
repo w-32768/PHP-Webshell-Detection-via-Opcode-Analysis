@@ -1,7 +1,5 @@
 # **PHP Webshell Detection - Opcode Processing**
 
-Dataset & Code for NDSS 2025 poster 46 - Poster: Long PHP webshell files detection based on sliding window attention.
-
 This repository provides scripts designed to detect potential webshells in PHP source code by using opcode analysis. The detection process is divided into two primary steps:
 
 **1. Converting PHP Source Code to Opcode**  
@@ -162,9 +160,18 @@ Users can adjust these parameters according to their specific needs for opcode g
 
 1) The `./datasets` directory contains zip archives organized by the author, which include both the opcode dataset and the processed results. These datasets are available for anyone to access and use.
 2) The dataset consists of the latest samples (from December 2021 to December 2024) as well as older samples (from November 2021 and earlier). The archives distinguish these two categories using the `new` and `old` folders. Both parts can be combined for model training.
-3) The dataset is of high quality, containing over 5,000 webshell files meticulously collected by the author. These files are sourced from multiple channels, including public websites, cybersecurity forums, major cybersecurity competitions, and malicious scripts captured from real-world servers used by hackers. Many webshells use anti-detection techniques. The benign PHP code is collected from open-source PHP frameworks such as WordPress and PHPCMS. In total, the dataset comprises more than 10,000 samples. The positive-to-negative sample ratio is approximately 1:1.2.
-4) A small number of webshell examples are already included in the `./samples` folder. If you require the complete webshell source code dataset, please contact the author via email to request access.
-5) Please send the email from an `.edu` email address. Only emails sent from `.edu` addresses will be responded to. The sender must clearly state their institution and identity. The webshell source code dataset is strictly for academic research purposes and must not be used for illegal activities. By sending the email, you agree to this usage agreement.
+3) The dataset is of high quality, containing **5,001 webshell samples** meticulously collected by the author. These files are sourced from multiple channels, including public websites, cybersecurity forums, major cybersecurity competitions, and malicious scripts captured from real-world servers used by hackers. Many webshells use anti-detection techniques. The **5,936 benign PHP samples** are collected from open-source PHP frameworks such as WordPress and PHPCMS. The overall positive-to-negative sample ratio is approximately 1:1.2.
+4) The complete dataset is publicly available through our [Zenodo repository](https://doi.org/10.5281/zenodo.14938302) or via the Releases section on the right. A small number of webshell examples are provided in the `./samples` folder for quick inspection.
+
+**Important Notes:**
+- 🔑 Source code archive password: `123`
+- ⚠️ Antivirus software may flag the archives - add the extraction folder to exclusion list before unpacking
+- The complete dataset should contain **5,001 webshell samples** and **5,936 benign samples**. If your count is lower, some files might have been quarantined by security software.
+- 🛑 **Legal Compliance Notice**: This dataset is provided strictly for academic research purposes. Any misuse for illegal activities is expressly prohibited. By using this dataset, you agree to:
+  - Use the materials solely for non-malicious, research-oriented purposes
+  - Not attempt to exploit any vulnerabilities contained in the samples
+  - Assume full responsibility for any consequences resulting from misuse
+  - Comply with all applicable laws and regulations in your jurisdiction
 
 ### Cite
 
