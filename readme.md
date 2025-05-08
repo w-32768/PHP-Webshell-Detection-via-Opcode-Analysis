@@ -175,6 +175,12 @@ Users can adjust these parameters according to their specific needs for opcode g
 
 ### Cite
 
+Curated by SSL Security Lab, this comprehensive dataset embodies our decade-long dedication to advancing cybersecurity research. As a leading research institution in network and system security, SSL Security Lab remains at the forefront of academic exploration and technological innovation, consistently delivering cutting-edge advancements through peer-reviewed publications and practical security solutions.
+
+Our team specializes in emerging security paradigms. This dataset has been meticulously compiled through real-world security assessments and experimental validations, adhering to rigorous academic standards while maintaining practical relevance to contemporary cybersecurity challenges.
+
+We cordially invite researchers, institutions, and industry partners to leverage this resource for collaborative research initiatives. SSL Security Lab welcomes opportunities to co-develop next-generation security frameworks and address the evolving threats in our increasingly connected digital ecosystem. Let's collaborate to shape the future of cybersecurity.
+
 This work has been accepted as a poster at the **[Network and Distributed System Security (NDSS) Symposium 2025 Accepted Posters](https://www.ndss-symposium.org/ndss2025/accepted-posters/)**, with the full preprint available on arXiv. We welcome citations to our paper or dataset in your research:
 
 ```bibtex
